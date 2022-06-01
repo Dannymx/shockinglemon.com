@@ -1,126 +1,166 @@
+# Boilerplate and Starter for Next JS 12+, Tailwind CSS 3 and TypeScript [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/26466516/141659551-d7ba5630-7200-46fe-863b-87818dae970a.png" alt="Next.js TypeScript Starter">
+  <a href="https://creativedesignsguru.com/demo/Nextjs-Boilerplate/"><img src="public/assets/images/nextjs-starter-banner.png?raw=true" alt="Next js starter banner"></a>
 </p>
 
-<br />
+🚀 Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, Netlify, PostCSS, Tailwind CSS.
 
-<div align="center"><strong>Non-opinionated TypeScript starter for Next.js</strong></div>
-<div align="center">Highly scalable foundation with the best DX. All the tools you need to build your next project.</div>
+Clone this project and use it to create your own [Next.js](https://nextjs.org) project. You can check a [Next js templates demo](https://creativedesignsguru.com/demo/Nextjs-Boilerplate/).
 
-<br />
+### Features
 
-<div align="center">
-  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&style=flat-square&color=5e17eb&labelColor=000000" alt="PRs welcome!" />
+Developer experience first:
 
-  <img alt="License" src="https://img.shields.io/github/license/jpedroschmitz/typescript-nextjs-starter?style=flat-square&color=5e17eb&labelColor=000000">
+- ⚡ [Next.js](https://nextjs.org) for Static Site Generator
+- 🔥 Type checking [TypeScript](https://www.typescriptlang.org)
+- 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
+- ✅ Strict Mode for TypeScript and React 18
+- 📏 Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
+- 💖 Code Formatter with [Prettier](https://prettier.io)
+- 🦊 Husky for Git Hooks
+- 🚫 Lint-staged for running linters on Git staged files
+- 🚓 Lint git commit with Commitlint
+- 🦺 Testing with Jest and React Testing Library
+- 💡 Absolute Imports using `@` prefix
+- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript, Jest
+- 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
+- ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+- 🖱️ One click deployment with Vercel or Netlify (or manual deployment to any hosting services)
+- 🌈 Include a FREE minimalist theme
+- 💯 Maximize lighthouse score
 
-  <a href="https://twitter.com/intent/follow?screen_name=jpedroschmitz">
-    <img src="https://img.shields.io/twitter/follow/jpedroschmitz?style=flat-square&color=5e17eb&labelColor=000000" alt="Follow @jpedroschmitz" />
-  </a>
-</div>
+Built-in feature from Next.js:
 
-<div align="center">
-  <sub>Created by <a href="https://twitter.com/jpedroschmitz">João Pedro</a> with the help of many <a href="https://github.com/jpedroschmitz/typescript-nextjs-starter/graphs/contributors">wonderful contributors</a>.</sub>
-</div>
+- ☕ Minify HTML & CSS
+- 💨 Live reload
+- ✅ Cache busting
 
-<br />
+### Philosophy
 
-## Features
+- Minimal code
+- SEO-friendly
+- 🚀 Production-ready
 
-- ⚡️ Next.js 12
-- ⚛️ React 18
-- ⛑ TypeScript
-- 📏 ESLint — To find and fix problems in your code
-- 💖 Prettier — Code Formatter for consistent style
-- 🐶 Husky — For running scripts before committing
-- 📄 Commitizen — To define a standard way of committing rules
-- 🚓 Commitlint — To make sure your commit messages follow the convention
-- 🖌 Renovate — To keep your dependencies up to date
-- 🚫 lint-staged — Run ESLint and Prettier against staged Git files
-- 👷 PR Workflow — Run Type Check & Linters on Pull Requests
-- ⚙️ EditorConfig - Consistent coding styles across editors and IDEs
-- 🗂 Path Mapping — Import components or images using the `@` prefix
+### Nextless.js SaaS Boilerplate
 
-## Quick Start
+Build your SaaS product faster with [React SaaS Boilerplate](https://nextlessjs.com).
 
-The best way to start with this template is using [Create Next App](https://nextjs.org/docs/api-reference/create-next-app).
+[![React SaaS Boilerplate Next.js](https://creativedesignsguru.com/assets/images/themes/next-js-saas-starter-kit.jpg)](https://nextlessjs.com)
 
-```
-yarn create next-app -e https://github.com/jpedroschmitz/typescript-nextjs-starter
-# or
-npx create-next-app -e https://github.com/jpedroschmitz/typescript-nextjs-starter
-```
+### Premium Themes
 
-### Development
+| [Green Nextjs Landing Page Template](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [Purple Saas Nextjs Theme](https://creativedesignsguru.com/landing-purple-modern-react-theme/) |
+| --- | --- |
+| [![Green Nextjs Landing Page Template](https://creativedesignsguru.com/assets/images/themes/landing-green-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [![Blue Landing Page Nextjs Theme](https://creativedesignsguru.com/assets/images/themes/landing-blue-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-blue-modern-react-theme/) |
 
-To start the project locally, run:
-
-```bash
-yarn dev
-```
-
-Open `http://localhost:3000` with your browser to see the result.
-
-## Testimonials
-
-> [**“This starter is by far the best TypeScript starter for Next.js. Feature packed but un-opinionated at the same time!”**](https://github.com/jpedroschmitz/typescript-nextjs-starter/issues/87#issue-789642190)<br>
-> — Arafat Zahan
-
-> [**“I can really recommend the Next.js Typescript Starter repo as a solid foundation for your future Next.js projects.”**](https://corfitz.medium.com/create-a-custom-create-next-project-command-2a6b35a1c8e6)<br>
-> — Corfitz
-
-> [**“Brilliant work!”**](https://github.com/jpedroschmitz/typescript-nextjs-starter/issues/87#issuecomment-769314539)<br>
-> — Soham Dasgupta
-
-## Showcase
-
-List of websites that started off with Next.js TypeScript Starter:
-
-- [dowhile.io](https://dowhile.io)
-- [graphcms.com](https://graphcms.com)
-- [mobg.com.br](https://mobg.com.br)
-- [nextlevelweek.com](https://nextlevelweek.com)
-- [rocketseat.com.br](https://www.rocketseat.com.br)
-
-## Documentation
+Find more [Nextjs Themes](https://creativedesignsguru.com/category/nextjs/).
 
 ### Requirements
 
-- Node.js >= 12.22.0
-- Yarn 1 (Classic)
+- Node.js 14+ and npm
 
-### Directory Structure
+### Getting started
 
-- [`.github`](.github) — GitHub configuration including the CI workflow.<br>
-- [`.husky`](.husky) — Husky configuration and hooks.<br>
-- [`public`](./public) — Static assets such as robots.txt, images, and favicon.<br>
-- [`src`](./src) — Application source code, including pages, components, styles.
+Run the following command on your local environment:
 
-### Scripts
-
-- `yarn dev` — Starts the application in development mode at `http://localhost:3000`.
-- `yarn build` — Creates an optimized production build of your application.
-- `yarn start` — Starts the application in production mode.
-- `yarn type-check` — Validate code using TypeScript compiler.
-- `yarn lint` — Runs ESLint for all files in the `src` directory.
-- `yarn format` — Runs Prettier for all files in the `src` directory.
-- `yarn commit` — Run commitizen. Alternative to `git commit`.
-
-### Path Mapping
-
-TypeScript are pre-configured with custom path mappings. To import components or files, use the `@` prefix.
-
-```tsx
-import { Button } from '@/components/Button';
-
-// To import images or other files from the public folder
-import avatar from '@/public/avatar.png';
+```shell
+git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
+cd my-project-name
+npm install
 ```
 
-### Switch to npm
+Then, you can run locally in development mode with live reload:
 
-This starter uses Yarn 1 (Classic) by default, but this choice is yours. If you'd like to switch to npm, delete the `yarn.lock` file, install the dependencies with `npm i`, change the CI workflow, and Husky Git hooks to use npm commands.
+```shell
+npm run dev
+```
 
-## License
+Open http://localhost:3000 with your favorite browser to see your project.
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more information.
+```shell
+.
+├── README.md                       # README file
+├── __mocks__                       # Mocks for testing
+├── .github                         # GitHub folder
+├── .husky                          # Husky configuration
+├── .vscode                         # VSCode configuration
+├── public                          # Public assets folder
+├── src
+│   ├── layouts                     # Layouts components
+│   ├── pages                       # Next JS Pages
+│   ├── pages.test                  # Next JS Pages tests (this avoid test to treated as a Next.js pages)
+│   ├── styles                      # Styles folder
+│   ├── templates                   # Default template
+│   └── utils                       # Utility functions
+├── tailwind.config.js              # Tailwind CSS configuration
+└── tsconfig.json                   # TypeScript configuration
+```
+
+### Customization
+
+You can easily configure Next js Boilerplate. Please change the following file:
+
+- `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png` and `public/favicon-32x32.png`: your website favicon, you can generate from https://favicon.io/favicon-converter/
+- `src/styles/global.css`: your CSS file using Tailwind CSS
+- `src/utils/AppConfig.ts`: configuration file
+- `src/templates/Main.tsx`: default theme
+
+### Deploy to production
+
+You can see the results locally in production mode with:
+
+```shell
+$ npm run build
+$ npm run start
+```
+
+The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
+
+You can create an optimized production build with:
+
+```shell
+npm run build-prod
+```
+
+Now, your blog is ready to be deployed. All generated files are located at `out` folder, which you can deploy with any hosting service.
+
+### Testing
+
+All tests are colocated with the source code inside the same directory. So, it makes it easier to find them. Unfortunately, it is not possible with the `pages` folder which is used by Next.js for routing. So, what is why we have a `pages.test` folder to write tests from files located in `pages` folder.
+
+### Deploy to Netlify
+
+Clone this repository on own GitHub account and deploy to Netlify:
+
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Next-js-Boilerplate)
+
+### Deploy to Vercel
+
+Deploy this Next JS Boilerplate on Vercel in one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fixartz%2FNext-js-Boilerplate)
+
+### VSCode information (optional)
+
+If you are VSCode users, you can have a better integration with VSCode by installing the suggested extension in `.vscode/extension.json`. The starter code comes up with Settings for a seamless integration with VSCode. The Debug configuration is also provided for frontend and backend debugging experience.
+
+With the plugins installed on your VSCode, ESLint and Prettier can automatically fix the code and show you the errors. Same goes for testing, you can install VSCode Jest extension to automatically run your tests and it also show the code coverage in context.
+
+Pro tips: if you need a project wide type checking with TypeScript, you can run a build with <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> on Mac.
+
+### Contributions
+
+Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
+
+### License
+
+Licensed under the MIT License, Copyright © 2022
+
+See [LICENSE](LICENSE) for more information.
+
+---
+
+Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+
+[![React SaaS Boilerplate](https://creativedesignsguru.com/assets/images/themes/next-js-saas-starter-kit.jpg)](https://nextlessjs.com)
