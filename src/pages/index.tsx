@@ -1,73 +1,186 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import styles from '@/styles/Home.module.css';
+import { Meta } from '@/layouts/Meta';
+import { Main } from '@/templates/Main';
 
-export default function Home() {
+const Index = () => {
+  const router = useRouter();
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>TypeScript starter for Next.js</title>
-        <meta
-          name="description"
-          content="TypeScript starter for Next.js that includes all you need to build amazing apps"
+    <Main
+      meta={
+        <Meta
+          title="Next.js Boilerplate Presentation"
+          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
         />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{` `}
-          <code className={styles.code}>src/pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+      }
+    >
+      <a href="https://github.com/ixartz/Next-js-Boilerplate">
+        <img
+          src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
+          alt="Nextjs starter banner"
+        />
+      </a>
+      <h1 className="text-2xl font-bold">
+        Boilerplate code for your Nextjs project with Tailwind CSS
+      </h1>
+      <p>
+        <span role="img" aria-label="rocket">
+          🚀
+        </span>{' '}
+        Next.js Boilerplate is a starter code for your Next js project by
+        putting developer experience first .{' '}
+        <span role="img" aria-label="zap">
+          ⚡️
+        </span>{' '}
+        Made with Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged,
+        VSCode, Netlify, PostCSS, Tailwind CSS.
+      </p>
+      <h2 className="text-lg font-semibold">Next js Boilerplate Features</h2>
+      <p>Developer experience first:</p>
+      <ul>
+        <li>
+          <span role="img" aria-label="fire">
+            🔥
+          </span>{' '}
+          <a href="https://nextjs.org" rel="nofollow">
+            Next.js
+          </a>{' '}
+          for Static Site Generator
+        </li>
+        <li>
+          <span role="img" aria-label="art">
+            🎨
+          </span>{' '}
+          Integrate with{' '}
+          <a href="https://tailwindcss.com" rel="nofollow">
+            Tailwind CSS
           </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+        </li>
+        <li>
+          <span role="img" aria-label="nail_care">
+            💅
+          </span>{' '}
+          PostCSS for processing Tailwind CSS
+        </li>
+        <li>
+          <span role="img" aria-label="tada">
+            🎉
+          </span>{' '}
+          Type checking Typescript
+        </li>
+        <li>
+          <span role="img" aria-label="pencil2">
+            ✏️
+          </span>{' '}
+          Linter with{' '}
+          <a href="https://eslint.org" rel="nofollow">
+            ESLint
           </a>
-
+        </li>
+        <li>
+          <span role="img" aria-label="hammer_and_wrench">
+            🛠
+          </span>{' '}
+          Code Formatter with{' '}
+          <a href="https://prettier.io" rel="nofollow">
+            Prettier
+          </a>
+        </li>
+        <li>
+          <span role="img" aria-label="fox_face">
+            🦊
+          </span>{' '}
+          Husky for Git Hooks
+        </li>
+        <li>
+          <span role="img" aria-label="no_entry_sign">
+            🚫
+          </span>{' '}
+          Lint-staged for running linters on Git staged files
+        </li>
+        <li>
+          <span role="img" aria-label="no_entry_sign">
+            🗂
+          </span>{' '}
+          VSCode configuration: Debug, Settings, Tasks and extension for
+          PostCSS, ESLint, Prettier, TypeScript
+        </li>
+        <li>
+          <span role="img" aria-label="robot">
+            🤖
+          </span>{' '}
+          SEO metadata, JSON-LD and Open Graph tags with Next SEO
+        </li>
+        <li>
+          <span role="img" aria-label="robot">
+            ⚙️
+          </span>{' '}
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+            href="https://www.npmjs.com/package/@next/bundle-analyzer"
+            rel="nofollow"
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            Bundler Analyzer
           </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=typescript-nextjs-starter"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=typescript-nextjs-starter"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{` `}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+        </li>
+        <li>
+          <span role="img" aria-label="rainbow">
+            🌈
+          </span>{' '}
+          Include a FREE minimalist theme
+        </li>
+        <li>
+          <span role="img" aria-label="hundred">
+            💯
+          </span>{' '}
+          Maximize lighthouse score
+        </li>
+      </ul>
+      <p>Built-in feature from Next.js:</p>
+      <ul>
+        <li>
+          <span role="img" aria-label="coffee">
+            ☕
+          </span>{' '}
+          Minify HTML &amp; CSS
+        </li>
+        <li>
+          <span role="img" aria-label="dash">
+            💨
+          </span>{' '}
+          Live reload
+        </li>
+        <li>
+          <span role="img" aria-label="white_check_mark">
+            ✅
+          </span>{' '}
+          Cache busting
+        </li>
+      </ul>
+      <h2 className="text-lg font-semibold">Our Stater code Philosophy</h2>
+      <ul>
+        <li>Minimal code</li>
+        <li>SEO-friendly</li>
+        <li>
+          <span role="img" aria-label="rocket">
+            🚀
+          </span>{' '}
+          Production-ready
+        </li>
+      </ul>
+      <p>
+        Check our GitHub project for more information about{' '}
+        <a href="https://github.com/ixartz/Next-js-Boilerplate">
+          Nextjs Boilerplate
         </a>
-      </footer>
-    </div>
+        . You can also browse our{' '}
+        <a href="https://creativedesignsguru.com/category/nextjs/">
+          Premium NextJS Templates
+        </a>{' '}
+        on our website to support this project.
+      </p>
+    </Main>
   );
-}
+};
+
+export default Index;

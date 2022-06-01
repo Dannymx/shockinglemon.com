@@ -5,15 +5,12 @@
 /.pnp
 .pnp.js
 
-# JetBrains IDE files
-.idea/
-
 # testing
 /coverage
 
 # next.js
-/.next/
-/out/
+/.next
+/out
 
 # production
 /build
@@ -21,19 +18,19 @@
 # misc
 .DS_Store
 *.pem
-tsconfig.tsbuildinfo
+Thumbs.db
 
 # debug
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# dotenv local files
+.env*.local
+
+# local folder
+local
 
 # vercel
 .vercel
