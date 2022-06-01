@@ -11,10 +11,14 @@ describe('Index page', () => {
       render(<Index />);
 
       const heading = screen.getByRole('heading', {
-        name: /Boilerplate code/,
+        name: /Shocking Lemon/,
       });
 
+      const image = screen.getByRole('img');
+
       expect(heading).toBeInTheDocument();
+
+      expect(image).toBeInTheDocument();
     });
   });
 });
