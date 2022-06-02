@@ -21,7 +21,7 @@ const Index = () => {
 
         <a
           className={styles.discord}
-          href="https://discord.gg/hvrAYhY9"
+          href="https://discord.gg/wcHhXbJR7P"
           target={'_blank'}
           rel="noreferrer"
         >
