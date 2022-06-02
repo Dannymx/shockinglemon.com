@@ -1,6 +1,13 @@
 .main {
   display: flex;
   height: 100%;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  @apply sm:text-6xl text-gray-300
 }

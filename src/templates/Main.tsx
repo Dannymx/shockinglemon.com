@@ -10,7 +10,7 @@ type IMainProps = {
 const Main = ({ meta, children }: IMainProps) => (
   <div className={`${styles.main} antialiased`}>
     {meta}
-    <h1>Shocking Lemon</h1>
+    <h1 className={`${styles.heading} bauhaus`}>Shocking Lemon</h1>
     <div className="text-xl">{children}</div>
   </div>
 );
