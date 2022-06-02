@@ -7,16 +7,12 @@
   src: url('../../public/assets/fonts/BauhausLightRegular.ttf') format('truetype');
 }
 
-html, body, #__next {
+html, body, #__next, main {
   @apply h-full
 }
 
 body {
-  @apply bg-black
-}
-
-.bauhaus {
-  font-family: 'bauhaus';
+  @apply bg-black antialiased
 }
 
 @tailwind components;
