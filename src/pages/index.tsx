@@ -18,16 +18,16 @@ const Index = () => {
       <div className={styles.main}>
         <h1 className={`${styles.heading} bauhaus`}>Shocking Lemon</h1>
         <Image src={MainImage} alt="Picture of band Shocking Lemon" />
-        <h3 className={styles.discord}>
-          Join us on{' '}
-          <a
-            href="https://discord.gg/hvrAYhY9"
-            target={'_blank'}
-            rel="noreferrer"
-          >
-            Discord
-          </a>
-        </h3>
+
+        <a
+          className={styles.discord}
+          href="https://discord.gg/hvrAYhY9"
+          target={'_blank'}
+          rel="noreferrer"
+        >
+          <h3 className={styles.discord}></h3>
+          Join us on Discord
+        </a>
       </div>
     </Main>
   );

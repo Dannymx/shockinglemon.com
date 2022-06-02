@@ -4,11 +4,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @apply text-gray-300
+  @apply text-gray-300 text-center
 }
 
 .heading {
-  text-align: center;
   font-size: 3rem;
   @apply sm:text-6xl;
   font-family: 'bauhaus';
@@ -16,5 +15,5 @@
 
 .discord {
   font-family: 'bauhaus';
-  @apply text-2xl
+  @apply text-4xl underline underline-offset-2;
 }
