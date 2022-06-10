@@ -10,7 +10,7 @@ const Index = () => {
     <Main
       meta={
         <Meta
-          title="ShockingLemon.com"
+          title="Shocking Lemon"
           description="Fan dedicated website for the Japanese rock band Shocking Lemon"
         />
       }
