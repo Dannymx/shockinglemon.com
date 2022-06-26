@@ -1,5 +1,6 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     fontSize: {
       xs: '0.75rem',
@@ -15,6 +16,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        'light-bg': '#e2e8f0',
+        'dark-body': '#374151',
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',
