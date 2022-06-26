@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
+import { Main } from '@/layouts/Main';
 import { Meta } from '@/layouts/Meta';
 import MainImage from '@/public/assets/images/main.jpg';
 import styles from '@/styles/index.module.css';
-import { Main } from '@/templates/Main';
 
 const Index = () => {
   return (
