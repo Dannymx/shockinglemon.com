@@ -17,7 +17,8 @@ module.exports = {
     extend: {
       colors: {
         'light-bg': '#e2e8f0',
-        'dark-body': '#374151',
+        'dark-copy': '#374151',
+        'light-copy': '#d1d5db',
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',
@@ -40,6 +41,11 @@ module.exports = {
           800: '#2c5282',
           900: '#2a4365',
         },
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        noto: ['Noto Sans JP', 'sans-serif'],
+        bauhaus: ['bauhaus', 'sans-serif'],
       },
     },
   },

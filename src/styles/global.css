@@ -12,7 +12,11 @@ html, body, #__next, main {
 }
 
 body {
-  @apply bg-light-bg text-dark-body antialiased
+  @apply
+  bg-light-bg
+  text-dark-copy
+  font-inter
+  antialiased
 }
 
 @tailwind components;
