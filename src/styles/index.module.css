@@ -9,11 +9,9 @@
 
 .heading {
   font-size: 3rem;
-  @apply sm:text-6xl;
-  font-family: 'bauhaus';
+  @apply sm:text-6xl font-bauhaus;
 }
 
 .discord {
-  font-family: 'bauhaus';
   @apply text-4xl underline underline-offset-2;
 }
