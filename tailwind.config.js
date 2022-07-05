@@ -46,6 +46,7 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
         noto: ['Noto Sans JP', 'sans-serif'],
         bauhaus: ['bauhaus', 'sans-serif'],
+        bebas: ['Bebas Neue', 'cursive'],
       },
     },
   },
