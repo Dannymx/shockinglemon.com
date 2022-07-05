@@ -7,8 +7,8 @@
   src: url('../../public/assets/fonts/BauhausLightRegular.ttf') format('truetype');
 }
 
-html, body, #__next, main {
-  @apply h-full
+html, body, #__next {
+  @apply h-screen
 }
 
 body {
