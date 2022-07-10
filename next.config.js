@@ -13,4 +13,9 @@ module.exports = withBundleAnalyzer({
   // So, the source code is "basePath-ready".
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
+  images: {
+    loader: 'imgix',
+    path: 'https://shockinglemon.imgix.net',
+    deviceSizes: [640, 768, 1024, 1280, 1536],
+  },
 });

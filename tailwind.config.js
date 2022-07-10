@@ -48,6 +48,10 @@ module.exports = {
         bauhaus: ['bauhaus', 'sans-serif'],
         bebas: ['Bebas Neue', 'cursive'],
       },
+      aspectRatio: {
+        'member-grid': '44 / 90',
+        'member-swatch': '22 / 45',
+      },
     },
   },
   plugins: [],
