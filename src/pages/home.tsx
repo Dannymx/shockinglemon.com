@@ -5,47 +5,26 @@ import HomeLayout from '@/layouts/HomeLayout';
 const Home = () => (
   <HomeLayout>
     <>
-      <div className="flex h-full">
-        <div className="">
-          <span className="font-bebas text-4xl font-extrabold">Welcome!</span>
+      <div className="flex items-center justify-center">
+        <div className="z-10 -mr-10 flex w-1/3 flex-col items-center justify-center rounded-3xl bg-white/30 p-10 shadow-xl backdrop-blur-sm">
+          <div className="mb-2 text-2xl font-bold">
+            <span className="font-bebas">Welcome /</span>
+            <span className="font-noto">ようこそ</span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </div>
-        <div className="relative grid aspect-member-grid h-[500px] grid-cols-2 gap-1">
-          <div className="relative ">
-            <Image
-              className="rounded-tl-3xl rounded-br-3xl"
-              src={'/assets/images/1.jpg'}
-              layout="fill"
-              objectFit="cover"
-              alt=""
-            />
-          </div>
-          <div className="relative">
-            <Image
-              className="rounded-tr-3xl rounded-bl-3xl"
-              src={'/assets/images/2.jpg'}
-              layout="fill"
-              objectFit="cover"
-              alt=""
-            />
-          </div>
-          <div className="relative">
-            <Image
-              className="rounded-tr-3xl rounded-bl-3xl"
-              src={'/assets/images/3.jpg'}
-              layout="fill"
-              objectFit="cover"
-              alt=""
-            />
-          </div>
-          <div className="relative">
-            <Image
-              className="rounded-tl-3xl rounded-br-3xl"
-              src={'/assets/images/4.jpg'}
-              layout="fill"
-              objectFit="cover"
-              alt=""
-            />
-          </div>
+        <div className="relative h-[500px] w-[400px] overflow-hidden rounded-3xl shadow-2xl">
+          <Image
+            src={'/assets/images/band.jpg'}
+            layout="fill"
+            objectFit="cover"
+            alt=""
+          />
         </div>
       </div>
     </>
