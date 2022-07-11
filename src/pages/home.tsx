@@ -7,15 +7,17 @@ const Home = () => (
     <>
       <div className="flex items-center justify-center">
         <div className="z-10 -mr-10 flex w-1/3 flex-col items-center justify-center rounded-3xl bg-white/30 p-10 shadow-xl backdrop-blur-sm">
-          <div className="mb-2 text-2xl font-bold">
+          <div className="mb-2 block w-full text-2xl font-bold">
             <span className="font-bebas">Welcome /</span>
             <span className="font-noto">ようこそ</span>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <p className="text-sm">
+            This website is dedicated to the Japanese rock band Shocking Lemon.
+            After many years since the band disolved, many fans wanted to know
+            more about their music, so as fans of the band we decided to create
+            this website and archive their music, photos, lyrics and other rare
+            media so others fans can enjoy it and make sure Shocking Lemon is
+            not forgotten.
           </p>
         </div>
         <div className="relative h-[500px] w-[400px] overflow-hidden rounded-3xl shadow-2xl">
