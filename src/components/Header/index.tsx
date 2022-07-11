@@ -3,11 +3,11 @@ import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 const navigation = [
-  { name: 'Music', href: '#', current: true },
-  { name: 'Band', href: '#', current: false },
-  { name: 'Media', href: '#', current: false },
-  { name: 'Blog', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
+  { name: 'Music', href: 'music', current: false },
+  { name: 'Band', href: 'band', current: false },
+  { name: 'Media', href: 'media', current: false },
+  { name: 'Blog', href: 'blog', current: false },
+  { name: 'About', href: 'about', current: false },
 ];
 
 function classNames(...classes: string[]) {
