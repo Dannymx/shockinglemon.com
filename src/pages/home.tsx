@@ -1,6 +1,6 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import HomeLayout from '@/layouts/HomeLayout';
+import HomeLayout from "@/layouts/HomeLayout";
 
 const Home = () => (
   <HomeLayout>
@@ -22,13 +22,14 @@ const Home = () => (
         </div>
         <div className="relative h-[420px] w-[700px] overflow-hidden rounded-3xl shadow-2xl">
           <Image
-            src={'/assets/images/band.jpg'}
+            src="/assets/images/intro-band.jpg"
             layout="fill"
             objectFit="cover"
             alt=""
           />
         </div>
       </div>
+      <div />
     </>
   </HomeLayout>
 );

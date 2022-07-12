@@ -4,7 +4,6 @@ const Footer = () => (
       🍋 Shocking Lemon. All rights reserved to their respective copyright
       holders.
     </p>
-    <p></p>
   </div>
 );
 
