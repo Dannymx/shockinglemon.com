@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @apply dark:text-gray-300 text-center
+  @apply dark:text-gray-300 text-center;
 }
 
 .heading {
