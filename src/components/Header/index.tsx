@@ -1,17 +1,17 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Disclosure } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Disclosure } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: 'Music', href: 'music', current: false },
-  { name: 'Band', href: 'band', current: false },
-  { name: 'Media', href: 'media', current: false },
-  { name: 'Blog', href: 'blog', current: false },
-  { name: 'About', href: 'about', current: false },
+  { name: "Music", href: "music", current: false },
+  { name: "Band", href: "band", current: false },
+  { name: "Media", href: "media", current: false },
+  { name: "Blog", href: "blog", current: false },
+  { name: "About", href: "about", current: false },
 ];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 const Header = () => (
@@ -48,11 +48,11 @@ const Header = () => (
                       href={item.href}
                       className={classNames(
                         item.current
-                          ? 'underline underline-offset-2'
-                          : 'hover:bg-gray-700 hover:text-white',
-                        'px-3 py-1 rounded-md'
+                          ? "underline underline-offset-2"
+                          : "hover:bg-gray-700 hover:text-white",
+                        "px-3 py-1 rounded-md"
                       )}
-                      aria-current={item.current ? 'page' : undefined}
+                      aria-current={item.current ? "page" : undefined}
                     >
                       {item.name}
                     </a>
@@ -72,11 +72,11 @@ const Header = () => (
                 href={item.href}
                 className={classNames(
                   item.current
-                    ? 'bg-gray-900 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                  'block px-3 py-2 rounded-md text-base font-medium'
+                    ? "bg-gray-900 text-white"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                  "block px-3 py-2 rounded-md text-base font-medium"
                 )}
-                aria-current={item.current ? 'page' : undefined}
+                aria-current={item.current ? "page" : undefined}
               >
                 {item.name}
               </Disclosure.Button>
