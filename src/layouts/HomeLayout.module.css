@@ -1,3 +1,3 @@
 .background-text {
-  @apply absolute inset-x-0 top-10 -z-10  text-center font-noto text-[4rem] lg:text-[6rem] xl:text-[8rem] font-bold opacity-30
+  @apply absolute inset-x-0 top-10 -z-10  text-center font-noto text-[4rem] lg:text-[6rem] xl:text-[8rem] font-bold opacity-30;
 }

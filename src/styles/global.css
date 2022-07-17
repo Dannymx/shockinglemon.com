@@ -1,22 +1,24 @@
 @tailwind base;
 
 @font-face {
-  font-family: 'bauhaus';
+  font-family: "bauhaus";
   font-style: normal;
   font-weight: 300;
-  src: url('../../public/assets/fonts/BauhausLightRegular.ttf') format('truetype');
+  src: url("../../public/assets/fonts/BauhausLightRegular.ttf")
+    format("truetype");
 }
 
-html, body, #__next {
-  @apply h-screen
+html,
+body,
+#__next {
+  @apply h-screen;
 }
 
 body {
-  @apply
-  bg-light-bg
+  @apply bg-light-bg
   text-dark-copy
   font-inter
-  antialiased
+  antialiased;
 }
 
 @tailwind components;
