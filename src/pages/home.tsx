@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+import {
+  HomeCard,
+  HomeCardBody,
+  HomeCardImage,
+  HomeCardTitle,
+} from "@/components/Card/HomeCard";
 import HomeLayout from "@/layouts/HomeLayout";
 
 const Home = () => (
@@ -11,7 +17,7 @@ const Home = () => (
             <span className="font-bebas">Welcome /</span>
             <span className="font-noto">ようこそ</span>
           </div>
-          <p className="text-sm">
+          <p>
             This website is dedicated to the Japanese rock band Shocking Lemon.
             After many years since the band disolved, many fans wanted to know
             more about their music, so as fans of the band we decided to create
@@ -29,7 +35,38 @@ const Home = () => (
           />
         </div>
       </div>
-      <div />
+      <div className="flex justify-center gap-6 pt-16">
+        <HomeCard>
+          <HomeCardImage imgSrc="/assets/images/home/card1.jpg" />
+          <HomeCardBody>
+            <HomeCardTitle>Join us on Discord</HomeCardTitle>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </HomeCardBody>
+        </HomeCard>
+        <HomeCard>
+          <HomeCardImage imgSrc="/assets/images/home/card2.jpg" />
+          <HomeCardBody>
+            <HomeCardTitle>Join us on Discord</HomeCardTitle>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </HomeCardBody>
+        </HomeCard>
+        <HomeCard>
+          <HomeCardImage imgSrc="/assets/images/home/card3.jpg" />
+          <HomeCardBody>
+            <HomeCardTitle>Join us on Discord</HomeCardTitle>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </HomeCardBody>
+        </HomeCard>
+      </div>
     </>
   </HomeLayout>
 );
