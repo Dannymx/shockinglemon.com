@@ -23,7 +23,7 @@ export const HomeCard = ({ children }: HomeCardProps) => (
 );
 
 export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
-  <div className="relative aspect-[4/5] h-[400px] overflow-hidden rounded-3xl shadow-xl">
+  <div className="relative aspect-[4/5] h-[400px] overflow-hidden rounded-xl shadow-xl">
     <Image
       className="transition duration-500 ease-in-out hover:scale-105"
       src={`${imgSrc}?fit=clip&h=500`}
@@ -40,7 +40,7 @@ export const HomeCardTitle = ({ children }: HomeCardTitleProps) => (
 
 export const HomeCardBody = ({ children }: HomeCardBodyProps) => (
   <div className="absolute bottom-0 h-1/2 w-full p-4">
-    <div className="h-full rounded-2xl bg-white/75 py-4 px-5 text-sm backdrop-blur-sm">
+    <div className="h-full rounded-md bg-white/75 py-4 px-5 text-sm backdrop-blur-sm">
       {children}
     </div>
   </div>
