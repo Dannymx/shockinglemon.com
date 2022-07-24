@@ -24,7 +24,7 @@
     "react-dom": "18.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "16.2.4",
+    "@commitlint/cli": "16.3.0",
     "@commitlint/config-conventional": "16.2.4",
     "@commitlint/cz-commitlint": "17.0.3",
     "@next/bundle-analyzer": "12.1.5",
