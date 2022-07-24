@@ -16,7 +16,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "@headlessui/react": "1.6.5",
+    "@headlessui/react": "1.6.6",
     "@heroicons/react": "1.0.6",
     "next": "12.1.5",
     "next-seo": "5.4.0",
