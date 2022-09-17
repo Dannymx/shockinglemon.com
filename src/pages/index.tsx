@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactElement } from "react";
 
 import { Main } from "@/layouts/Main";
 import { Meta } from "@/layouts/Meta";
@@ -6,6 +7,22 @@ import MainImage from "@/public/assets/images/main.jpg";
 import styles from "@/styles/index.module.css";
 
 const Index = () => (
+  <div className={styles.main}>
+    <h1 className={`${styles.heading} bauhaus`}>Shocking Lemon</h1>
+    <Image src={MainImage} alt="Picture of band Shocking Lemon" />
+
+    <a
+      className={styles.discord}
+      href="https://discord.gg/wcHhXbJR7P"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <h3 className={styles.discord}>Join us on Discord</h3>
+    </a>
+  </div>
+);
+
+Index.getLayout = (page: ReactElement) => (
   <Main
     meta={
       <Meta
@@ -14,19 +31,7 @@ const Index = () => (
       />
     }
   >
-    <div className={styles.main}>
-      <h1 className={`${styles.heading} bauhaus`}>Shocking Lemon</h1>
-      <Image src={MainImage} alt="Picture of band Shocking Lemon" />
-
-      <a
-        className={styles.discord}
-        href="https://discord.gg/wcHhXbJR7P"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <h3 className={styles.discord}>Join us on Discord</h3>
-      </a>
-    </div>
+    {page}
   </Main>
 );
 
