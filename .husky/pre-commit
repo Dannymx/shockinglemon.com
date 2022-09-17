@@ -1,5 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Disable concurent to run `check-types` after ESLint in lint-staged
-npx lint-staged --concurrent false
+# Temporary fix for Windows terminal
+exec >/dev/tty 2>&1
+
+npx lint-staged
