@@ -3,6 +3,7 @@
   "extends": ["config:base"],
   "baseBranches": ["develop"],
   "automerge": true,
+  "automergeStrategy": "squash",
   "automergeType": "branch",
   "schedule": ["before 6pm on Friday"]
 }
