@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Music records",
+  "properties": {
+    "records": {
+      "type": "array",
+      "items": {
+        "title": "A single record of the band",
+        "type": "object",
+        "additionalProperties": false,
+        "minProperties": 9,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "release": {
+            "type": "string"
+          },
+          "price": {
+            "properties": {
+              "currency": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              }
+            }
+          },
+          "format": {
+            "type": "string"
+          },
+          "medium": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "catalog": {
+            "type": "string"
+          },
+          "barcode": {
+            "type": "string"
+          },
+          "songs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "minProperties": 2,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "length": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
