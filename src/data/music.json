@@ -1,0 +1,103 @@
+{
+  "$schema": "../schemas/musicSchema.json",
+  "records": [
+    {
+      "name": "Blue Room",
+      "release": "1999-07-24",
+      "price": {
+        "currency": "yen",
+        "price": 1890
+      },
+      "format": "Mini-album",
+      "medium": ["CD"],
+      "labels": ["ALINNOS RECORDS", "Tricycle Entertainment"],
+      "catalog": "ARZS-0012",
+      "barcode": "4515634210122",
+      "songs": [
+        {
+          "name": "Pastel room",
+          "length": "4:18"
+        },
+        {
+          "name": "Lemonade",
+          "length": "3:46"
+        },
+        {
+          "name": "Chill",
+          "length": "6:49"
+        },
+        {
+          "name": "Blue",
+          "length": "4:34"
+        },
+        {
+          "name": "Movie",
+          "length": "4:37"
+        },
+        {
+          "name": "Orange",
+          "length": "4:47"
+        }
+      ]
+    },
+    {
+      "name": "Denimhead",
+      "release": "1999-11-06",
+      "price": {
+        "currency": "yen",
+        "price": 2800
+      },
+      "format": "Album",
+      "medium": ["CD"],
+      "labels": ["Tricycle Entertainment"],
+      "catalog": "TNCH-0001",
+      "barcode": "4538736210012",
+      "songs": [
+        {
+          "name": "Ice baby",
+          "length": "5:09"
+        },
+        {
+          "name": "Losing nothing man",
+          "length": "5:01"
+        },
+        {
+          "name": "Plastic house",
+          "length": "4:59"
+        },
+        {
+          "name": "Lemon power",
+          "length": "4:05"
+        },
+        {
+          "name": "Escape",
+          "length": "4:44"
+        },
+        {
+          "name": "Remember for me",
+          "length": "4:03"
+        },
+        {
+          "name": "Numb",
+          "length": "3:24"
+        },
+        {
+          "name": "Pastel room",
+          "length": "4:17"
+        },
+        {
+          "name": "09 Sad wind.flac",
+          "length": "4:54"
+        },
+        {
+          "name": "Love is vain",
+          "length": "5:25"
+        },
+        {
+          "name": "Cream life",
+          "length": "7:30"
+        }
+      ]
+    }
+  ]
+}
