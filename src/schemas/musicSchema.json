@@ -28,18 +28,25 @@
             }
           },
           "format": {
-            "type": "string"
+            "type": "string",
+            "enum": ["Album", "Mini-album", "Single", "Compilation"]
           },
           "medium": {
             "type": "array",
             "items": {
-              "type": "string"
-            }
+              "type": "string",
+              "enum": ["CD", "Mini CD", "LP", "Cassette"],
+              "default": "CD"
+            },
+            "minItems": 1,
+            "maxItems": 4,
+            "uniqueItems": true
           },
           "labels": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "enum": ["ALINNOS RECORDS", "Tricycle Entertainment"]
             }
           },
           "catalog": {
