@@ -2,6 +2,91 @@
   "$schema": "../schemas/musicSchema.json",
   "records": [
     {
+      "name": "Nothing",
+      "release": "1996-10-30",
+      "price": {
+        "currency": "yen",
+        "price": 1000
+      },
+      "format": "Mini-album",
+      "medium": ["Mini CD"],
+      "labels": ["REALIZE", "ALINNOS RECORDS"],
+      "catalog": "ARZS-0006",
+      "barcode": "4515634220060",
+      "songs": [
+        {
+          "name": "NOTHING",
+          "length": "5:21"
+        },
+        {
+          "name": "ELECTRIC",
+          "length": "4:52"
+        },
+        {
+          "name": "FANTASTIC CARNIVAL",
+          "length": "4:49"
+        },
+        {
+          "name": "BABY LOVE",
+          "length": "5:22"
+        }
+      ]
+    },
+    {
+      "name": "Marshmallow Bomb",
+      "release": "1997-07-24",
+      "price": {
+        "currency": "yen",
+        "price": 1000
+      },
+      "format": "Single",
+      "medium": ["Mini CD"],
+      "labels": ["Victor Entertainment"],
+      "catalog": "TBDL-2",
+      "barcode": "4514664000345",
+      "songs": [
+        {
+          "name": "Marshmallow Bomb",
+          "length": "0:00"
+        },
+        {
+          "name": "Tambourine Man",
+          "length": "0:00"
+        }
+      ]
+    },
+    {
+      "name": "Pastel Room",
+      "release": "1999-05-28",
+      "price": {
+        "currency": "yen",
+        "price": 1260
+      },
+      "format": "Maxi-single",
+      "medium": ["CD"],
+      "labels": ["ALINNOS RECORDS", "Tricycle Entertainment"],
+      "catalog": "ARZS-0011",
+      "barcode": "",
+      "songs": [
+        {
+          "name": "Pastel room",
+          "length": "4:18"
+        },
+        {
+          "name": "Chill",
+          "length": "6:49"
+        },
+        {
+          "name": "Movie",
+          "length": "4:37"
+        },
+        {
+          "name": "Orange",
+          "length": "4:47"
+        }
+      ]
+    },
+    {
       "name": "Blue Room",
       "release": "1999-07-24",
       "price": {
@@ -10,7 +95,7 @@
       },
       "format": "Mini-album",
       "medium": ["CD"],
-      "labels": ["ALINNOS RECORDS", "Tricycle Entertainment"],
+      "labels": ["ALINNOS RECORDS", "REALIZE", "Tricycle Entertainment"],
       "catalog": "ARZS-0012",
       "barcode": "4515634210122",
       "songs": [
@@ -96,6 +181,310 @@
         {
           "name": "Cream life",
           "length": "7:30"
+        }
+      ]
+    },
+    {
+      "name": "Sound of Ash",
+      "release": "2000-09-20",
+      "price": {
+        "currency": "yen",
+        "price": 1890
+      },
+      "format": "Mini-album",
+      "medium": ["CD"],
+      "labels": ["Tricycle Entertainment", "ALINNOS RECORDS", "REALIZE"],
+      "catalog": "ARZS-0023",
+      "barcode": "4515634210238",
+      "songs": [
+        {
+          "name": "In the Sun",
+          "length": "5:31"
+        },
+        {
+          "name": "Do You Know",
+          "length": "5:56"
+        },
+        {
+          "name": "Super Soul",
+          "length": "4:25"
+        },
+        {
+          "name": "Come On",
+          "length": "6:27"
+        },
+        {
+          "name": "Owari",
+          "length": "6:29"
+        },
+        {
+          "name": "Last Morning",
+          "length": "5:07"
+        }
+      ]
+    },
+    {
+      "name": "Under Star",
+      "release": "2000-12-21",
+      "price": {
+        "currency": "yen",
+        "price": 1200
+      },
+      "format": "Maxi-single",
+      "medium": ["CD", "Cassette"],
+      "labels": ["VAP"],
+      "catalog": "VPCC-82139",
+      "barcode": "4988021821391",
+      "songs": [
+        {
+          "name": "Under Star",
+          "length": "4:36"
+        },
+        {
+          "name": "Sugar baby",
+          "length": "4:04"
+        },
+        {
+          "name": "Hurt",
+          "length": "5:05"
+        }
+      ]
+    },
+    {
+      "name": "Inner Light",
+      "release": "2001-05-23",
+      "price": {
+        "currency": "yen",
+        "price": 1200
+      },
+      "format": "Maxi-single",
+      "medium": ["CD"],
+      "labels": ["VAP"],
+      "catalog": "VPCC-82143",
+      "barcode": "4988021821438",
+      "songs": [
+        {
+          "name": "Inner Light",
+          "length": "5:47"
+        },
+        {
+          "name": "Sound of Ash",
+          "length": "4:29"
+        },
+        {
+          "name": "Painful",
+          "length": "5:27"
+        }
+      ]
+    },
+    {
+      "name": "Sometimes Alone",
+      "release": "2001-09-05",
+      "price": {
+        "currency": "yen",
+        "price": 3000
+      },
+      "format": "Album",
+      "medium": ["CD"],
+      "labels": ["VAP"],
+      "catalog": "VPCC-81378",
+      "barcode": "4988021813785",
+      "songs": [
+        {
+          "name": "Zero",
+          "length": "5:40"
+        },
+        {
+          "name": "Singer song writer man",
+          "length": "5:16"
+        },
+        {
+          "name": "Stay",
+          "length": "5:30"
+        },
+        {
+          "name": "Unchain",
+          "length": "5:18"
+        },
+        {
+          "name": "Night fly",
+          "length": "2:57"
+        },
+        {
+          "name": "Karma place",
+          "length": "4:38"
+        },
+        {
+          "name": "Inner Light",
+          "length": "5:04"
+        },
+        {
+          "name": "Under star",
+          "length": "4:41"
+        },
+        {
+          "name": "Soon",
+          "length": "5:31"
+        },
+        {
+          "name": "You",
+          "length": "5:50"
+        },
+        {
+          "name": "Never my sun",
+          "length": "5:39"
+        }
+      ]
+    },
+    {
+      "name": "Everything in My Life",
+      "release": "2003-07-17",
+      "price": {
+        "currency": "yen",
+        "price": 1800
+      },
+      "format": "Mini-album",
+      "medium": ["CD"],
+      "labels": ["One-Coin Records"],
+      "catalog": "ONECO-1",
+      "barcode": "4580102740166",
+      "songs": [
+        {
+          "name": "Star Star",
+          "length": "4:59"
+        },
+        {
+          "name": "I'm So Hurt",
+          "length": "5:47"
+        },
+        {
+          "name": "In My Life",
+          "length": "5:18"
+        },
+        {
+          "name": "My Bomb",
+          "length": "4:27"
+        },
+        {
+          "name": "Freedom",
+          "length": "4:43"
+        },
+        {
+          "name": "Tell Me Over",
+          "length": "5:10"
+        }
+      ]
+    },
+    {
+      "name": "Vain World",
+      "release": "2006-02-12",
+      "price": {
+        "currency": "yen",
+        "price": 1200
+      },
+      "format": "Maxi-single",
+      "medium": ["CD"],
+      "labels": ["THOM RECORDS"],
+      "catalog": "THOM-1",
+      "barcode": "",
+      "songs": [
+        {
+          "name": "Vain World",
+          "length": "5:29"
+        },
+        {
+          "name": "Baby Baby Baby",
+          "length": "4:08"
+        },
+        {
+          "name": "Pure Boy",
+          "length": "5:44"
+        }
+      ]
+    },
+    {
+      "name": "Just Like Beginning",
+      "release": "2006-05-06",
+      "price": {
+        "currency": "yen",
+        "price": 1200
+      },
+      "format": "Single",
+      "medium": ["CD"],
+      "labels": ["THOM RECORDS"],
+      "catalog": "THOM-2",
+      "barcode": "",
+      "songs": [
+        {
+          "name": "Just Like Beginning",
+          "length": "5:19"
+        },
+        {
+          "name": "Raincoat",
+          "length": "3:52"
+        },
+        {
+          "name": "Night Tonight",
+          "length": "6:41"
+        }
+      ]
+    },
+    {
+      "name": "Solvent Echo",
+      "release": "2007-04-18",
+      "price": {
+        "currency": "yen",
+        "price": 2800
+      },
+      "format": "Album",
+      "medium": ["CD"],
+      "labels": ["ARIZE RECORDS", "THOM RECORDS"],
+      "catalog": "AETH-0001",
+      "barcode": "4571257571118",
+      "songs": [
+        {
+          "name": "Shining bright light",
+          "length": "5:02"
+        },
+        {
+          "name": "Winter",
+          "length": "2:54"
+        },
+        {
+          "name": "North song",
+          "length": "4:36"
+        },
+        {
+          "name": "Sweet song",
+          "length": "3:32"
+        },
+        {
+          "name": "Together",
+          "length": "4:06"
+        },
+        {
+          "name": "Dream on",
+          "length": "3:25"
+        },
+        {
+          "name": "Vain World",
+          "length": "5:28"
+        },
+        {
+          "name": "Like a baby",
+          "length": "4:38"
+        },
+        {
+          "name": "Mugen",
+          "length": "5:05"
+        },
+        {
+          "name": "Just Like Beginning",
+          "length": "5:17"
+        },
+        {
+          "name": "Baby Forever",
+          "length": "7:06"
         }
       ]
     }

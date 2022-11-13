@@ -29,7 +29,13 @@
           },
           "format": {
             "type": "string",
-            "enum": ["Album", "Mini-album", "Single", "Compilation"]
+            "enum": [
+              "Album",
+              "Compilation",
+              "Maxi-single",
+              "Mini-album",
+              "Single"
+            ]
           },
           "medium": {
             "type": "array",
@@ -46,7 +52,16 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": ["ALINNOS RECORDS", "Tricycle Entertainment"]
+              "enum": [
+                "ALINNOS RECORDS",
+                "ARIZE RECORDS",
+                "REALIZE",
+                "One-Coin Records",
+                "THOM RECORDS",
+                "Tricycle Entertainment",
+                "VAP",
+                "Victor Entertainment"
+              ]
             }
           },
           "catalog": {
