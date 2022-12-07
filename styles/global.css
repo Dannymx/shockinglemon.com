@@ -1,13 +1,5 @@
 @tailwind base;
 
-@font-face {
-  font-family: "bauhaus";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../../public/assets/fonts/BauhausLightRegular.ttf")
-    format("truetype");
-}
-
 html,
 body,
 #__next {

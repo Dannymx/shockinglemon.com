@@ -1,5 +1,5 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
+import Image from "next/image";
 
 type HomeCardProps = {
   children: ReactNode;
@@ -25,11 +25,10 @@ export const HomeCard = ({ children }: HomeCardProps) => (
 export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
   <div className="relative aspect-[4/5] h-[400px] overflow-hidden rounded-xl shadow-xl">
     <Image
-      className="transition duration-500 ease-in-out hover:scale-105"
+      className="object-cover transition duration-500 ease-in-out hover:scale-105"
       src={`${imgSrc}?fit=clip&h=500`}
       alt={alt}
-      layout="fill"
-      objectFit="cover"
+      fill
     />
   </div>
 );
