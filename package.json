@@ -20,7 +20,7 @@
     "@heroicons/react": "2.0.13",
     "@next/font": "13.0.6",
     "next": "13.0.8-canary.0",
-    "next-seo": "5.14.1",
+    "next-seo": "5.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
