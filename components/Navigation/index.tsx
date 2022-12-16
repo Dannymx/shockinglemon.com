@@ -16,10 +16,10 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Header = () => (
+const Navigation = () => (
   <Disclosure
     as="nav"
-    className="bg-gray-800 sm:mx-auto sm:max-w-max sm:bg-transparent"
+    className="mx-auto w-full bg-gray-800 sm:container sm:bg-transparent"
   >
     {({ open }) => (
       <>
@@ -89,4 +89,4 @@ const Header = () => (
     )}
   </Disclosure>
 );
-export default Header;
+export default Navigation;

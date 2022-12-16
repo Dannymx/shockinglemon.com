@@ -1,4 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -7,6 +11,13 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+    },
+    screens: {
+      xs: "390px",
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         "light-bg": "#e2e8f0",
