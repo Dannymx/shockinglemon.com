@@ -6,13 +6,6 @@ body,
   @apply min-h-screen h-screen;
 }
 
-body {
-  @apply bg-light-bg
-  text-dark-copy
-  font-inter
-  antialiased;
-}
-
 @tailwind components;
 
 @tailwind utilities;

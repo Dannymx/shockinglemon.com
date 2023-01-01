@@ -28,11 +28,10 @@ export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
   <div className="absolute h-full w-full overflow-hidden rounded-xl shadow-xl">
     <Image
       className="object-cover transition duration-500 ease-in-out"
-      src={`${imgSrc}?fit=clip&h=500`}
+      src={`${imgSrc}`}
       alt={alt}
       fill
       quality={100}
-      sizes="100vw"
     />
   </div>
 );

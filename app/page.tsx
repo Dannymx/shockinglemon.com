@@ -5,7 +5,7 @@ import {
   HomeCardTitle,
 } from "components/Card/HomeCard";
 import HomeHero from "components/Hero/Home";
-import { cards } from "./data/home";
+import { cards } from "./home";
 
 export default function Page() {
   return (
