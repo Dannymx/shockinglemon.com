@@ -1,7 +1,8 @@
 {
-  "$schema": "../schemas/musicSchema.json",
+  "$schema": "./musicSchema.json",
   "records": [
     {
+      "slug": "nothing",
       "name": "Nothing",
       "release": "1996-10-30",
       "price": {
@@ -30,9 +31,14 @@
           "name": "BABY LOVE",
           "length": "5:22"
         }
-      ]
+      ],
+      "images": {
+        "cover": false,
+        "other": []
+      }
     },
     {
+      "slug": "marshmallow-bomb",
       "name": "Marshmallow Bomb",
       "release": "1997-07-24",
       "price": {
@@ -53,9 +59,14 @@
           "name": "Tambourine Man",
           "length": "0:00"
         }
-      ]
+      ],
+      "images": {
+        "cover": false,
+        "other": []
+      }
     },
     {
+      "slug": "pastel-room",
       "name": "Pastel Room",
       "release": "1999-05-28",
       "price": {
@@ -84,9 +95,14 @@
           "name": "Orange",
           "length": "4:47"
         }
-      ]
+      ],
+      "images": {
+        "cover": false,
+        "other": []
+      }
     },
     {
+      "slug": "blue-room",
       "name": "Blue Room",
       "release": "1999-07-24",
       "price": {
@@ -123,9 +139,14 @@
           "name": "Orange",
           "length": "4:47"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "denimhead",
       "name": "Denimhead",
       "release": "1999-11-06",
       "price": {
@@ -182,9 +203,14 @@
           "name": "Cream life",
           "length": "7:30"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "sound-of-ash",
       "name": "Sound of Ash",
       "release": "2000-09-20",
       "price": {
@@ -221,9 +247,14 @@
           "name": "Last Morning",
           "length": "5:07"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "under-star",
       "name": "Under Star",
       "release": "2000-12-21",
       "price": {
@@ -248,9 +279,14 @@
           "name": "Hurt",
           "length": "5:05"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "inner-light",
       "name": "Inner Light",
       "release": "2001-05-23",
       "price": {
@@ -275,9 +311,14 @@
           "name": "Painful",
           "length": "5:27"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "sometimes-alone",
       "name": "Sometimes Alone",
       "release": "2001-09-05",
       "price": {
@@ -334,9 +375,14 @@
           "name": "Never my sun",
           "length": "5:39"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "everything-in-my-life",
       "name": "Everything in My Life",
       "release": "2003-07-17",
       "price": {
@@ -373,9 +419,14 @@
           "name": "Tell Me Over",
           "length": "5:10"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "vain-world",
       "name": "Vain World",
       "release": "2006-02-12",
       "price": {
@@ -400,9 +451,14 @@
           "name": "Pure Boy",
           "length": "5:44"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "just-like-beginning",
       "name": "Just Like Beginning",
       "release": "2006-05-06",
       "price": {
@@ -427,9 +483,14 @@
           "name": "Night Tonight",
           "length": "6:41"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     },
     {
+      "slug": "solvent-echo",
       "name": "Solvent Echo",
       "release": "2007-04-18",
       "price": {
@@ -486,7 +547,11 @@
           "name": "Baby Forever",
           "length": "7:06"
         }
-      ]
+      ],
+      "images": {
+        "cover": true,
+        "other": []
+      }
     }
   ]
 }
