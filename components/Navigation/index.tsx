@@ -3,6 +3,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const navigation = [
   { name: "Music", href: "music", current: false },
@@ -39,10 +40,10 @@ const Navigation = () => (
             <div className="flex flex-1 items-center justify-center sm:flex-col sm:items-stretch sm:justify-between">
               <div className="flex items-center justify-center">
                 <span className="font-bauhaus text-2xl font-bold text-light-copy sm:text-6xl sm:font-normal sm:text-dark-copy">
-                  Shocking Lemon
+                  <Link href="/">Shocking Lemon</Link>
                 </span>
               </div>
-              <div className="hidden sm:block">
+              <div className="mt-4 hidden sm:block">
                 <div className="flex justify-center space-x-4 align-middle font-bebas text-2xl">
                   {navigation.map((item) => (
                     <a
