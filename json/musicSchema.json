@@ -12,7 +12,14 @@
         "minProperties": 9,
         "properties": {
           "name": {
-            "type": "string"
+            "properties": {
+              "en": {
+                "type": "string"
+              },
+              "jp": {
+                "type": ["string", "null"]
+              }
+            }
           },
           "slug": {
             "type": "string"
