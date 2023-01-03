@@ -1,6 +1,9 @@
 export type Record = {
   slug: string;
-  name: string;
+  name: {
+    en: string;
+    jp: string | null;
+  };
   release: string;
   price: {
     currency: string;

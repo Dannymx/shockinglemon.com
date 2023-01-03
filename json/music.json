@@ -3,7 +3,10 @@
   "records": [
     {
       "slug": "nothing",
-      "name": "Nothing",
+      "name": {
+        "en": "NOTHING",
+        "jp": null
+      },
       "release": "1996-10-30",
       "price": {
         "currency": "yen",
@@ -39,7 +42,10 @@
     },
     {
       "slug": "marshmallow-bomb",
-      "name": "Marshmallow Bomb",
+      "name": {
+        "en": "Marshmallow Bomb",
+        "jp": "マシュマロ・ボム"
+      },
       "release": "1997-07-24",
       "price": {
         "currency": "yen",
@@ -67,7 +73,10 @@
     },
     {
       "slug": "pastel-room",
-      "name": "Pastel Room",
+      "name": {
+        "en": "Pastel Room",
+        "jp": "パステル・ルーム"
+      },
       "release": "1999-05-28",
       "price": {
         "currency": "yen",
@@ -103,7 +112,10 @@
     },
     {
       "slug": "blue-room",
-      "name": "Blue Room",
+      "name": {
+        "en": "Blue Room",
+        "jp": "ブルー・ルーム"
+      },
       "release": "1999-07-24",
       "price": {
         "currency": "yen",
@@ -147,7 +159,10 @@
     },
     {
       "slug": "denimhead",
-      "name": "Denimhead",
+      "name": {
+        "en": "Denimhead",
+        "jp": "デニムヘッド"
+      },
       "release": "1999-11-06",
       "price": {
         "currency": "yen",
@@ -211,7 +226,10 @@
     },
     {
       "slug": "sound-of-ash",
-      "name": "Sound of Ash",
+      "name": {
+        "en": "Sound of Ash",
+        "jp": "サウンド・オブ・アッシュ"
+      },
       "release": "2000-09-20",
       "price": {
         "currency": "yen",
@@ -255,7 +273,10 @@
     },
     {
       "slug": "under-star",
-      "name": "Under Star",
+      "name": {
+        "en": "Under Star",
+        "jp": "アンダー・スター"
+      },
       "release": "2000-12-21",
       "price": {
         "currency": "yen",
@@ -287,7 +308,10 @@
     },
     {
       "slug": "inner-light",
-      "name": "Inner Light",
+      "name": {
+        "en": "Inner Light",
+        "jp": "インナー・ライト"
+      },
       "release": "2001-05-23",
       "price": {
         "currency": "yen",
@@ -319,7 +343,10 @@
     },
     {
       "slug": "sometimes-alone",
-      "name": "Sometimes Alone",
+      "name": {
+        "en": "Sometimes Alone",
+        "jp": "サムタイムズ・アローン"
+      },
       "release": "2001-09-05",
       "price": {
         "currency": "yen",
@@ -383,7 +410,10 @@
     },
     {
       "slug": "everything-in-my-life",
-      "name": "Everything in My Life",
+      "name": {
+        "en": "Everything in My Life",
+        "jp": "エブリシング・イン・マイ・ライフ"
+      },
       "release": "2003-07-17",
       "price": {
         "currency": "yen",
@@ -427,7 +457,10 @@
     },
     {
       "slug": "vain-world",
-      "name": "Vain World",
+      "name": {
+        "en": "Vain World",
+        "jp": "ヴェイン・ワールド"
+      },
       "release": "2006-02-12",
       "price": {
         "currency": "yen",
@@ -459,7 +492,10 @@
     },
     {
       "slug": "just-like-beginning",
-      "name": "Just Like Beginning",
+      "name": {
+        "en": "Just Like Beginning",
+        "jp": "ジャスト・ライク・ビギニング"
+      },
       "release": "2006-05-06",
       "price": {
         "currency": "yen",
@@ -491,7 +527,10 @@
     },
     {
       "slug": "solvent-echo",
-      "name": "Solvent Echo",
+      "name": {
+        "en": "Solvent Echo",
+        "jp": "ソルヴェント・エコー"
+      },
       "release": "2007-04-18",
       "price": {
         "currency": "yen",
