@@ -1,0 +1,7 @@
+.cover {
+  @apply relative flex aspect-square overflow-hidden;
+}
+
+.cover-border {
+  @apply rounded-xl shadow-md shadow-slate-500;
+}
