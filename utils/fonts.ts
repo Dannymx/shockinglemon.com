@@ -14,7 +14,7 @@ const inter = Inter({
 const noto = Noto_Sans_JP({
   variable: "--font-noto",
   weight: ["400", "700"],
-  subsets: ["japanese"],
+  subsets: ["latin"],
 });
 const bauhaus = localFont({
   src: "../fonts/BauhausLightRegular.ttf",

@@ -5,3 +5,7 @@
 .cover-border {
   @apply rounded-xl shadow-md shadow-slate-500;
 }
+
+.sleeve-text {
+  writing-mode: vertical-rl;
+}

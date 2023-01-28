@@ -1,4 +1,5 @@
 import music from "json/music.json";
+import Link from "next/link";
 import Cover from "components/Music/Cover";
 import type { Record } from "components/Music/types";
 
@@ -9,7 +10,9 @@ const Page = () => (
       .map((album: Record) => (
         <div key={album.slug}>
           <Cover album={album} />
-          <h4 className="pt-2 text-center">{album.name.en}</h4>
+          <h4 className="pt-2 text-center text-sm">
+            <Link href={`/music/${album.slug}`}>{album.name.en}</Link>
+          </h4>
         </div>
       ))}
   </div>

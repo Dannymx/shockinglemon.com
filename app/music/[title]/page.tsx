@@ -19,16 +19,39 @@ const Page = ({ params }: Params) => {
   return (
     <div>
       {/* left column */}
-      <div className="w-1/3">
+      <div className="flex w-1/3 flex-row items-start">
         <div
-          className={`relative aspect-square overflow-hidden ${styles["cover-border"]}`}
+          className={`${styles["sleeve-text"]} pr-4 font-noto text-xl font-bold`}
         >
-          <Image
-            className="object-cover"
-            src={`/assets/images/music/${album.slug}/cover.jpg`}
-            alt={`Cover of ${album.name}`}
-            fill
-          />
+          {album.name.jp}
+        </div>
+        <div className="flex grow flex-col gap-4 divide-y-2">
+          {/* Cover */}
+          <div
+            className={`relative flex aspect-square grow overflow-hidden ${styles["cover-border"]}`}
+          >
+            <Image
+              className="object-cover"
+              src={`/assets/images/music/${album.slug}/cover.jpg`}
+              alt={`Cover of ${album.name.en}`}
+              fill
+            />
+          </div>
+          {/* Images */}
+          {album.images.other.length ? (
+            <div className="grid grid-cols-3 gap-2">
+              {album.images.other.map((image, i) => (
+                <div key={image} className="relative flex aspect-square grow">
+                  <Image
+                    className="border border-slate-500 object-contain"
+                    src={`/assets/images/music/${album.slug}/${image}`}
+                    alt={`Image #${i + 1} of ${album.name.en}`}
+                    fill
+                  />
+                </div>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
