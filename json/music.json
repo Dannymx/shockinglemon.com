@@ -154,7 +154,19 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "sleeve.jpg",
+          "inner-back.jpg",
+          "back.jpg",
+          "booklet-back.jpg",
+          "booklet-1.jpg",
+          "booklet-2.jpg",
+          "booklet-3.jpg",
+          "promo-1.jpg",
+          "promo-2.jpg"
+        ]
       }
     },
     {
