@@ -9,3 +9,7 @@
 .sleeve-text {
   writing-mode: vertical-rl;
 }
+
+.cell {
+  @apply pl-0 p-2 border-b border-slate-200;
+}
