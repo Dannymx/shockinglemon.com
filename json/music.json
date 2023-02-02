@@ -59,11 +59,11 @@
       "songs": [
         {
           "name": "Marshmallow Bomb",
-          "length": "0:00"
+          "length": "N/A"
         },
         {
           "name": "Tambourine Man",
-          "length": "0:00"
+          "length": "N/A"
         }
       ],
       "images": {
@@ -86,7 +86,7 @@
       "medium": ["CD"],
       "labels": ["ALINNOS RECORDS", "Tricycle Entertainment"],
       "catalog": "ARZS-0011",
-      "barcode": "",
+      "barcode": "N/A",
       "songs": [
         {
           "name": "Pastel room",
@@ -482,7 +482,7 @@
       "medium": ["CD"],
       "labels": ["THOM RECORDS"],
       "catalog": "THOM-1",
-      "barcode": "",
+      "barcode": "N/A",
       "songs": [
         {
           "name": "Vain World",
@@ -517,7 +517,7 @@
       "medium": ["CD"],
       "labels": ["THOM RECORDS"],
       "catalog": "THOM-2",
-      "barcode": "",
+      "barcode": "N/A",
       "songs": [
         {
           "name": "Just Like Beginning",

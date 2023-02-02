@@ -9,7 +9,9 @@ const Page = () => (
       .sort((a, b) => (a.release < b.release ? 1 : -1))
       .map((album: Record) => (
         <div key={album.slug}>
-          <Cover album={album} />
+          <Link href={`/music/${album.slug}`}>
+            <Cover album={album} />
+          </Link>
           <h4 className="pt-2 text-center text-sm">
             <Link href={`/music/${album.slug}`}>{album.name.en}</Link>
           </h4>
