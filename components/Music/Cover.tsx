@@ -1,19 +1,25 @@
 import Image from "next/image";
 import type { Record } from "components/Music/types";
+import type { ActiveImage } from "./Gallery";
 import styles from "./music.module.css";
 
 type Props = {
   album: Record;
   sizes?: string;
+  activeImage?: ActiveImage;
 };
 
-const Cover = ({ album, sizes }: Props) => {
+const Cover = ({ album, sizes, activeImage }: Props) => {
   if (album.images.cover) {
+    const imgSrc = `/assets/images/music/${album.slug}/${
+      activeImage?.id ? album.images.other.at(activeImage.id) : "cover.jpg"
+    }`;
+
     return (
       <div className={`${styles.cover} ${styles["cover-border"]}`}>
         <Image
-          className="object-cover"
-          src={`/assets/images/music/${album.slug}/cover.jpg`}
+          className={`${activeImage ? "object-contain" : "object-cover"}`}
+          src={imgSrc}
           alt={`Cover of ${album.name.en}`}
           fill
           sizes={sizes ?? `(min-width: 768px) 20vw, 50vw`}

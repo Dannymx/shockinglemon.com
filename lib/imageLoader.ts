@@ -1,7 +1,7 @@
 type Props = {
   src: string;
   width: string;
-  quality: number;
+  quality?: number;
 };
 
 const imgixLoader = ({ src, width, quality }: Props) =>
