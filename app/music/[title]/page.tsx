@@ -1,21 +1,18 @@
 import music from "json/music.json";
-import Image from "next/image";
-import Cover from "components/Music/Cover";
 import { Row } from "components/Music/Details";
+import Gallery from "components/Music/Gallery";
 import styles from "components/Music/music.module.css";
 import type { Record } from "components/Music/types";
 
 export const dynamicParams = false;
 
-type Params = {
+type Props = {
   params: {
     title: string;
   };
 };
 
-const Page = ({ params }: Params) => {
-  const { title } = params;
-
+const Page = ({ params: { title } }: Props) => {
   const album = music.records.find((record: Record) => record.slug === title);
 
   if (!album) return <h1>Album not found</h1>;
@@ -30,24 +27,7 @@ const Page = ({ params }: Params) => {
           {album.name.jp}
         </div>
         <div className="flex grow flex-col gap-4 divide-y-2">
-          {/* cover */}
-          <Cover album={album} sizes="20vw" />
-          {/* extra images */}
-          {album.images.other.length ? (
-            <div className="grid grid-cols-3 gap-2">
-              {album.images.other.map((image, i) => (
-                <div key={image} className="relative flex aspect-square grow">
-                  <Image
-                    className="border border-slate-500 object-contain"
-                    src={`/assets/images/music/${album.slug}/${image}`}
-                    alt={`Image #${i + 1} of ${album.name.en}`}
-                    fill
-                    sizes="100px"
-                  />
-                </div>
-              ))}
-            </div>
-          ) : null}
+          <Gallery album={album} />
         </div>
       </div>
 
@@ -58,7 +38,7 @@ const Page = ({ params }: Params) => {
             {album.name.en}
           </h1>
           <div>
-            <table className="w-full table-auto border-collapse text-sm">
+            <table className="w-full table-auto border-collapse">
               <tbody>
                 <Row text="Release date" value={album.release} />
                 <Row
@@ -72,7 +52,10 @@ const Page = ({ params }: Params) => {
                 <Row text="Barcode" value={album.barcode} />
 
                 <tr>
-                  <td colSpan={2} className={`${styles.cell}`}>
+                  <td
+                    colSpan={2}
+                    className={`${styles.cell} border-t-2 border-t-slate-300 font-bold`}
+                  >
                     Tracks
                   </td>
                 </tr>
@@ -81,19 +64,6 @@ const Page = ({ params }: Params) => {
                 ))}
               </tbody>
             </table>
-
-            {/* <table className="mt-4 w-full table-auto border-collapse text-sm">
-              <tbody>
-                <tr>
-                  <td colSpan={2} className={styles.cell}>
-                    Tracks
-                  </td>
-                </tr>
-                {album.songs.map((song) => (
-                  <Row key={song.name} text={song.name} value={song.length} />
-                ))}
-              </tbody>
-            </table> */}
           </div>
         </div>
       </div>
