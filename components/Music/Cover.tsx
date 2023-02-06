@@ -1,18 +1,17 @@
 import Image from "next/image";
 import type { Record } from "components/Music/types";
-import type { ActiveImage } from "./Gallery";
 import styles from "./music.module.css";
 
 type Props = {
   album: Record;
   sizes?: string;
-  activeImage?: ActiveImage;
+  activeImage?: string;
 };
 
 const Cover = ({ album, sizes, activeImage }: Props) => {
   if (album.images.cover) {
     const imgSrc = `/assets/images/music/${album.slug}/${
-      activeImage?.id ? album.images.other.at(activeImage.id) : "cover.jpg"
+      activeImage ?? "cover.jpg"
     }`;
 
     return (
