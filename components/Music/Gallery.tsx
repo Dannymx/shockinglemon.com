@@ -11,6 +11,7 @@ type GalleryProps = {
 };
 
 const Gallery = ({ album }: GalleryProps) => {
+  // By default the cover image is cover.jpg
   const [activeImage, setActiveImage] = useState("cover.jpg");
 
   return (

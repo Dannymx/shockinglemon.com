@@ -1,9 +1,9 @@
 .cover {
-  @apply relative flex aspect-square overflow-hidden;
+  @apply relative flex rounded-xl aspect-square;
 }
 
 .cover-border {
-  @apply rounded-xl shadow-md shadow-slate-500;
+  @apply overflow-hidden shadow-md shadow-slate-500;
 }
 
 .sleeve-text {
