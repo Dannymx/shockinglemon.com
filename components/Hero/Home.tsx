@@ -24,6 +24,7 @@ export default function HomeHero() {
           className="object-cover"
           fill
           alt=""
+          sizes="50vw"
         />
       </div>
     </div>

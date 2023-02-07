@@ -32,6 +32,7 @@ export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
       alt={alt}
       fill
       quality={100}
+      sizes="50vw"
     />
   </div>
 );
