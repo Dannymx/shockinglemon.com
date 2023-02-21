@@ -10,7 +10,10 @@ const Page = () => (
       .map((album: Record) => (
         <div key={album.slug}>
           <Link href={`/music/${album.slug}`}>
-            <Cover album={album} />
+            <Cover
+              album={album}
+              sizes="(min-width:1536px) 20vw, (min-width:1024px) 30vw, 25vw"
+            />
           </Link>
           <h4 className="pt-2 text-center text-sm">
             <Link href={`/music/${album.slug}`}>{album.name.en}</Link>

@@ -40,7 +40,7 @@ const Cover = ({ album, sizes, activeImage }: Props) => {
         src={imgSrc}
         alt={`Cover of ${album.name.en}`}
         fill
-        sizes={sizes ?? `(min-width: 768px) 25vw, 50vw`}
+        sizes={sizes ?? `(min-width: 768px) 20vw, 50vw`}
       />
     </div>
   );

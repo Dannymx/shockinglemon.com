@@ -36,8 +36,15 @@
         }
       ],
       "images": {
-        "cover": false,
-        "other": []
+        "cover": true,
+        "other": [
+          "cover.jpg",
+          "cover-full.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "booklet-full.jpg"
+        ]
       }
     },
     {
@@ -157,7 +164,7 @@
         "other": [
           "cover.jpg",
           "disc.png",
-          "sleeve.jpg",
+          "obi.jpg",
           "inner-back.jpg",
           "back.jpg",
           "booklet-back.jpg",
@@ -233,7 +240,23 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "disc-not-for-sale.png",
+          "obi-not-for-sale.jpg",
+          "inner-back.jpg",
+          "booklet-back.jpg",
+          "booklet-1.jpg",
+          "booklet-2.jpg",
+          "booklet-3.jpg",
+          "lyrics.jpg",
+          "info.jpg",
+          "tour.jpg",
+          "sticker.jpg"
+        ]
       }
     },
     {
@@ -280,7 +303,18 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "inner-back.jpg",
+          "inner-back-autographed.jpg",
+          "tour.jpg",
+          "promo-1.jpg",
+          "promo-2.jpg",
+          "lyrics.jpg"
+        ]
       }
     },
     {
@@ -315,7 +349,18 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "cover-full.jpg",
+          "back.jpg",
+          "booklet-full.jpg",
+          "lyrics.jpg",
+          "promo-1.jpg",
+          "promo-2.jpg",
+          "sticker-1.jpg"
+        ]
       }
     },
     {
@@ -350,7 +395,19 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "inner-back.jpg",
+          "booklet-back.jpg",
+          "lyrics.jpg",
+          "promo-1.jpg",
+          "promo-2.jpg",
+          "sticker-1.jpg",
+          "sticker-2.jpg"
+        ]
       }
     },
     {
@@ -417,7 +474,23 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "inner-back.jpg",
+          "booklet-back.jpg",
+          "booklet-1.jpg",
+          "booklet-2.jpg",
+          "booklet-3.jpg",
+          "booklet-4.jpg",
+          "booklet-5.jpg",
+          "lyrics-1.jpg",
+          "lyrics-2.jpg",
+          "promo-1.jpg",
+          "promo-2.jpg"
+        ]
       }
     },
     {
@@ -464,7 +537,16 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "inner-back.jpg",
+          "booklet-back.jpg",
+          "booklet-1.jpg",
+          "lyrics.jpg"
+        ]
       }
     },
     {
@@ -499,7 +581,15 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "inner-back.jpg",
+          "booklet-back.jpg",
+          "lyrics.jpg"
+        ]
       }
     },
     {
@@ -534,7 +624,15 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "inner-back.jpg",
+          "booklet-back.jpg",
+          "lyrics.jpg"
+        ]
       }
     },
     {
@@ -601,7 +699,17 @@
       ],
       "images": {
         "cover": true,
-        "other": []
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "obi.jpg",
+          "back.jpg",
+          "inner-back.jpg",
+          "booklet-back.jpg",
+          "booklet-1.jpg",
+          "booklet-2.jpg",
+          "booklet-3.jpg"
+        ]
       }
     }
   ]
