@@ -27,12 +27,12 @@ export const HomeCard = ({ children }: HomeCardProps) => (
 export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
   <div className="absolute h-full w-full overflow-hidden rounded-xl shadow-xl">
     <Image
-      className="object-cover transition duration-500 ease-in-out"
+      className="object-cover"
       src={`${imgSrc}`}
       alt={alt}
       fill
       quality={100}
-      sizes="50vw"
+      sizes="(min-width:1536px) 20vw, (min-width:1024px) 30vw, 50vw"
     />
   </div>
 );
