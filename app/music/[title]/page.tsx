@@ -12,8 +12,15 @@ type Props = {
   };
 };
 
+const findRecord = (title: string) =>
+  music.records.find((record: Record) => record.slug === title);
+
+export const generateMetadata = ({ params: { title } }: Props) => ({
+  title: findRecord(title)?.name.en,
+});
+
 const Page = ({ params: { title } }: Props) => {
-  const album = music.records.find((record: Record) => record.slug === title);
+  const album = findRecord(title);
 
   if (!album) return <h1>Album not found</h1>;
 

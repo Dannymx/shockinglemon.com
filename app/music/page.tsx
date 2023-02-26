@@ -1,7 +1,12 @@
 import music from "json/music.json";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Cover from "components/Music/Cover";
 import type { Record } from "components/Music/types";
+
+export const metadata: Metadata = {
+  title: "Music - Shocking Lemon",
+};
 
 const Page = () => (
   <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">

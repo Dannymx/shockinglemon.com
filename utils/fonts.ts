@@ -1,5 +1,5 @@
-import { Bebas_Neue, Inter, Noto_Sans_JP } from "@next/font/google";
-import localFont from "@next/font/local";
+import { Bebas_Neue, Inter, Noto_Sans_JP } from "next/font/google";
+import localFont from "next/font/local";
 
 const bebas = Bebas_Neue({
   variable: "--font-bebas",
