@@ -9,11 +9,10 @@ import "styles/global.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Shocking Lemon",
-    template: "%s - Shocking Lemon",
+    default: AppConfig.title,
+    template: `%s - ${AppConfig.title}`,
   },
-  description:
-    "Fan dedicated website for the Japanese rock band Shocking Lemon",
+  description: AppConfig.description,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

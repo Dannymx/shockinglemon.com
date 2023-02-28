@@ -1,4 +1,4 @@
-import music from "json/music.json";
+import music from "data/music/music.json";
 import { Row } from "components/Music/Details";
 import Gallery from "components/Music/Gallery";
 import styles from "components/Music/music.module.css";

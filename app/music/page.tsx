@@ -1,11 +1,11 @@
-import music from "json/music.json";
+import music from "data/music/music.json";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Cover from "components/Music/Cover";
 import type { Record } from "components/Music/types";
 
 export const metadata: Metadata = {
-  title: "Music - Shocking Lemon",
+  title: "Music",
 };
 
 const Page = () => (

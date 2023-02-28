@@ -603,7 +603,7 @@
         "currency": "yen",
         "price": 1200
       },
-      "format": "Single",
+      "format": "Maxi-single",
       "medium": ["CD"],
       "labels": ["THOM RECORDS"],
       "catalog": "THOM-2",
