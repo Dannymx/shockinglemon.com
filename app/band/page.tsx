@@ -1,25 +1,35 @@
-import Image from "next/image";
+import Toshiki from "data/band/toshiki-shimizu.mdx";
+import Member from "components/Band/Member";
 
-export default function Band() {
-  return (
-    <div className="">
-      <div className="flex items-start">
-        <div className="relative flex aspect-[1/2] w-1/4 overflow-hidden rounded-xl shadow-md shadow-slate-500">
-          <Image
-            className="object-cover"
-            alt="Toshiki Shimizu"
-            src="/assets/images/band/toshiki-shimizu.jpg"
-            fill
-          />
-        </div>
-        <div className="z-10 -ml-8 mt-8 flex grow rounded-md bg-white/75 p-6 shadow-md shadow-slate-500/25">
-          <h2 className="text-4xl">
-            <span className="font-bebas">Toshiki Shimizu</span>
-            <span> / </span>
-            <span className="font-noto">シミズトシキ</span>
-          </h2>
-        </div>
-      </div>
-    </div>
-  );
-}
+const band = [
+  {
+    name: { en: "Toshiki Shimizu", jp: "シミズトシキ" },
+    img: "/assets/images/band/toshiki-shimizu.jpg",
+    content: <Toshiki />,
+  },
+  {
+    name: { en: "Hideki Taniuchi", jp: "タニウチヒデキ" },
+    img: "/assets/images/band/hideki-taniuchi.jpg",
+    content: <Toshiki />,
+  },
+  {
+    name: { en: "Takahiko Ogino", jp: "オギノタカヒコ" },
+    img: "/assets/images/band/takahiko-ogino.jpg",
+    content: <Toshiki />,
+  },
+  {
+    name: { en: "Makoto Sakata", jp: "サカタマコト" },
+    img: "/assets/images/band/makoto-sakata.jpg",
+    content: <Toshiki />,
+  },
+];
+
+const Band = () => (
+  <>
+    {band.map((member, i) => (
+      <Member key={member.img} member={member} reversed={i % 2 !== 0} />
+    ))}
+  </>
+);
+
+export default Band;
