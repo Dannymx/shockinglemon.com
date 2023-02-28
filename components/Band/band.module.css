@@ -1,0 +1,7 @@
+.member h3 {
+  @apply font-bold;
+}
+
+.member p {
+  /* break-inside: avoid; */
+}
