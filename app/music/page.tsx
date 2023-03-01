@@ -20,7 +20,7 @@ const Page = () => (
               sizes="(min-width:1536px) 20vw, (min-width:1024px) 30vw, 25vw"
             />
           </Link>
-          <h4 className="pt-2 text-center text-sm">
+          <h4 className="pt-2 text-center text-sm lg:text-base">
             <Link href={`/music/${album.slug}`}>{album.name.en}</Link>
           </h4>
         </div>
