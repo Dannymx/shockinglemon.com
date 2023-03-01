@@ -1,7 +1,18 @@
-.member h3 {
+.member h3,
+.member h2 {
   @apply font-bold;
 }
 
 .member p {
-  /* break-inside: avoid; */
+  @apply text-sm;
+  page-break-before: avoid;
+}
+
+.member ul {
+  @apply text-sm;
+  @apply list-none list-inside;
+}
+
+.member li > ul > li {
+  @apply list-none list-inside;
 }
