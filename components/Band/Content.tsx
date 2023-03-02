@@ -21,13 +21,13 @@ const Content = ({ name, content }: Props) => {
 
   return (
     <>
-      <div className="mb-2 flex justify-between">
-        <h2 className="text-3xl">
+      <div className="mb-4 flex flex-col justify-between md:mb-2 md:flex-row">
+        <h2 className="text-xl md:text-2xl lg:text-3xl">
           <span className="font-bebas">{name.en}</span>
-          <span> / </span>
+          <span className=""> / </span>
           <span className="font-noto">{name.jp}</span>
         </h2>
-        <div className="flex flex-row items-center gap-2">
+        <div className="flex flex-row items-center gap-2 text-xs md:text-base">
           <button
             type="button"
             className={language === "en" ? "underline underline-offset-4" : ""}
@@ -46,9 +46,9 @@ const Content = ({ name, content }: Props) => {
         </div>
       </div>
       <div
-        className={`columns-2 ${styles.member} ${
-          language === "jp" ? "font-noto" : null
-        }`}
+        className={`columns-2 text-xs sm:text-sm md:text-base ${
+          styles.member
+        } ${language === "jp" ? "font-noto" : null}`}
       >
         {content[language as keyof ContentLanguages]}
       </div>

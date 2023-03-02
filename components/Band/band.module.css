@@ -3,13 +3,16 @@
   @apply font-bold;
 }
 
+.member p,
+.member ul {
+  /* @apply text-xs sm:text-sm; */
+}
+
 .member p {
-  @apply text-sm;
   page-break-before: avoid;
 }
 
 .member ul {
-  @apply text-sm;
   @apply list-none list-inside;
 }
 
