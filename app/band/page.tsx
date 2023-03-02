@@ -44,11 +44,11 @@ const band = [
 ];
 
 const Band = () => (
-  <>
+  <div className="flex flex-col gap-4">
     {band.map((member, i) => (
       <Member key={member.img} member={member} reversed={i % 2 !== 0} />
     ))}
-  </>
+  </div>
 );
 
 export default Band;

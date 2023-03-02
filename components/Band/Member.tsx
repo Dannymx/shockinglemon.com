@@ -18,16 +18,21 @@ type MemberProps = {
 
 const Member = ({ member: { name, img, content }, reversed }: MemberProps) => (
   <div
-    className={`flex flex-row items-center ${
-      reversed ? "flex-row-reverse" : null
+    className={`flex flex-col items-center sm:flex-row sm:items-start lg:items-center ${
+      reversed ? "sm:flex-row-reverse" : null
     }`}
   >
-    <div className="relative flex aspect-[1/2] w-1/4 shrink-0 overflow-hidden rounded-xl shadow-md shadow-slate-500">
-      <Image className="object-cover" alt={name.en} src={img} fill />
+    <div className="relative -mb-10 flex h-[300px] w-11/12 shrink-0 overflow-hidden rounded-xl shadow-md shadow-slate-500 sm:mb-0 sm:mt-8 sm:aspect-[1/2] sm:h-auto sm:w-1/3 md:w-1/4 lg:m-0">
+      <Image
+        className="object-cover object-top sm:object-center"
+        alt={name.en}
+        src={img}
+        fill
+      />
     </div>
     <div
-      className={`flex flex-col rounded-md bg-white/75 p-6 shadow-md shadow-slate-500/25 ${
-        reversed ? "-mr-6 pr-12" : "-ml-6 pl-12"
+      className={`flex flex-col rounded-md bg-white/75 p-6 pt-14 shadow-md shadow-slate-500/25 sm:pt-6 ${
+        reversed ? "sm:-mr-6 sm:pr-12" : "sm:-ml-6 sm:pl-12"
       }`}
     >
       <Content name={name} content={content} />
