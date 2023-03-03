@@ -3,11 +3,6 @@
   @apply font-bold;
 }
 
-.member p,
-.member ul {
-  /* @apply text-xs sm:text-sm; */
-}
-
 .member p {
   page-break-before: avoid;
 }

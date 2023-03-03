@@ -6,7 +6,12 @@ import TakahikoEN from "data/band/takahiko-ogino.en.mdx";
 import TakahikoJP from "data/band/takahiko-ogino.jp.mdx";
 import ToshikiEN from "data/band/toshiki-shimizu.en.mdx";
 import ToshikiJP from "data/band/toshiki-shimizu.jp.mdx";
+import type { Metadata } from "next";
 import Member from "components/Band/Member";
+
+export const metadata: Metadata = {
+  title: "Band",
+};
 
 const band = [
   {

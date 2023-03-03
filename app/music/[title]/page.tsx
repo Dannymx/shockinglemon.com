@@ -38,7 +38,7 @@ const Page = ({ params: { title } }: Props) => {
 
       {/* right column */}
       <div className="lg:w-2/3">
-        <div className="w-full rounded-xl bg-slate-100 p-4 pb-0 shadow-md shadow-slate-500">
+        <div className="w-full rounded-xl bg-slate-100 p-4 pb-0 shadow-md shadow-slate-500/25">
           <h1 className="border-b border-slate-200 pb-4 font-bauhaus text-2xl font-bold">
             {album.name.en}
           </h1>
