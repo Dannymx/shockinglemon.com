@@ -34,3 +34,6 @@ local
 
 # vercel
 .vercel
+
+# contentlayer
+.contentlayer

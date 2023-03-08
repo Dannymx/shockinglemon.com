@@ -1,11 +1,11 @@
-import HidekiEN from "data/band/hideki-taniuchi.en.mdx";
-import HidekiJP from "data/band/hideki-taniuchi.jp.mdx";
-import MakotoEN from "data/band/makoto-sakata.en.mdx";
-import MakotoJP from "data/band/makoto-sakata.jp.mdx";
-import TakahikoEN from "data/band/takahiko-ogino.en.mdx";
-import TakahikoJP from "data/band/takahiko-ogino.jp.mdx";
-import ToshikiEN from "data/band/toshiki-shimizu.en.mdx";
-import ToshikiJP from "data/band/toshiki-shimizu.jp.mdx";
+import HidekiEN from "content/band/hideki-taniuchi.en.mdx";
+import HidekiJP from "content/band/hideki-taniuchi.jp.mdx";
+import MakotoEN from "content/band/makoto-sakata.en.mdx";
+import MakotoJP from "content/band/makoto-sakata.jp.mdx";
+import TakahikoEN from "content/band/takahiko-ogino.en.mdx";
+import TakahikoJP from "content/band/takahiko-ogino.jp.mdx";
+import ToshikiEN from "content/band/toshiki-shimizu.en.mdx";
+import ToshikiJP from "content/band/toshiki-shimizu.jp.mdx";
 import type { Metadata } from "next";
 import Member from "components/Band/Member";
 
