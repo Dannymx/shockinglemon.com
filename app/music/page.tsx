@@ -1,4 +1,4 @@
-import music from "data/music/music.json";
+import music from "content/music/music.json";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Cover from "components/Music/Cover";

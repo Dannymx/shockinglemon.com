@@ -15,6 +15,7 @@ const noto = Noto_Sans_JP({
   variable: "--font-noto",
   weight: ["400", "700"],
   subsets: ["latin"],
+  preload: false,
 });
 const bauhaus = localFont({
   src: "../fonts/BauhausLightRegular.ttf",

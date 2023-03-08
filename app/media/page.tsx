@@ -1,5 +1,5 @@
 import { RocketLaunchIcon } from "@heroicons/react/24/outline";
-import videos from "data/media/videos.json";
+import videos from "content/media/videos.json";
 import type { Metadata } from "next";
 import Section from "components/Media/Section";
 import Videos, { schema } from "components/Media/Videos";
