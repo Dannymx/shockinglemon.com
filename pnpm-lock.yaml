@@ -16,6 +16,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.53.0
   '@typescript-eslint/parser': 5.53.0
   autoprefixer: 10.4.13
+  clsx: 1.2.1
   commitizen: 4.3.0
   contentlayer: 0.3.0
   cross-env: 7.0.3
@@ -52,6 +53,7 @@ specifiers:
   react: 18.2.0
   react-dom: 18.2.0
   rimraf: 4.3.1
+  tailwind-merge: 1.10.0
   tailwindcss: 3.2.7
   typescript: 4.9.5
   zod: 3.20.6
@@ -61,12 +63,14 @@ dependencies:
   '@heroicons/react': 2.0.16_react@18.2.0
   '@next/bundle-analyzer': 13.2.3
   '@next/mdx': 13.2.3
+  clsx: 1.2.1
   contentlayer: 0.3.0
   date-fns: 2.29.3
   next: 13.2.3_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.3.0_nvzgbose6yf6w7ijjprgspqefi
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  tailwind-merge: 1.10.0
   zod: 3.20.6
 
 devDependencies:
@@ -2987,6 +2991,11 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
     dev: true
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /co/4.6.0:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
@@ -8664,6 +8673,10 @@ packages:
       '@pkgr/utils': 2.3.1
       tslib: 2.5.0
     dev: true
+
+  /tailwind-merge/1.10.0:
+    resolution: {integrity: sha512-WFnDXSS4kFTZwjKg5/oZSGzBRU/l+qcbv5NVTzLUQvJ9yovDAP05h0F2+ZFW0Lw9EcgRoc2AfURUdZvnEFrXKg==}
+    dev: false
 
   /tailwindcss/3.2.7_postcss@8.4.21:
     resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
