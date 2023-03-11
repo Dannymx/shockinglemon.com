@@ -2,7 +2,7 @@ import { compareDesc } from "date-fns";
 import type { Metadata } from "next";
 
 import { allPosts } from "@/.contentlayer/generated";
-import Mdx from "@/components/mdx";
+import BlogContent from "@/components/Blog/BlogContent";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function Blog() {
               Published on {formatDate(post.date)}
             </time>
           </div>
-          <Mdx code={post.body.code} />
+          <BlogContent content={post.body.code} />
         </div>
       ))}
     </div>

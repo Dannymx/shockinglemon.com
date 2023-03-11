@@ -30,7 +30,38 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
+export const Member = defineDocumentType(() => ({
+  name: "Member",
+  filePathPattern: "band/**/*.mdx",
+  contentType: "mdx",
+  fields: {
+    name: {
+      type: "string",
+      description: "Name of the memmber",
+      required: true,
+    },
+    image: {
+      type: "string",
+      description: "Image that will be used in OG cards",
+      required: true,
+    },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      // eslint-disable-next-line no-underscore-dangle
+      resolve: (doc) => doc._raw.sourceFileName.replace(/(\.[^.]+){2}$/, ""),
+    },
+    language: {
+      type: "string",
+      resolve: (doc) =>
+        // eslint-disable-next-line no-underscore-dangle
+        doc._raw.sourceFileName.replace(/^.*\.([^.]+)\.mdx$/, "$1"),
+    },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [Post],
+  documentTypes: [Post, Member],
 });
