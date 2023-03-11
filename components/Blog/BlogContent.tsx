@@ -3,10 +3,6 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 
 import { cn } from "@/lib/utils";
 
-type MdxProps = {
-  code: string;
-};
-
 const components: MDXComponents = {
   p: ({ className, ...props }) => (
     <p
@@ -16,14 +12,10 @@ const components: MDXComponents = {
   ),
 };
 
-const Mdx = ({ code }: MdxProps) => {
-  const Component = useMDXComponent(code);
+const BlogContent = ({ content }: { content: string }) => {
+  const MDX = useMDXComponent(content);
 
-  return (
-    <div>
-      <Component components={components} />
-    </div>
-  );
+  return <MDX components={components} />;
 };
 
-export default Mdx;
+export default BlogContent;
