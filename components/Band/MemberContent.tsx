@@ -2,14 +2,16 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import styles from "@/components/Band/band.module.css";
 
 import type { Member } from "@/.contentlayer/generated";
+import { getMemberName } from "@/lib/utils";
 
 type Props = {
   bios: Member[];
-  reversed: boolean;
+  reversed?: boolean;
 };
 
 const MemberMarkdown = ({ content }: { content: string }) => {
@@ -18,13 +20,11 @@ const MemberMarkdown = ({ content }: { content: string }) => {
   return <MDX />;
 };
 
-const MemberContent = ({ bios, reversed }: Props) => {
+const MemberContent = ({ bios, reversed = false }: Props) => {
   const [language, setLanguage] = useState("en");
   const member = bios.find((bio) => bio.language === language);
 
   if (!member) return <p>Member not found.</p>;
-
-  const memberName = member.name.split("/");
 
   return (
     <>
@@ -43,9 +43,11 @@ const MemberContent = ({ bios, reversed }: Props) => {
       >
         <div className="mb-4 flex flex-col justify-between md:mb-2 md:flex-row">
           <h2 className="text-xl md:text-2xl lg:text-3xl">
-            <span className="font-bebas">{memberName.at(0)?.trim()}</span>
-            <span className=""> / </span>
-            <span className="font-noto">{memberName.at(1)?.trim()}</span>
+            <Link href={`/band/${member.slug}`}>
+              <span className="font-bebas">{getMemberName(member).at(0)}</span>
+              <span className=""> / </span>
+              <span className="font-noto">{getMemberName(member).at(1)}</span>
+            </Link>
           </h2>
           <div className="flex flex-row items-center gap-2 text-xs md:text-base">
             <button

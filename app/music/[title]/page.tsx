@@ -1,4 +1,5 @@
 import music from "content/music/music.json";
+import type { Metadata } from "next";
 import { Row } from "components/Music/Details";
 import Gallery from "components/Music/Gallery";
 import styles from "components/Music/music.module.css";
@@ -15,7 +16,9 @@ type Props = {
 const findRecord = (title: string) =>
   music.records.find((record: Record) => record.slug === title);
 
-export const generateMetadata = ({ params: { title } }: Props) => ({
+export const generateMetadata = async ({
+  params: { title },
+}: Props): Promise<Metadata> => ({
   title: findRecord(title)?.name.en,
 });
 

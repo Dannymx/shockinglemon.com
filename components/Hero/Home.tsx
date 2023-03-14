@@ -11,10 +11,10 @@ export default function HomeHero() {
         </div>
         <p className="text-sm lg:text-base">
           This website is dedicated to the Japanese rock band Shocking Lemon.
-          After many years since the band disolved, many fans wanted to know
+          After many years since the band dissolved, many fans wanted to know
           more about their music, so as fans we decided to create this website
-          and archive their music, photos, lyrics and other rare media so others
-          can enjoy it and make sure Shocking Lemon is not forgotten.
+          and archive their music, photos, lyrics, and other rare media so
+          others can enjoy it and make sure Shocking Lemon is not forgotten.
         </p>
       </div>
       {/* Right column image */}

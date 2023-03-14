@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { allMembers } from "@/.contentlayer/generated";
 import MemberContainer from "@/components/Band/MemberContainer";
 import MemberContent from "@/components/Band/MemberContent";
+import { getMemberSlugs } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Band",
@@ -10,9 +11,7 @@ export const metadata: Metadata = {
 
 const Band = () => {
   // get unique slugs of all the members
-  const slugs = allMembers
-    .map((member) => member.slug)
-    .filter((slug, i, arr) => arr.indexOf(slug) === i);
+  const slugs = getMemberSlugs(allMembers);
 
   return (
     <div className="flex flex-col gap-4">
