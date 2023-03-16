@@ -5,6 +5,7 @@ import styles from "components/Music/music.module.css";
 import type { Record } from "components/Music/types";
 
 import music from "@/content/music/music.json";
+import { OpenGraphConfig } from "@/lib/AppConfig";
 import { findRecord } from "@/lib/utils";
 
 export const dynamicParams = false;
@@ -17,9 +18,23 @@ type Props = {
 
 export const generateMetadata = async ({
   params: { title },
-}: Props): Promise<Metadata> => ({
-  title: findRecord(title)?.name.en,
-});
+}: Props): Promise<Metadata> => {
+  const record = findRecord(title);
+
+  if (record) {
+    return {
+      title: findRecord(title)?.name.en,
+      ...(typeof OpenGraphConfig.record === "function"
+        ? OpenGraphConfig.record({
+            name: record.name.en,
+            slug: record.slug,
+          })
+        : null),
+    };
+  }
+
+  return {};
+};
 
 const Page = ({ params: { title } }: Props) => {
   const album = findRecord(title);

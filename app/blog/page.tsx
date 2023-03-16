@@ -3,10 +3,12 @@ import type { Metadata } from "next";
 
 import { allPosts } from "@/.contentlayer/generated";
 import BlogContent from "@/components/Blog/BlogContent";
+import { OpenGraphConfig } from "@/lib/AppConfig";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Blog",
+  ...(OpenGraphConfig.media ?? null),
 };
 
 export default function Blog() {

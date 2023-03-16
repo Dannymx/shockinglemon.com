@@ -17,6 +17,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
     mdxRs: true,
+    typedRoutes: true,
   },
   images: {
     loader: "custom",

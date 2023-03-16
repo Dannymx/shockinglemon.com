@@ -4,8 +4,11 @@ import Link from "next/link";
 import Cover from "components/Music/Cover";
 import type { Record } from "components/Music/types";
 
+import { OpenGraphConfig } from "@/lib/AppConfig";
+
 export const metadata: Metadata = {
   title: "Music",
+  ...(OpenGraphConfig.music ?? null),
 };
 
 const Page = () => (

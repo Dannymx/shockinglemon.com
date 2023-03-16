@@ -28,3 +28,6 @@ export const getMemberName = (member: Member) => {
 
 export const findRecord = (title: string) =>
   music.records.find((record: Record) => record.slug === title);
+
+export const absoluteUrl = (path?: string) =>
+  `${process.env.NEXT_PUBLIC_APP_URL}${path ?? ""}`;

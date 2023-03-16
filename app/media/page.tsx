@@ -4,8 +4,11 @@ import type { Metadata } from "next";
 import Section from "components/Media/Section";
 import Videos, { schema } from "components/Media/Videos";
 
+import { OpenGraphConfig } from "@/lib/AppConfig";
+
 export const metadata: Metadata = {
   title: "Media",
+  ...(OpenGraphConfig.media ?? null),
 };
 
 export default function Media() {

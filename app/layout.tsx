@@ -5,15 +5,23 @@ import Footer from "components/Footer";
 import Navigation from "components/Navigation";
 import "styles/global.css";
 
-import { AppConfig } from "@/lib/AppConfig";
+import { AppConfig, OpenGraphConfig } from "@/lib/AppConfig";
 import { fontVariables } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: {
-    default: AppConfig.title,
-    template: `%s - ${AppConfig.title}`,
+    default: AppConfig.title.en,
+    template: `%s | ${AppConfig.title.en}`,
   },
   description: AppConfig.description,
+  keywords: [
+    AppConfig.title.en,
+    AppConfig.title.jp,
+    "Japan",
+    "Japanese",
+    "J-Rock",
+  ],
+  ...(OpenGraphConfig.home ?? null),
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
