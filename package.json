@@ -20,6 +20,7 @@
     "@heroicons/react": "2.0.16",
     "@next/bundle-analyzer": "13.2.4",
     "@next/mdx": "13.2.4",
+    "@vercel/og": "0.4.0",
     "clsx": "1.2.1",
     "contentlayer": "0.3.0",
     "date-fns": "2.29.3",

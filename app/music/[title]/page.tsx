@@ -1,9 +1,11 @@
-import music from "content/music/music.json";
 import type { Metadata } from "next";
 import { Row } from "components/Music/Details";
 import Gallery from "components/Music/Gallery";
 import styles from "components/Music/music.module.css";
 import type { Record } from "components/Music/types";
+
+import music from "@/content/music/music.json";
+import { findRecord } from "@/lib/utils";
 
 export const dynamicParams = false;
 
@@ -12,9 +14,6 @@ type Props = {
     title: string;
   };
 };
-
-const findRecord = (title: string) =>
-  music.records.find((record: Record) => record.slug === title);
 
 export const generateMetadata = async ({
   params: { title },

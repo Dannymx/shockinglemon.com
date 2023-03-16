@@ -1,8 +1,10 @@
 import type { ClassValue } from "clsx";
 import clsx from "clsx";
+import music from "content/music/music.json";
 import { twMerge } from "tailwind-merge";
 
 import type { Member } from "@/.contentlayer/generated";
+import type { Record } from "@/components/Music/types";
 
 export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
@@ -23,3 +25,6 @@ export const getMemberName = (member: Member) => {
 
   return [name[0]?.trim(), name[1]?.trim()];
 };
+
+export const findRecord = (title: string) =>
+  music.records.find((record: Record) => record.slug === title);

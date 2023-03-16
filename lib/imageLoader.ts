@@ -1,6 +1,6 @@
 type Props = {
   src: string;
-  width: string;
+  width: string | number;
   quality?: number;
   auto?: boolean;
 };
