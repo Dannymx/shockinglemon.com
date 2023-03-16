@@ -1,6 +1,8 @@
 import Content from "content/about/about.mdx";
 import type { MDXComponents } from "mdx/types";
+import type { Metadata } from "next";
 
+import { OpenGraphConfig } from "@/lib/AppConfig";
 import { cn } from "@/lib/utils";
 
 const components: MDXComponents = {
@@ -24,6 +26,11 @@ const components: MDXComponents = {
       {...props}
     />
   ),
+};
+
+export const metadata: Metadata = {
+  title: "About",
+  ...(OpenGraphConfig.about ?? null),
 };
 
 export default function About() {
