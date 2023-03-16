@@ -1,37 +1,6 @@
-import type { ReactNode } from "react";
-
 import type { Record } from "@/components/Music/types";
-import imgixLoader from "@/lib/imageLoader";
-
-type Props = {
-  img: string;
-  children: ReactNode;
-};
-
-const CardContent = ({ img, children }: Props) => (
-  <div tw="flex h-full w-full pb-10 items-end flex-row">
-    <img tw="absolute top-0 left-0" src={img} alt="" />
-    <div tw="flex flex-col py-6 px-10 bg-black/50 w-full">{children}</div>
-  </div>
-);
-
-type RecordContentProps = {
-  record: Record;
-};
-
-const RecordContent = ({ record }: RecordContentProps) => (
-  <div tw="flex h-full w-full pb-10 items-end flex-row">
-    <img
-      tw="absolute top-0 left-0"
-      src={imgixLoader({
-        src: `/assets/images/music/${record.slug}/cover.jpg`,
-        width: 1000,
-      })}
-      alt=""
-    />
-    {/* <div tw="flex flex-col py-6 px-10 bg-black/50 w-full">{children}</div> */}
-  </div>
-);
+import { CardContent } from "@/components/OpenGraph/Page";
+import { RecordContent } from "@/components/OpenGraph/Record";
 
 type CardsProps = (
   | {
