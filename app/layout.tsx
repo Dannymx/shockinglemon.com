@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Footer from "components/Footer";
 import Navigation from "components/Navigation";
-import { AppConfig } from "utils/AppConfig";
-import { fontVariables } from "utils/fonts";
 import "styles/global.css";
+
+import { AppConfig } from "@/lib/AppConfig";
+import { fontVariables } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: {
