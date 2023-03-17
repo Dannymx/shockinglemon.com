@@ -96,4 +96,13 @@ export const OpenGraphConfig: OpenGraphConfigProps = {
       name,
       slug: `/music/${slug}`,
     }),
+  member: ({ name, slug }) =>
+    generateOpenGraph({
+      openGraph: {
+        type: "profile",
+      },
+      imgPath: `/api/og?card=member&member=${slug}`,
+      name,
+      slug: `/band/${slug}`,
+    }),
 };

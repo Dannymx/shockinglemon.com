@@ -8,7 +8,7 @@ import { getMemberSlugs } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Band",
-  ...(OpenGraphConfig.media ?? null),
+  ...(OpenGraphConfig.band ?? null),
 };
 
 const Band = () => {
