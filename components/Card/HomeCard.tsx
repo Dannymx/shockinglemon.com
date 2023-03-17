@@ -42,7 +42,7 @@ export const HomeCardTitle = ({ children }: HomeCardTitleProps) => (
 
 export const HomeCardBody = ({ children }: HomeCardBodyProps) => (
   <div className="flex w-full flex-col p-4 pt-0 md:min-h-[50%]">
-    <div className="grow rounded-md bg-white/75 py-4 px-5 text-sm backdrop-blur-sm">
+    <div className="grow rounded-md bg-white/75 py-4 px-5 backdrop-blur-sm">
       {children}
     </div>
   </div>
