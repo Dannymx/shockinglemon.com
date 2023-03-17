@@ -8,7 +8,7 @@ import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Blog",
-  ...(OpenGraphConfig.media ?? null),
+  ...(OpenGraphConfig.blog ?? null),
 };
 
 export default function Blog() {
