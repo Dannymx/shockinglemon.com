@@ -40,6 +40,14 @@ export const cards: CardsProps = [
     ),
   },
   {
+    slug: "media",
+    content: (
+      <CardContent img="https://shockinglemon.imgix.net/assets/images/music/sometimes-alone/booklet-5.jpg?w=1200&h=630&fit=crop&crop=focalpoint&fp-x=.75&fp-y=.5&fp-z=1.89">
+        <div tw="flex text-9xl text-slate-300">Media</div>
+      </CardContent>
+    ),
+  },
+  {
     slug: "blog",
     content: (
       <CardContent img="https://shockinglemon.imgix.net/assets/images/music/inner-light/booklet-back.jpg?w=1200&h=630&fit=crop&crop=edges">
