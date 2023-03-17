@@ -7,6 +7,7 @@ export const AppConfig = {
   description:
     "Fan dedicated website for the Japanese rock band Shocking Lemon",
   locale: "en",
+  discord: "https://discord.gg/wcHhXbJR7P",
 };
 
 type OpenGraphProps = Metadata & {
