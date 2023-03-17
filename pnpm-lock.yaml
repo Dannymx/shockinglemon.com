@@ -37,7 +37,7 @@ specifiers:
   eslint-plugin-react: 7.32.2
   eslint-plugin-react-hooks: 4.6.0
   eslint-plugin-simple-import-sort: 10.0.0
-  eslint-plugin-tailwindcss: 3.9.0
+  eslint-plugin-tailwindcss: 3.10.1
   eslint-plugin-testing-library: 5.10.2
   eslint-plugin-unused-imports: 2.0.0
   husky: 8.0.3
@@ -104,7 +104,7 @@ devDependencies:
   eslint-plugin-react: 7.32.2_eslint@8.36.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.36.0
   eslint-plugin-simple-import-sort: 10.0.0_eslint@8.36.0
-  eslint-plugin-tailwindcss: 3.9.0_tailwindcss@3.2.7
+  eslint-plugin-tailwindcss: 3.10.1_tailwindcss@3.2.7
   eslint-plugin-testing-library: 5.10.2_vgl77cfdswitgr47lm5swmv43m
   eslint-plugin-unused-imports: 2.0.0_jtgb5dte5zomp45ibyirh6zfwm
   husky: 8.0.3
@@ -4247,8 +4247,8 @@ packages:
       eslint: 8.36.0
     dev: true
 
-  /eslint-plugin-tailwindcss/3.9.0_tailwindcss@3.2.7:
-    resolution: {integrity: sha512-uA2/Q0g22i1uGFI/FTBkLCvpc5VpzMZjAJn3/hPqhongG0V7aaRHrFx4LyfOje/b9Q/t9iarx40InrXKf2jC6w==}
+  /eslint-plugin-tailwindcss/3.10.1_tailwindcss@3.2.7:
+    resolution: {integrity: sha512-NLPZ6b6nd/8CgGNMQ6NDiPUfBLQpSGu/u9RyX3MCZOwzNs2dFt1OamNAiRuo3Ixh7Gv4t5UcAcdNt8z74UDJkA==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
       tailwindcss: ^3.2.2
