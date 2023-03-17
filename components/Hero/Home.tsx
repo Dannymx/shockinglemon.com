@@ -9,7 +9,7 @@ export default function HomeHero() {
           <span className="font-bebas">Welcome /</span>
           <span className="font-noto">ようこそ</span>
         </div>
-        <p className="text-sm lg:text-base">
+        <p>
           This website is dedicated to the Japanese rock band Shocking Lemon.
           After many years since the band dissolved, many fans wanted to know
           more about their music, so as fans we decided to create this website

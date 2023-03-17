@@ -30,7 +30,9 @@ export default function Blog() {
               Published on {formatDate(post.date)}
             </time>
           </div>
-          <BlogContent content={post.body.code} />
+          <div>
+            <BlogContent content={post.body.code} />
+          </div>
         </div>
       ))}
     </div>
