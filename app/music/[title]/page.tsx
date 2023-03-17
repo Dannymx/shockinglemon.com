@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Row } from "components/Music/Details";
 import Gallery from "components/Music/Gallery";
 import styles from "components/Music/music.module.css";
@@ -55,6 +56,7 @@ const Page = ({ params: { title } }: Props) => {
 
       {/* right column */}
       <div className="lg:w-2/3">
+        {/* Album details */}
         <div className="w-full rounded-xl bg-slate-100 p-4 pb-0 shadow-md shadow-slate-500/25">
           <h1 className="border-b border-slate-200 pb-4 font-bauhaus text-2xl font-bold">
             {album.name.en}
@@ -85,6 +87,22 @@ const Page = ({ params: { title } }: Props) => {
               ))}
             </tbody>
           </table>
+        </div>
+        {/* Lyrics */}
+        <div className="mt-4 rounded-xl bg-slate-100 p-4 shadow-md shadow-slate-500/25">
+          <h1 className="mb-4 border-b border-b-slate-300 pb-2 font-bebas text-2xl">
+            Lyrics
+          </h1>
+          <div>
+            <p>Sorry, currently we only have the lyrics in image format.</p>
+            <p>
+              Want to contribute and help transcribe to text or translate the
+              lyrics?{" "}
+              <Link href="/about" className="font-bold hover:underline">
+                Learn how to contribute here.
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>
