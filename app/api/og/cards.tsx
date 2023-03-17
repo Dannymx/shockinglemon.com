@@ -1,19 +1,29 @@
+import type { Member } from "@/.contentlayer/generated";
 import type { Record } from "@/components/Music/types";
+import { MemberContent } from "@/components/OpenGraph/Member";
 import { CardContent } from "@/components/OpenGraph/Page";
 import { RecordContent } from "@/components/OpenGraph/Record";
 
-type CardsProps = (
-  | {
-      slug: string;
-      content: JSX.Element;
-    }
-  | {
-      slug: "record";
-      content: ({ record }: { record: Record }) => JSX.Element;
-    }
-)[];
+export type Card = OGPage | OGRecord | OGMember;
 
-export const cards: CardsProps = [
+export type OGPage = {
+  slug: Slugs;
+  content: JSX.Element;
+};
+
+export type OGRecord = {
+  slug: "record";
+  content: ({ record }: { record: Record }) => JSX.Element;
+};
+
+export type OGMember = {
+  slug: "member";
+  content: ({ member }: { member: Member }) => JSX.Element;
+};
+
+type Slugs = "home" | "music" | "band" | "media" | "blog" | "about";
+
+export const cards: Card[] = [
   {
     slug: "home",
     content: (
@@ -67,6 +77,12 @@ export const cards: CardsProps = [
     slug: "record",
     content: ({ record }: { record: Record }) => (
       <RecordContent record={record} />
+    ),
+  },
+  {
+    slug: "member",
+    content: ({ member }: { member: Member }) => (
+      <MemberContent member={member} />
     ),
   },
 ];
