@@ -79,6 +79,14 @@ export const OpenGraphConfig: OpenGraphConfigProps = {
     name: "Media",
     slug: "/media",
   }),
+  blog: generateOpenGraph({
+    openGraph: {
+      type: "website",
+    },
+    imgPath: "/api/og?card=blog",
+    name: "Blog",
+    slug: "/blog",
+  }),
   about: generateOpenGraph({
     openGraph: {
       type: "website",
