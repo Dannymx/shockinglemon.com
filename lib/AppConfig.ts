@@ -41,6 +41,12 @@ const generateOpenGraph = ({
 
     ...openGraph,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: name ? `${name} | ${AppConfig.title.en}` : AppConfig.title.en,
+    description: AppConfig.description,
+    images: [absoluteUrl(imgPath)],
+  },
 });
 
 type OpenGraphConfigProps = Record<
