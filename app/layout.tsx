@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import Script from "next/script";
 import Footer from "components/Footer";
 import Navigation from "components/Navigation";
 import "styles/global.css";
@@ -45,22 +45,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         key="icon16"
       />
       <link rel="icon" href="/favicon.ico" key="favicon" />
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-255T0ZF51F"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-255T0ZF51F');
-        `}
-      </Script>
-
       <body className="bg-light-bg font-inter text-dark-copy antialiased">
         <div className="relative flex h-full flex-col sm:pt-10">
+          <Analytics />
           <Navigation />
           <main className="container mx-auto max-w-7xl grow px-8 py-10 2xl:px-0">
             {children}
