@@ -4,10 +4,11 @@ import Link from "next/link";
 import Cover from "components/Music/Cover";
 import type { Record } from "components/Music/types";
 
-import { OpenGraphConfig } from "@/lib/AppConfig";
+import { OpenGraphConfig } from "@/lib/OpenGraph";
 
 export const metadata: Metadata = {
   title: "Music",
+  description: `Shocking Lemon has ${music.records.length} records released between 1996 and 2007.`,
   ...(OpenGraphConfig.music ?? null),
 };
 

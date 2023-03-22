@@ -2,7 +2,7 @@ import Content from "content/about/about.mdx";
 import type { MDXComponents } from "mdx/types";
 import type { Metadata } from "next";
 
-import { OpenGraphConfig } from "@/lib/AppConfig";
+import { OpenGraphConfig } from "@/lib/OpenGraph";
 import { cn } from "@/lib/utils";
 
 const components: MDXComponents = {
