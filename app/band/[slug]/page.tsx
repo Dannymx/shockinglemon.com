@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { allMembers } from "@/.contentlayer/generated";
 import MemberContainer from "@/components/Band/MemberContainer";
 import MemberContent from "@/components/Band/MemberContent";
-import { OpenGraphConfig } from "@/lib/AppConfig";
+import { OpenGraphConfig } from "@/lib/OpenGraph";
 import { getMemberName, getMemberSlugs } from "@/lib/utils";
 
 export const dynamicParams = false;
@@ -20,11 +20,15 @@ export const generateMetadata = async ({
   const member = allMembers.find((bio) => bio.slug === slug);
 
   if (member) {
+    const name = `${getMemberName(member).at(0)} (${getMemberName(member).at(
+      1
+    )})`;
+
     return {
-      title: getMemberName(member).at(0),
+      title: name,
       ...(typeof OpenGraphConfig.member === "function"
         ? OpenGraphConfig.member({
-            name: member.name,
+            name,
             slug: member.slug,
           })
         : null),

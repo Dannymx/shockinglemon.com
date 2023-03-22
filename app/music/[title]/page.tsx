@@ -6,8 +6,8 @@ import styles from "components/Music/music.module.css";
 import type { Record } from "components/Music/types";
 
 import music from "@/content/music/music.json";
-import { OpenGraphConfig } from "@/lib/AppConfig";
-import { findRecord } from "@/lib/utils";
+import { OpenGraphConfig } from "@/lib/OpenGraph";
+import { findRecord, formatDate } from "@/lib/utils";
 
 export const dynamicParams = false;
 
@@ -23,12 +23,24 @@ export const generateMetadata = async ({
   const record = findRecord(title);
 
   if (record) {
+    const description = `${record.name.en} is a ${
+      record.format
+    } released in ${formatDate(record.release)} and includes ${
+      record.songs.length
+    } songs. Published by ${record.labels.join(", ")} in ${record.medium.join(
+      ", "
+    )} format.`;
+
     return {
-      title: findRecord(title)?.name.en,
+      title: record.name.en,
+      description,
       ...(typeof OpenGraphConfig.record === "function"
         ? OpenGraphConfig.record({
             name: record.name.en,
             slug: record.slug,
+            openGraph: {
+              description,
+            },
           })
         : null),
     };

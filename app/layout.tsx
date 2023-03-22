@@ -5,8 +5,9 @@ import Footer from "components/Footer";
 import Navigation from "components/Navigation";
 import "styles/global.css";
 
-import { AppConfig, OpenGraphConfig } from "@/lib/AppConfig";
+import { AppConfig } from "@/lib/AppConfig";
 import { fontVariables } from "@/lib/fonts";
+import { OpenGraphConfig } from "@/lib/OpenGraph";
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     "Japan",
     "Japanese",
     "J-Rock",
+    "Visual kei",
   ],
   ...(OpenGraphConfig.home ?? null),
 };
