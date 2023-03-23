@@ -5,7 +5,6 @@ import type { MDXComponents } from "mdx/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import styles from "@/components/Band/band.module.css";
 
 import type { Member } from "@/.contentlayer/generated";
 import { cn, getMemberName } from "@/lib/utils";
@@ -17,7 +16,18 @@ type Props = {
 
 const components: MDXComponents = {
   p: ({ className, ...props }) => (
-    <p className={cn("mb-2", className)} {...props} />
+    <p className={cn("mb-2 break-before-avoid", className)} {...props} />
+  ),
+  ul: ({ className, ...props }) => (
+    <ul className={cn("list-none list-inside", className)} {...props} />
+  ),
+  h1: ({ className, ...props }) => (
+    // eslint-disable-next-line jsx-a11y/heading-has-content
+    <h1 className={cn("font-bold", className)} {...props} />
+  ),
+  h3: ({ className, ...props }) => (
+    // eslint-disable-next-line jsx-a11y/heading-has-content
+    <h3 className={cn("font-bold", className)} {...props} />
   ),
 };
 
@@ -79,7 +89,7 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
           </div>
         </div>
         <div
-          className={`columns-2 text-sm md:text-base ${styles.member} ${
+          className={`columns-2 text-sm md:text-base ${
             language === "jp" ? "font-noto" : null
           }`}
         >
