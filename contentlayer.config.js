@@ -50,13 +50,13 @@ export const Member = defineDocumentType(() => ({
     slug: {
       type: "string",
       // eslint-disable-next-line no-underscore-dangle
-      resolve: (doc) => doc._raw.sourceFileName.replace(/(\.[^.]+){2}$/, ""),
+      resolve: (doc) => doc._raw.sourceFileName.replace(/(\.[^.]+){1}$/, ""),
     },
     language: {
       type: "string",
       resolve: (doc) =>
         // eslint-disable-next-line no-underscore-dangle
-        doc._raw.sourceFileName.replace(/^.*\.([^.]+)\.mdx$/, "$1"),
+        doc._raw.sourceFileDir.replace(/.*\//, ""),
     },
   },
 }));
