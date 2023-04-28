@@ -7,9 +7,7 @@ import { cards } from "./cards";
 import type { Member } from ".contentlayer/generated";
 import { allMembers } from ".contentlayer/generated";
 
-export const config = {
-  runtime: "experimental-edge",
-};
+export const runtime = "edge";
 
 const getContent = ({ og, url }: { og: Card; url: URL }) => {
   const slug = url.searchParams.get("record");

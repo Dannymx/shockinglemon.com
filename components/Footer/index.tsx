@@ -1,5 +1,5 @@
 const Footer = () => (
-  <div className="py-5 px-8 text-center text-sm">
+  <div className="px-8 py-5 text-center text-sm">
     <p>
       🍋 Shocking Lemon. All rights reserved to their respective copyright
       holders.
