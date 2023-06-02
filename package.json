@@ -16,7 +16,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "@headlessui/react": "1.7.14",
+    "@headlessui/react": "1.7.15",
     "@heroicons/react": "2.0.18",
     "@next/bundle-analyzer": "13.3.1",
     "@next/mdx": "13.3.1",
