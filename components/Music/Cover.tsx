@@ -32,11 +32,11 @@ const Cover = ({ album, sizes, activeImage }: Props) => {
       }`}
     >
       <Image
-        className={`${
+        className={
           !activeImage || activeImage === "cover.jpg"
             ? "object-cover"
             : "object-contain drop-shadow-[0_2px_6px_rgba(100,116,139,1)]"
-        }`}
+        }
         src={imgSrc}
         alt={`Cover of ${album.name.en}`}
         fill

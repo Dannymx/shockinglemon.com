@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang={AppConfig.locale} className={`${fontVariables}`}>
+    <html lang={AppConfig.locale} className={fontVariables}>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="UTF-8" key="charset" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" key="apple" />
