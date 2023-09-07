@@ -31,3 +31,11 @@ export const findRecord = (title: string) =>
 
 export const absoluteUrl = (path?: string) =>
   `${process.env.NEXT_PUBLIC_APP_URL}${path ?? ""}`;
+
+export const slugify = (string: string) =>
+  string
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
