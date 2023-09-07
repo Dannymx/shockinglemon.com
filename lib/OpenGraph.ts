@@ -112,4 +112,14 @@ export const OpenGraphConfig: Record<
       name,
       slug: `/band/${slug}`,
     }),
+  post: ({ name, slug, openGraph }) =>
+    generateOpenGraph({
+      openGraph: {
+        type: "article",
+        ...openGraph,
+      },
+      imgPath: `/api/og?card=blog`,
+      name,
+      slug: `/blog/${slug}`,
+    }),
 };
