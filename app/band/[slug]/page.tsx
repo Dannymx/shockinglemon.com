@@ -21,7 +21,7 @@ export const generateMetadata = async ({
 
   if (member) {
     const name = `${getMemberName(member).at(0)} (${getMemberName(member).at(
-      1
+      1,
     )})`;
 
     return {
@@ -50,5 +50,6 @@ export default function Member({ params: { slug } }: Props) {
   );
 }
 
-export const generateStaticParams = () =>
-  getMemberSlugs(allMembers).map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  return getMemberSlugs(allMembers).map((slug) => ({ slug }));
+}
