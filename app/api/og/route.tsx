@@ -1,6 +1,5 @@
-import { ImageResponse } from "@vercel/og";
 import music from "content/music/music.json";
-import { NextResponse } from "next/server";
+import { ImageResponse, NextResponse } from "next/server";
 import type { Record } from "components/Music/types";
 import type { Card } from "./cards";
 import { cards } from "./cards";
@@ -35,7 +34,7 @@ export async function GET(req: Request) {
       name: "bauhaus",
       style: "normal" as const,
       data: await fetch(
-        new URL("@/fonts/BauhausLightRegular.ttf", import.meta.url)
+        new URL("@/fonts/BauhausLightRegular.ttf", import.meta.url),
       ).then((res) => res.arrayBuffer()),
     },
   ];
