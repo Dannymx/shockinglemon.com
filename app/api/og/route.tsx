@@ -1,5 +1,6 @@
 import music from "content/music/music.json";
-import { ImageResponse, NextResponse } from "next/server";
+import { ImageResponse } from "next/og";
+import { NextResponse } from "next/server";
 import type { Record } from "components/Music/types";
 import type { Card } from "./cards";
 import { cards } from "./cards";
