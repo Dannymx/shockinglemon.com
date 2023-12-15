@@ -16,15 +16,16 @@ const generateOpenGraph = ({
   slug,
   imgPath,
 }: OpenGraphProps): Metadata => ({
+  metadataBase: new URL(absoluteUrl()),
   openGraph: {
     locale: "en_US",
-    url: absoluteUrl(slug ?? undefined),
+    url: slug ?? undefined,
     title: name ? `${name} | ${AppConfig.title.en}` : AppConfig.title.en,
     description: AppConfig.description,
     siteName: AppConfig.title.en,
     images: [
       {
-        url: absoluteUrl(imgPath),
+        url: imgPath,
         width: 1200,
         height: 630,
         alt: name ? `${name} | ${AppConfig.title.en}` : AppConfig.title.en,
@@ -37,7 +38,7 @@ const generateOpenGraph = ({
     card: "summary_large_image",
     title: name ? `${name} | ${AppConfig.title.en}` : AppConfig.title.en,
     description: openGraph?.description ?? AppConfig.description,
-    images: [absoluteUrl(imgPath)],
+    images: [imgPath],
   },
 });
 
