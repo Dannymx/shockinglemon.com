@@ -113,8 +113,15 @@
         }
       ],
       "images": {
-        "cover": false,
-        "other": []
+        "cover": true,
+        "other": [
+          "cover.jpg",
+          "disc.png",
+          "cover-full.jpg",
+          "back.jpg",
+          "lyrics.jpg",
+          "autographs.jpg"
+        ]
       }
     },
     {
