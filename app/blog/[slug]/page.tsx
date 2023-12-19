@@ -2,7 +2,7 @@ import { allPosts } from "@/.contentlayer/generated";
 import BlogContainer from "@/components/Blog/BlogContainer";
 import BlogContent from "@/components/Blog/BlogContent";
 import { OpenGraphConfig } from "@/lib/OpenGraph";
-import { slugify } from "@/lib/utils";
+import { generateBlogTitles, slugify } from "@/lib/utils";
 
 type Props = {
   params: {
@@ -43,7 +43,5 @@ export default function Post({ params: { slug } }: Props) {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return allPosts.map((post) => ({
-    slug: slugify(post.title),
-  }));
+  return generateBlogTitles();
 }
