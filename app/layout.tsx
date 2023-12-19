@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import Footer from "components/Footer";
 import Navigation from "components/Navigation";
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             {children}
           </main>
           <Footer />
+          <SpeedInsights />
         </div>
       </body>
     </html>
