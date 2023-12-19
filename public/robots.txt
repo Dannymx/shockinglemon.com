@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://shockinglemon.com
+
+# Sitemaps
+Sitemap: https://shockinglemon.com/sitemap.xml
