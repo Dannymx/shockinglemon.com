@@ -21,6 +21,9 @@ const staticPaths: Array<__next_route_internal_types__.StaticRoutes> = [
   "/music",
 ];
 
+const generateConfig = (entry: SitemapEntry[]) =>
+  entry.map((item) => ({ ...item, url: `${baseUrl}${item.url}` }));
+
 // Static secondary pages
 const pagesConfig: MetadataRoute.Sitemap = staticPaths.map((path) => ({
   url: `${baseUrl}${path}`,
@@ -30,32 +33,32 @@ const pagesConfig: MetadataRoute.Sitemap = staticPaths.map((path) => ({
 }));
 
 // Dynamic subpages
-const musicConfig = music.records
-  .map<SitemapEntry>((album: Record) => ({
+const musicConfig = generateConfig(
+  music.records.map<SitemapEntry>((album: Record) => ({
     url: `/music/${album.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.8,
-  }))
-  .map((entry) => ({ ...entry, url: `${baseUrl}${entry.url}` }));
+  })),
+);
 
-const bandConfig: MetadataRoute.Sitemap = getMemberSlugs(allMembers)
-  .map<SitemapEntry>((slug) => ({
+const bandConfig: MetadataRoute.Sitemap = generateConfig(
+  getMemberSlugs(allMembers).map<SitemapEntry>((slug) => ({
     url: `/band/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.7,
-  }))
-  .map((entry) => ({ ...entry, url: `${baseUrl}${entry.url}` }));
+  })),
+);
 
-const blogConfig: MetadataRoute.Sitemap = generateBlogTitles()
-  .map<SitemapEntry>((blogEntry) => ({
+const blogConfig: MetadataRoute.Sitemap = generateConfig(
+  generateBlogTitles().map<SitemapEntry>((blogEntry) => ({
     url: `/blog/${blogEntry.slug}`,
     lastModified: new Date(),
     changeFrequency: "daily",
     priority: 0.6,
-  }))
-  .map((entry) => ({ ...entry, url: `${baseUrl}${entry.url}` }));
+  })),
+);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
