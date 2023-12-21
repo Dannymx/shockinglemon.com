@@ -7,7 +7,7 @@ import type { Record } from "components/Music/types";
 import { OpenGraphConfig } from "@/lib/OpenGraph";
 
 export const metadata: Metadata = {
-  title: "Music",
+  title: "Shocking Lemon discography, lyrics, images, song lists and more",
   description: `Shocking Lemon has ${music.records.length} records released between 1996 and 2007.`,
   ...(OpenGraphConfig.music ?? null),
 };

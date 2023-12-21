@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   HomeCard,
@@ -8,6 +9,13 @@ import {
 import HomeHero from "components/Hero/Home";
 
 import { AppConfig } from "@/lib/AppConfig";
+import { OpenGraphConfig } from "@/lib/OpenGraph";
+
+export const metadata: Metadata = {
+  title:
+    "A fan community dedicated to Shocking Lemon with the most complete archive",
+  ...(OpenGraphConfig.home ?? null),
+};
 
 const cards = [
   {

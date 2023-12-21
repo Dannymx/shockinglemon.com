@@ -51,6 +51,7 @@ export const OpenGraphConfig: Record<
     openGraph: {
       type: "website",
     },
+    name: "Home",
     imgPath: "/api/og?card=home",
   }),
   music: generateOpenGraph({

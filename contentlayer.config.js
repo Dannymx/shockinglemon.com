@@ -40,6 +40,11 @@ export const Member = defineDocumentType(() => ({
       description: "Name of the memmber",
       required: true,
     },
+    role: {
+      type: "string",
+      description: "Role of the memmber",
+      required: true,
+    },
     image: {
       type: "string",
       description: "Image that will be used in OG cards",
