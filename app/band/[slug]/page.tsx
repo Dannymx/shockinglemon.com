@@ -25,7 +25,7 @@ export const generateMetadata = async ({
     )})`;
 
     return {
-      title: name,
+      title: `${name}: ${member.role}`,
       ...(typeof OpenGraphConfig.member === "function"
         ? OpenGraphConfig.member({
             name,

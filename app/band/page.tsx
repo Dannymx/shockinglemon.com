@@ -7,7 +7,7 @@ import { OpenGraphConfig } from "@/lib/OpenGraph";
 import { getMemberSlugs } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Band",
+  title: "Biographies of the band members of Shocking Lemon",
   ...(OpenGraphConfig.band ?? null),
 };
 

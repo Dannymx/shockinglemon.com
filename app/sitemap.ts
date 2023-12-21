@@ -37,7 +37,7 @@ const musicConfig = generateConfig(
   music.records.map<SitemapEntry>((album: Record) => ({
     url: `/music/${album.slug}`,
     lastModified: new Date(),
-    changeFrequency: "monthly",
+    changeFrequency: "weekly",
     priority: 0.8,
   })),
 );
@@ -46,7 +46,7 @@ const bandConfig: MetadataRoute.Sitemap = generateConfig(
   getMemberSlugs(allMembers).map<SitemapEntry>((slug) => ({
     url: `/band/${slug}`,
     lastModified: new Date(),
-    changeFrequency: "monthly",
+    changeFrequency: "weekly",
     priority: 0.7,
   })),
 );
