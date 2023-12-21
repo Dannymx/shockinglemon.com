@@ -8,7 +8,7 @@ import { OpenGraphConfig } from "@/lib/OpenGraph";
 import { slugify } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog with the latest news about Shocking Lemon",
   ...(OpenGraphConfig.blog ?? null),
 };
 

@@ -13,7 +13,7 @@ import { OpenGraphConfig } from "@/lib/OpenGraph";
 export const metadata: Metadata = {
   title: {
     default: AppConfig.title.en,
-    template: `%s | ${AppConfig.title.en}`,
+    template: `%s`,
   },
   description: AppConfig.description,
   keywords: [

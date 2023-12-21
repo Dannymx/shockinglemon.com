@@ -7,7 +7,7 @@ import Videos, { schema } from "components/Media/Videos";
 import { OpenGraphConfig } from "@/lib/OpenGraph";
 
 export const metadata: Metadata = {
-  title: "Media",
+  title: "Images, videos and other rare media of Shocking Lemon",
   ...(OpenGraphConfig.media ?? null),
 };
 

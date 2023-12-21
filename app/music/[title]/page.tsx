@@ -28,11 +28,11 @@ export const generateMetadata = async ({
     } released in ${formatDate(record.release)} and includes ${
       record.songs.length
     } songs. Published by ${record.labels.join(", ")} in ${record.medium.join(
-      ", "
+      ", ",
     )} format.`;
 
     return {
-      title: record.name.en,
+      title: `${record.name.en} by Shocking Lemon, ${record.songs.length} songs`,
       description,
       ...(typeof OpenGraphConfig.record === "function"
         ? OpenGraphConfig.record({

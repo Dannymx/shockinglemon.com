@@ -21,7 +21,7 @@ const components: MDXComponents = {
     <h2
       className={cn(
         "text-2xl font-bebas [&:not(:first-child)]:mt-6",
-        className
+        className,
       )}
       {...props}
     />
@@ -29,7 +29,7 @@ const components: MDXComponents = {
 };
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About our website and how to contribute",
   ...(OpenGraphConfig.about ?? null),
 };
 
