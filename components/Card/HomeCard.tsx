@@ -25,7 +25,7 @@ export const HomeCard = ({ children }: HomeCardProps) => (
 );
 
 export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
-  <div className="absolute h-full w-full overflow-hidden rounded-xl shadow-md shadow-slate-500">
+  <div className="absolute size-full overflow-hidden rounded-xl shadow-md shadow-slate-500">
     <Image
       className="object-cover"
       src={imgSrc}

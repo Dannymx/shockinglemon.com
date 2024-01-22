@@ -29,9 +29,7 @@ const Gallery = ({ album }: GalleryProps) => {
             activeImage={activeImage}
             setActiveImage={setActiveImage}
           />
-        ) : (
-          <p className="text-center">No images found for this record</p>
-        )}
+        ) : null}
       </div>
     </div>
   );
