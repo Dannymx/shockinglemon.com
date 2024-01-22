@@ -31,9 +31,9 @@ const Navigation = () => (
               <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
-                  <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  <XMarkIcon className="block size-6" aria-hidden="true" />
                 ) : (
-                  <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  <Bars3Icon className="block size-6" aria-hidden="true" />
                 )}
               </Disclosure.Button>
             </div>
@@ -53,7 +53,7 @@ const Navigation = () => (
                         item.current
                           ? "underline underline-offset-2"
                           : "hover:bg-gray-700 hover:text-white",
-                        "px-3 py-1 rounded-md"
+                        "px-3 py-1 rounded-md",
                       )}
                       aria-current={item.current ? "page" : undefined}
                     >
@@ -77,7 +77,7 @@ const Navigation = () => (
                   item.current
                     ? "bg-gray-900 text-white"
                     : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                  "block px-3 py-2 rounded-md font-bebas text-2xl"
+                  "block px-3 py-2 rounded-md font-bebas text-2xl",
                 )}
                 aria-current={item.current ? "page" : undefined}
               >
