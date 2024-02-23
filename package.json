@@ -47,7 +47,7 @@
     "autoprefixer": "10.4.17",
     "commitizen": "4.3.0",
     "cross-env": "7.0.3",
-    "cssnano": "6.0.3",
+    "cssnano": "6.0.4",
     "eslint": "8.56.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "17.1.0",
