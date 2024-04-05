@@ -41,7 +41,7 @@
     "@testing-library/react": "14.2.2",
     "@types/mdx": "2.0.12",
     "@types/node": "20.11.30",
-    "@types/react": "18.2.73",
+    "@types/react": "18.2.74",
     "@typescript-eslint/eslint-plugin": "6.19.1",
     "@typescript-eslint/parser": "6.19.1",
     "autoprefixer": "10.4.19",
