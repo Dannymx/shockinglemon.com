@@ -71,7 +71,7 @@ importers:
         version: 6.4.8
       '@testing-library/react':
         specifier: 16.0.0
-        version: 16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.11)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.11)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@types/mdx':
         specifier: 2.0.13
         version: 2.0.13
@@ -79,8 +79,8 @@ importers:
         specifier: 20.16.5
         version: 20.16.5
       '@types/react':
-        specifier: 18.3.5
-        version: 18.3.5
+        specifier: 18.3.8
+        version: 18.3.8
       '@typescript-eslint/eslint-plugin':
         specifier: 7.18.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.4))(eslint@9.9.1(jiti@1.21.0))(typescript@5.5.4)
@@ -1310,8 +1310,8 @@ packages:
   '@types/react-dom@18.0.11':
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
 
-  '@types/react@18.3.5':
-    resolution: {integrity: sha512-WeqMfGJLGuLCqHGYRGHxnKrXcTitc6L/nBUWfWPcTarG3t9PsquqUMuVeXZeca+mglY4Vo5GZjCi0A3Or2lnxA==}
+  '@types/react@18.3.8':
+    resolution: {integrity: sha512-syBUrW3/XpnW4WJ41Pft+I+aPoDVbrBVQGEnbD7NijDGlVC+8gV/XKRY+7vMDlfPpbwYt0l1vd/Sj8bJGMbs9Q==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -6711,14 +6711,14 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/react@16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.11)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@testing-library/react@16.0.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.11)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.24.1
       '@testing-library/dom': 10.1.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     optionalDependencies:
-      '@types/react': 18.3.5
+      '@types/react': 18.3.8
       '@types/react-dom': 18.0.11
 
   '@tootallnate/once@2.0.0': {}
@@ -6824,10 +6824,10 @@ snapshots:
 
   '@types/react-dom@18.0.11':
     dependencies:
-      '@types/react': 18.3.5
+      '@types/react': 18.3.8
     optional: true
 
-  '@types/react@18.3.5':
+  '@types/react@18.3.8':
     dependencies:
       '@types/prop-types': 15.7.5
       csstype: 3.1.3
