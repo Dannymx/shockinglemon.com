@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { allMembers } from "@/.contentlayer/generated";
 import MemberContainer from "@/components/Band/MemberContainer";
 import MemberContent from "@/components/Band/MemberContent";
@@ -7,12 +9,16 @@ import { getMemberName, getMemberSlugs } from "@/lib/utils";
 export const dynamicParams = false;
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export const generateMetadata = async ({ params: { slug } }: Props) => {
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const { slug } = await params;
+
   const member = allMembers.find((bio) => bio.slug === slug);
 
   if (member) {
@@ -34,7 +40,9 @@ export const generateMetadata = async ({ params: { slug } }: Props) => {
   return {};
 };
 
-export default function Page({ params: { slug } }: Props) {
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+
   const memberBios = allMembers.filter((memberBio) => memberBio.slug === slug);
 
   return (
