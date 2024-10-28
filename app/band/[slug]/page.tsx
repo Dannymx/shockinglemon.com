@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 import { allMembers } from "@/.contentlayer/generated";
 import MemberContainer from "@/components/Band/MemberContainer";
 import MemberContent from "@/components/Band/MemberContent";
@@ -14,9 +12,7 @@ type Props = {
   };
 };
 
-export const generateMetadata = async ({
-  params: { slug },
-}: Props): Promise<Metadata> => {
+export const generateMetadata = async ({ params: { slug } }: Props) => {
   const member = allMembers.find((bio) => bio.slug === slug);
 
   if (member) {
@@ -38,7 +34,7 @@ export const generateMetadata = async ({
   return {};
 };
 
-export default function Member({ params: { slug } }: Props) {
+export default function Page({ params: { slug } }: Props) {
   const memberBios = allMembers.filter((memberBio) => memberBio.slug === slug);
 
   return (

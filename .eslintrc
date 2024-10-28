@@ -3,7 +3,7 @@
   "extends": [
     "airbnb",
     "next/core-web-vitals", // Needed to avoid warning in next.js build: 'The Next.js plugin was not detected in your ESLint configuration'
-    "prettier"
+    "prettier",
   ],
   "overrides": [
     // Configuration for TypeScript files
@@ -13,16 +13,16 @@
         "@typescript-eslint",
         "unused-imports",
         "tailwindcss",
-        "simple-import-sort"
+        "simple-import-sort",
       ],
       "extends": [
         "plugin:tailwindcss/recommended",
-        "airbnb-typescript",
+        "@kesills/airbnb-typescript",
         "next/core-web-vitals",
-        "prettier"
+        "prettier",
       ],
       "parserOptions": {
-        "project": "./tsconfig.json"
+        "project": "./tsconfig.json",
       },
       "rules": {
         "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
@@ -37,8 +37,8 @@
         "tailwindcss/classnames-order": [
           "warn",
           {
-            "officialSorting": true
-          }
+            "officialSorting": true,
+          },
         ], // Follow the same ordering as the official plugin `prettier-plugin-tailwindcss`
         "simple-import-sort/imports": "error", // Import configuration for `eslint-plugin-simple-import-sort`
         "simple-import-sort/exports": "error", // Export configuration for `eslint-plugin-simple-import-sort`
@@ -46,11 +46,11 @@
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
           "error",
-          { "argsIgnorePattern": "^_" }
+          { "argsIgnorePattern": "^_" },
         ],
         "react/function-component-definition": "off",
-        "import/order": "off"
-      }
+        "import/order": "off",
+      },
     },
     {
       "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
@@ -75,12 +75,12 @@
                 "^\\.(?!/?$)",
                 "^\\./?$",
                 // Style imports.
-                "^.+\\.s?css$"
-              ]
-            ]
-          }
-        ]
-      }
+                "^.+\\.s?css$",
+              ],
+            ],
+          },
+        ],
+      },
     },
     // Configuration for testing
     {
@@ -90,8 +90,8 @@
         "plugin:jest/recommended",
         "plugin:jest-formatting/recommended",
         "plugin:testing-library/react",
-        "plugin:jest-dom/recommended"
-      ]
-    }
-  ]
+        "plugin:jest-dom/recommended",
+      ],
+    },
+  ],
 }
