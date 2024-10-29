@@ -9,14 +9,16 @@ import { getMemberName, getMemberSlugs } from "@/lib/utils";
 export const dynamicParams = false;
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export const generateMetadata = async ({
-  params: { slug },
+  params,
 }: Props): Promise<Metadata> => {
+  const { slug } = await params;
+
   const member = allMembers.find((bio) => bio.slug === slug);
 
   if (member) {
@@ -38,7 +40,9 @@ export const generateMetadata = async ({
   return {};
 };
 
-export default function Member({ params: { slug } }: Props) {
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+
   const memberBios = allMembers.filter((memberBio) => memberBio.slug === slug);
 
   return (

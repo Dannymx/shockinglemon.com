@@ -12,14 +12,16 @@ import { findRecord, formatDate } from "@/lib/utils";
 export const dynamicParams = false;
 
 type Props = {
-  params: {
+  params: Promise<{
     title: string;
-  };
+  }>;
 };
 
 export const generateMetadata = async ({
-  params: { title },
+  params,
 }: Props): Promise<Metadata> => {
+  const { title } = await params;
+
   const record = findRecord(title);
 
   if (record) {
@@ -49,7 +51,9 @@ export const generateMetadata = async ({
   return {};
 };
 
-const Page = ({ params: { title } }: Props) => {
+export default async function Page({ params }: Props) {
+  const { title } = await params;
+
   const album = findRecord(title);
 
   if (!album) return <h1>Album not found</h1>;
@@ -119,12 +123,10 @@ const Page = ({ params: { title } }: Props) => {
       </div>
     </div>
   );
-};
+}
 
 export async function generateStaticParams() {
   return music.records.map((album: Record) => ({
     title: album.slug,
   }));
 }
-
-export default Page;

@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { MDXComponents } from "mdx/types";
 import Image from "next/image";
 import Link from "next/link";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import { useMDXComponent } from "next-contentlayer2/hooks";
 
 import type { Member } from "@/.contentlayer/generated";
 import { cn, getMemberName } from "@/lib/utils";

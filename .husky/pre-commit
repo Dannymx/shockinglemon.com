@@ -1,6 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 # Temporary fix for Windows terminal
 exec >/dev/tty 2>&1
 

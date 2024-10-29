@@ -5,12 +5,13 @@ import { OpenGraphConfig } from "@/lib/OpenGraph";
 import { generateBlogTitles, slugify } from "@/lib/utils";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export async function generateMetadata({ params: { slug } }: Props) {
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
   const post = allPosts.find((item) => slugify(item.title) === slug);
 
   if (post) {
@@ -28,7 +29,9 @@ export async function generateMetadata({ params: { slug } }: Props) {
   return {};
 }
 
-export default function Post({ params: { slug } }: Props) {
+export default async function Post({ params }: Props) {
+  const { slug } = await params;
+
   const post = allPosts.find((item) => slugify(item.title) === slug);
 
   if (!post) return <h1>Post not found</h1>;
