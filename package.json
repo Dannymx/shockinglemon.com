@@ -36,7 +36,7 @@
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
     "@kesills/eslint-config-airbnb-typescript": "20.0.0",
-    "@testing-library/jest-dom": "6.6.2",
+    "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.0.1",
     "@types/mdx": "2.0.13",
     "@types/node": "22.8.1",
