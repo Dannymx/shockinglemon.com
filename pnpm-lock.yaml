@@ -42,8 +42,8 @@ importers:
         specifier: 14.2.17
         version: 14.2.17(@babel/core@7.21.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-contentlayer2:
-        specifier: 0.5.1
-        version: 0.5.1(acorn@8.12.1)(contentlayer2@0.5.1(acorn@8.12.1)(esbuild@0.18.20))(esbuild@0.18.20)(next@14.2.17(@babel/core@7.21.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 0.5.3
+        version: 0.5.3(acorn@8.12.1)(contentlayer2@0.5.1(acorn@8.12.1)(esbuild@0.18.20))(esbuild@0.18.20)(next@14.2.17(@babel/core@7.21.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -464,6 +464,17 @@ packages:
       markdown-wasm:
         optional: true
 
+  '@contentlayer2/core@0.5.3':
+    resolution: {integrity: sha512-qGDryuO+6Uw0U8JZ9cdrxzieEJkkwuTuT+soycnYFShuvqofb+wkpktnsaTn4wUXLd5ut/ngPrH/9w/IbOlF2w==}
+    peerDependencies:
+      esbuild: '>=0.17'
+      markdown-wasm: 1.x
+    peerDependenciesMeta:
+      esbuild:
+        optional: true
+      markdown-wasm:
+        optional: true
+
   '@contentlayer2/source-files@0.5.1':
     resolution: {integrity: sha512-M2Z/LtfU9TwE9z9dH0jqU7UEI80KuFzVvnz51ykRsktfsbZ76n/0fU6ERojiqGS5KgK8Djg3SoxJsY521dvHjQ==}
 
@@ -472,6 +483,14 @@ packages:
 
   '@contentlayer2/utils@0.5.1':
     resolution: {integrity: sha512-cIsQ7ySGAbTZFhp8KdiSwHTYpD5GNmvTmCJtI/zaua23l33DuvEt9KCpZa9CmQ2IQyaGlTHKL2wv994bblCH8w==}
+    peerDependencies:
+      '@effect-ts/otel-node': '*'
+    peerDependenciesMeta:
+      '@effect-ts/otel-node':
+        optional: true
+
+  '@contentlayer2/utils@0.5.3':
+    resolution: {integrity: sha512-2nTFhZ7xnOevoZQnGP6BSIkTCpNos1PkGJ894gMYSmRMaMkyv+9VE9adoa0sywIA1y01iLU8niqcxJiuCQ1OkQ==}
     peerDependencies:
       '@effect-ts/otel-node': '*'
     peerDependenciesMeta:
@@ -3915,13 +3934,13 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  next-contentlayer2@0.5.1:
-    resolution: {integrity: sha512-thDT4nsPAP6lHZlaHIPI25urR0+XDVSUexoZytze7PAAcEBRfiddrklA7JYZR7rhFgaCspDg1ryc7Six6lYUgw==}
+  next-contentlayer2@0.5.3:
+    resolution: {integrity: sha512-xNuiAJxeQOABiWsjJ6hFv/Ovb9vRujBgamaEjvYXiVecrBtCIyCDF3WpdDx4krfAd9WJRW8TN6OLpyZsG2ApjA==}
     peerDependencies:
-      contentlayer2: 0.5.1
+      contentlayer2: 0.5.3
       next: '>=12.0.0'
-      react: '*'
-      react-dom: '*'
+      react: ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^18 || ^19 || ^19.0.0-rc
 
   next@14.2.17:
     resolution: {integrity: sha512-hNo/Zy701DDO3nzKkPmsLRlDfNCtb1OJxFUvjGEl04u7SFa3zwC6hqsOUzMajcaEOEV8ey1GjvByvrg0Qr5AiQ==}
@@ -5726,6 +5745,27 @@ snapshots:
       - acorn
       - supports-color
 
+  '@contentlayer2/core@0.5.3(acorn@8.12.1)(esbuild@0.18.20)':
+    dependencies:
+      '@contentlayer2/utils': 0.5.3
+      camel-case: 4.1.2
+      comment-json: 4.2.3
+      gray-matter: 4.0.3
+      mdx-bundler: 10.0.3(acorn@8.12.1)(esbuild@0.18.20)
+      rehype-stringify: 10.0.1
+      remark-frontmatter: 5.0.0
+      remark-parse: 11.0.0
+      remark-rehype: 11.1.1
+      source-map-support: 0.5.21
+      type-fest: 4.26.1
+      unified: 11.0.5
+    optionalDependencies:
+      esbuild: 0.18.20
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - acorn
+      - supports-color
+
   '@contentlayer2/source-files@0.5.1(acorn@8.12.1)(esbuild@0.18.20)':
     dependencies:
       '@contentlayer2/core': 0.5.1(acorn@8.12.1)(esbuild@0.18.20)
@@ -5759,6 +5799,27 @@ snapshots:
       - supports-color
 
   '@contentlayer2/utils@0.5.1':
+    dependencies:
+      '@effect-ts/core': 0.60.5
+      '@effect-ts/otel': 0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.27.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.27.0(@opentelemetry/api@1.9.0))
+      '@effect-ts/otel-sdk-trace-node': 0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.27.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.27.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-node@1.27.0(@opentelemetry/api@1.9.0))
+      '@js-temporal/polyfill': 0.4.4
+      '@opentelemetry/api': 1.9.0
+      '@opentelemetry/core': 1.27.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/exporter-trace-otlp-grpc': 0.51.1(@opentelemetry/api@1.9.0)
+      '@opentelemetry/resources': 1.27.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-base': 1.27.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-node': 1.27.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/semantic-conventions': 1.27.0
+      chokidar: 3.5.3
+      hash-wasm: 4.11.0
+      inflection: 3.0.0
+      memfs: 4.14.0
+      oo-ascii-tree: 1.104.0
+      ts-pattern: 5.5.0
+      type-fest: 4.26.1
+
+  '@contentlayer2/utils@0.5.3':
     dependencies:
       '@effect-ts/core': 0.60.5
       '@effect-ts/otel': 0.15.1(@effect-ts/core@0.60.5)(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.27.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.27.0(@opentelemetry/api@1.9.0))
@@ -10040,10 +10101,10 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-contentlayer2@0.5.1(acorn@8.12.1)(contentlayer2@0.5.1(acorn@8.12.1)(esbuild@0.18.20))(esbuild@0.18.20)(next@14.2.17(@babel/core@7.21.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next-contentlayer2@0.5.3(acorn@8.12.1)(contentlayer2@0.5.1(acorn@8.12.1)(esbuild@0.18.20))(esbuild@0.18.20)(next@14.2.17(@babel/core@7.21.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@contentlayer2/core': 0.5.1(acorn@8.12.1)(esbuild@0.18.20)
-      '@contentlayer2/utils': 0.5.1
+      '@contentlayer2/core': 0.5.3(acorn@8.12.1)(esbuild@0.18.20)
+      '@contentlayer2/utils': 0.5.3
       contentlayer2: 0.5.1(acorn@8.12.1)(esbuild@0.18.20)
       next: 14.2.17(@babel/core@7.21.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
