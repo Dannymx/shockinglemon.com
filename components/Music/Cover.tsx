@@ -1,12 +1,13 @@
-import Image from "next/image";
 import type { Record } from "components/Music/types";
+import Image from "next/image";
+
 import styles from "./music.module.css";
 
-type Props = {
+interface Props {
   album: Record;
   sizes?: string;
   activeImage?: string;
-};
+}
 
 const Cover = ({ album, sizes, activeImage }: Props) => {
   if (!album.images.cover) {
@@ -32,15 +33,15 @@ const Cover = ({ album, sizes, activeImage }: Props) => {
       }`}
     >
       <Image
+        fill
+        alt={`Cover of ${album.name.en}`}
+        sizes={sizes ?? `(min-width: 768px) 20vw, 50vw`}
+        src={imgSrc}
         className={
           !activeImage || activeImage === "cover.jpg"
             ? "object-cover"
             : "object-contain drop-shadow-[0_2px_6px_rgba(100,116,139,1)]"
         }
-        src={imgSrc}
-        alt={`Cover of ${album.name.en}`}
-        fill
-        sizes={sizes ?? `(min-width: 768px) 20vw, 50vw`}
       />
     </div>
   );

@@ -1,9 +1,9 @@
-type Props = {
+interface Props {
   src: string;
   width: string | number;
   quality?: number;
   auto?: boolean;
-};
+}
 
 const imgixLoader = ({ src, width, quality, auto }: Props) =>
   `https://shockinglemon.imgix.net${src}?w=${width}&auto=${

@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 
-type Props = {
+interface Props {
   reversed?: boolean;
   children: ReactNode;
-};
+}
 
 const MemberContainer = ({ reversed = false, children }: Props) => (
   <div

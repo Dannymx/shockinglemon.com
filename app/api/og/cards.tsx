@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 import type { Member } from "@/.contentlayer/generated";
 import type { Record } from "@/components/Music/types";
 import { MemberContent } from "@/components/OpenGraph/Member";
@@ -6,20 +8,20 @@ import { RecordContent } from "@/components/OpenGraph/Record";
 
 export type Card = OGPage | OGRecord | OGMember;
 
-export type OGPage = {
+export interface OGPage {
   slug: Slugs;
   content: JSX.Element;
-};
+}
 
-export type OGRecord = {
+export interface OGRecord {
   slug: "record";
   content: ({ record }: { record: Record }) => JSX.Element;
-};
+}
 
-export type OGMember = {
+export interface OGMember {
   slug: "member";
   content: ({ member }: { member: Member }) => JSX.Element;
-};
+}
 
 type Slugs = "home" | "music" | "band" | "media" | "blog" | "about";
 

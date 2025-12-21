@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { AppConfig } from "./AppConfig";
 import { absoluteUrl } from "./utils";
 

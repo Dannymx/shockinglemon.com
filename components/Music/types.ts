@@ -1,4 +1,4 @@
-export type Record = {
+export interface Record {
   slug: string;
   name: {
     en: string;
@@ -14,12 +14,12 @@ export type Record = {
   labels: string[];
   catalog: string;
   barcode: string;
-  songs: Array<{
+  songs: {
     name: string;
     length: string;
-  }>;
+  }[];
   images: {
     cover: boolean;
     other: string[];
   };
-};
+}

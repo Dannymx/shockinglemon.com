@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import Link from "next/link";
 import { Row } from "components/Music/Details";
 import Gallery from "components/Music/Gallery";
 import styles from "components/Music/music.module.css";
 import type { Record } from "components/Music/types";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 import music from "@/content/music/music.json";
 import { OpenGraphConfig } from "@/lib/OpenGraph";
@@ -11,11 +11,11 @@ import { findRecord, formatDate } from "@/lib/utils";
 
 export const dynamicParams = false;
 
-type Props = {
+interface Props {
   params: Promise<{
     title: string;
   }>;
-};
+}
 
 export const generateMetadata = async ({
   params,
@@ -92,8 +92,8 @@ export default async function Page({ params }: Props) {
 
               <tr>
                 <td
-                  colSpan={2}
                   className={`${styles.cell} border-t-2 border-t-slate-300 font-bold`}
+                  colSpan={2}
                 >
                   Tracks
                 </td>
@@ -114,7 +114,7 @@ export default async function Page({ params }: Props) {
             <p>
               Want to contribute and help transcribe to text or translate the
               lyrics?{" "}
-              <Link href="/about" className="font-bold hover:underline">
+              <Link className="font-bold hover:underline" href="/about">
                 Learn how to contribute here.
               </Link>
             </p>

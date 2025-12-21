@@ -1,6 +1,10 @@
 {
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
   "search.exclude": {
     "package-lock.json": true
   },

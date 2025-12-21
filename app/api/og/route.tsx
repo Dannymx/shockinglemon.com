@@ -1,11 +1,13 @@
+import type { Record } from "components/Music/types";
 import music from "content/music/music.json";
 import { ImageResponse } from "next/og";
 import { NextResponse } from "next/server";
-import type { Record } from "components/Music/types";
+
+import type { Member } from "@/.contentlayer/generated";
+import { allMembers } from "@/.contentlayer/generated";
+
 import type { Card } from "./cards";
 import { cards } from "./cards";
-import type { Member } from ".contentlayer/generated";
-import { allMembers } from ".contentlayer/generated";
 
 export const runtime = "edge";
 

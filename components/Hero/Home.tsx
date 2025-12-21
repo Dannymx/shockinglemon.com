@@ -20,11 +20,11 @@ export default function HomeHero() {
       {/* Right column image */}
       <div className="relative z-10 -mt-4 flex h-[200px] w-[95vw] grow overflow-hidden rounded-xl shadow-md shadow-slate-500 sm:z-0 sm:mt-0 sm:h-[300px] sm:w-full md:h-[350px] md:w-auto lg:h-[420px]">
         <Image
-          src="/assets/images/home/intro-band.jpg"
-          className="object-cover"
           fill
           alt=""
+          className="object-cover"
           sizes="(min-width:1280px) 30vw, 50vw"
+          src="/assets/images/home/intro-band.jpg"
         />
       </div>
     </div>

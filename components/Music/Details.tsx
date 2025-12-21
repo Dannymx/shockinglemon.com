@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
+
 import styles from "./music.module.css";
 
-type Props = {
+interface Props {
   text: ReactNode;
   value: ReactNode;
-};
+}
 
 export const Row = ({ text, value }: Props) => (
   <tr>

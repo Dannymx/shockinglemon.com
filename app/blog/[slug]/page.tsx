@@ -4,11 +4,11 @@ import BlogContent from "@/components/Blog/BlogContent";
 import { OpenGraphConfig } from "@/lib/OpenGraph";
 import { generateBlogTitles, slugify } from "@/lib/utils";
 
-type Props = {
+interface Props {
   params: Promise<{
     slug: string;
   }>;
-};
+}
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;

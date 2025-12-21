@@ -8,11 +8,11 @@ import { getMemberName, getMemberSlugs } from "@/lib/utils";
 
 export const dynamicParams = false;
 
-type Props = {
+interface Props {
   params: Promise<{
     slug: string;
   }>;
-};
+}
 
 export const generateMetadata = async ({
   params,

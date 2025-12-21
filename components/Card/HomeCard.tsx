@@ -1,22 +1,22 @@
-import type { ReactNode } from "react";
 import Image from "next/image";
+import type { ReactNode } from "react";
 
-type HomeCardProps = {
+interface HomeCardProps {
   children: ReactNode;
-};
+}
 
-type HomeCardImageProps = {
+interface HomeCardImageProps {
   imgSrc: string;
   alt?: string;
-};
+}
 
-type HomeCardTitleProps = {
+interface HomeCardTitleProps {
   children: ReactNode;
-};
+}
 
-type HomeCardBodyProps = {
+interface HomeCardBodyProps {
   children: ReactNode;
-};
+}
 
 export const HomeCard = ({ children }: HomeCardProps) => (
   <div className="relative flex aspect-[4/3] w-full items-end sm:aspect-[4/5]">
@@ -27,11 +27,11 @@ export const HomeCard = ({ children }: HomeCardProps) => (
 export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
   <div className="absolute size-full overflow-hidden rounded-xl shadow-md shadow-slate-500">
     <Image
-      className="object-cover"
-      src={imgSrc}
-      alt={alt}
       fill
+      alt={alt}
+      className="object-cover"
       sizes="(min-width:1536px) 20vw, (min-width:1024px) 30vw, 50vw"
+      src={imgSrc}
     />
   </div>
 );

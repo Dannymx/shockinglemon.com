@@ -1,11 +1,12 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import imgixLoader from "lib/imageLoader";
+
 import type { Record } from "./types";
 
-type Props = {
+interface Props {
   album: Record;
   activeImage: string;
-};
+}
 
 const GallerySelected = ({ album, activeImage }: Props) => {
   const imgSrc = imgixLoader({
@@ -18,10 +19,10 @@ const GallerySelected = ({ album, activeImage }: Props) => {
     <div className="flex justify-between text-xs">
       <span>{activeImage}</span>
       <a
-        href={imgSrc}
         className="flex justify-end"
-        target="_blank"
+        href={imgSrc}
         rel="noreferrer"
+        target="_blank"
       >
         View full size <ArrowTopRightOnSquareIcon className="ml-2 inline h-4" />
       </a>

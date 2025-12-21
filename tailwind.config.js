@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */

@@ -2,46 +2,46 @@ import type { Member } from "@/.contentlayer/generated";
 import imgixLoader from "@/lib/imageLoader";
 import { getMemberName } from "@/lib/utils";
 
-type Props = {
+interface Props {
   member: Member;
-};
+}
 
 export const MemberContent = ({ member }: Props) => (
   <div tw="relative h-full w-full flex flex-row overflow-hidden">
     <img
-      style={{
-        filter: "blur(16px) brightness(50%)",
-        objectFit: "none",
-        objectPosition: "center",
-      }}
+      alt=""
       tw="absolute left-0 top-0 right-0 bottom-0"
       src={imgixLoader({
         src: member.image,
         width: 1200,
       })}
-      alt=""
+      style={{
+        filter: "blur(16px) brightness(50%)",
+        objectFit: "none",
+        objectPosition: "center",
+      }}
     />
     {/* Left Column */}
     <div tw="flex flex-row h-full w-2/5 items-center justify-end">
       <div tw="relative flex bg-white/25 p-4 rounded-xl">
         <div
+          tw="flex rounded-lg items-center justify-center"
           style={{
             width: "250px",
             height: "500px",
             overflow: "hidden",
           }}
-          tw="flex rounded-lg items-center justify-center"
         >
           <img
-            style={{
-              objectFit: "cover",
-            }}
+            alt=""
             tw="absolute h-full w-full"
             src={imgixLoader({
               src: member.image,
               width: 500,
             })}
-            alt=""
+            style={{
+              objectFit: "cover",
+            }}
           />
         </div>
       </div>

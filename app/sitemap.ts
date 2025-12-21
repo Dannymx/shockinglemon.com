@@ -1,5 +1,5 @@
-import type { MetadataRoute } from "next";
 import type { Record } from "components/Music/types";
+import type { MetadataRoute } from "next/types";
 
 import { allMembers } from "@/.contentlayer/generated";
 import music from "@/content/music/music.json";
@@ -7,13 +7,13 @@ import { generateBlogTitles, getMemberSlugs } from "@/lib/utils";
 
 const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://shockinglemon.com";
 
-type DynamicPath = {
+interface DynamicPath {
   url: __next_route_internal_types__.DynamicRoutes;
-};
+}
 
 type SitemapEntry = Omit<MetadataRoute.Sitemap[number], "url"> & DynamicPath;
 
-const staticPaths: Array<__next_route_internal_types__.StaticRoutes> = [
+const staticPaths: __next_route_internal_types__.StaticRoutes[] = [
   "/about",
   "/band",
   "/blog",

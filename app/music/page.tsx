@@ -1,8 +1,8 @@
+import Cover from "components/Music/Cover";
+import type { Record } from "components/Music/types";
 import music from "content/music/music.json";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Cover from "components/Music/Cover";
-import type { Record } from "components/Music/types";
 
 import { OpenGraphConfig } from "@/lib/OpenGraph";
 

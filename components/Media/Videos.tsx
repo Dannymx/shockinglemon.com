@@ -1,14 +1,14 @@
 import { z } from "zod";
 
-type Props = {
+interface Props {
   videos: z.infer<typeof schema>;
-};
+}
 
 export const schema = z.array(
   z.object({
     url: z.string().url().startsWith("https://www.youtube.com/watch?v="),
     name: z.string(),
-  })
+  }),
 );
 
 const Videos = ({ videos }: Props) => (
@@ -22,7 +22,7 @@ const Videos = ({ videos }: Props) => (
             title={video.name}
             src={video.url.replace(
               "https://www.youtube.com/watch?v=",
-              "https://www.youtube.com/embed/"
+              "https://www.youtube.com/embed/",
             )}
           />
         </div>

@@ -1,13 +1,13 @@
-import type { ReactNode } from "react";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 import type { Post } from "@/.contentlayer/generated";
 import { formatDate, slugify } from "@/lib/utils";
 
-type Props = {
+interface Props {
   post: Post;
   children: ReactNode;
-};
+}
 
 const BlogContainer = ({ post, children }: Props) => (
   <div
@@ -19,7 +19,7 @@ const BlogContainer = ({ post, children }: Props) => (
       <h1 className="font-bebas text-2xl">
         <Link href={`/blog/${slugify(post.title)}`}>{post.title}</Link>
       </h1>
-      <time dateTime={post.date} className="block text-sm text-slate-600">
+      <time className="block text-sm text-slate-600" dateTime={post.date}>
         Published on {formatDate(post.date)}
       </time>
     </div>
