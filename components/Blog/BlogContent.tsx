@@ -1,5 +1,5 @@
 import type { MDXComponents } from "mdx/types";
-import { useMDXComponent } from "next-contentlayer2/hooks";
+import { useMDXComponent } from "@content-collections/mdx/react";
 
 import { cn } from "@/lib/utils";
 

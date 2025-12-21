@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .cover {
   @apply relative flex rounded-xl aspect-square;
 }

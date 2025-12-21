@@ -16,7 +16,7 @@ import prettierPlugin from "eslint-plugin-prettier";
 import reactCompiler from "eslint-plugin-react-compiler";
 import reactRefresh from "eslint-plugin-react-refresh";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
-import tailwindcss from "eslint-plugin-tailwindcss";
+import tailwind from "eslint-plugin-tailwindcss";
 import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 
@@ -94,13 +94,14 @@ export default [
   ...typescriptConfig,
   // Prettier Config
   ...prettierConfig,
+  // Tailwind CSS Plugin
+  ...tailwind.configs["flat/recommended"],
   reactRefresh.configs.next,
   {
     name: "custom-plugins",
     plugins: {
       "simple-import-sort": simpleImportSort,
       "unused-imports": unusedImports,
-      tailwindcss,
       "react-compiler": reactCompiler,
     },
   },

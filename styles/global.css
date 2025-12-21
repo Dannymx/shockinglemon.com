@@ -1,11 +1,7 @@
-@tailwind base;
+@import "tailwindcss";
 
 html,
 body,
 #__next {
   @apply min-h-screen h-screen;
 }
-
-@tailwind components;
-
-@tailwind utilities;

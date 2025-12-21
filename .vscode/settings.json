@@ -23,5 +23,8 @@
         "$schema": "https://json.schemastore.org/eslintrc"
       }
     }
-  ]
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

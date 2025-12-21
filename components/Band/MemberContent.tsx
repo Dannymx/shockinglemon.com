@@ -1,10 +1,10 @@
 "use client";
 
+import { useMDXComponent } from "@content-collections/mdx/react";
 import type { Member } from "content-collections";
 import type { MDXComponents } from "mdx/types";
 import Image from "next/image";
 import Link from "next/link";
-import { useMDXComponent } from "next-contentlayer2/hooks";
 import React, { useState } from "react";
 
 import { cn, getMemberName } from "@/lib/utils";
