@@ -35,8 +35,5 @@ local
 # vercel
 .vercel
 
-# contentlayer
-.contentlayer
-
 # content-collections
 .content-collections
