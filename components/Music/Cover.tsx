@@ -13,7 +13,12 @@ const Cover = ({ album, sizes, activeImage }: Props) => {
   if (!album.images.cover) {
     return (
       <div
-        className={`${styles.cover} ${styles["cover-border"]} items-center justify-center bg-gradient-to-br from-cyan-500 to-blue-500 text-8xl`}
+        className={`
+          ${styles.cover}
+          ${styles["cover-border"]}
+          items-center justify-center bg-linear-to-br from-cyan-500 to-blue-500
+          text-8xl
+        `}
       >
         🍋
       </div>
@@ -26,11 +31,14 @@ const Cover = ({ album, sizes, activeImage }: Props) => {
 
   return (
     <div
-      className={`${styles.cover} ${
-        !activeImage || activeImage === "cover.jpg"
-          ? styles["cover-border"]
-          : ""
-      }`}
+      className={`
+        ${styles.cover}
+        ${
+          !activeImage || activeImage === "cover.jpg"
+            ? styles["cover-border"]
+            : ""
+        }
+      `}
     >
       <Image
         fill

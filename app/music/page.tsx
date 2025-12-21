@@ -13,7 +13,14 @@ export const metadata: Metadata = {
 };
 
 const Page = () => (
-  <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+  <div
+    className={`
+      grid grid-cols-2 gap-6
+      sm:grid-cols-3
+      md:grid-cols-4
+      lg:grid-cols-5
+    `}
+  >
     {music.records
       .sort((a, b) => (a.release < b.release ? 1 : -1))
       .map((album: Record) => (
@@ -24,7 +31,12 @@ const Page = () => (
               sizes="(min-width:1536px) 20vw, (min-width:1024px) 30vw, 25vw"
             />
           </Link>
-          <h4 className="pt-2 text-center text-sm lg:text-base">
+          <h4
+            className={`
+              pt-2 text-center text-sm
+              lg:text-base
+            `}
+          >
             <Link href={`/music/${album.slug}`}>{album.name.en}</Link>
           </h4>
         </div>

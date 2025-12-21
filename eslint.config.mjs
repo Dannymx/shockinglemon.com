@@ -12,11 +12,11 @@ import js from "@eslint/js";
 import { globalIgnores } from "eslint/config";
 import { configs, plugins, rules } from "eslint-config-airbnb-extended";
 import { rules as prettierConfigRules } from "eslint-config-prettier";
+import tailwind from "eslint-plugin-better-tailwindcss";
 import prettierPlugin from "eslint-plugin-prettier";
 import reactCompiler from "eslint-plugin-react-compiler";
 import reactRefresh from "eslint-plugin-react-refresh";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
-import tailwind from "eslint-plugin-tailwindcss";
 import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 
@@ -94,8 +94,6 @@ export default [
   ...typescriptConfig,
   // Prettier Config
   ...prettierConfig,
-  // Tailwind CSS Plugin
-  ...tailwind.configs["flat/recommended"],
   reactRefresh.configs.next,
   {
     name: "custom-plugins",
@@ -103,6 +101,7 @@ export default [
       "simple-import-sort": simpleImportSort,
       "unused-imports": unusedImports,
       "react-compiler": reactCompiler,
+      "better-tailwindcss": tailwind,
     },
   },
   {
@@ -124,6 +123,9 @@ export default [
           defaultProject: "tsconfig.json",
         },
         tsconfigRootDir: import.meta.dirname,
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
       ecmaVersion: "latest",
       sourceType: "module",
@@ -146,6 +148,12 @@ export default [
         },
         node: true,
       },
+      "better-tailwindcss": {
+        // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
+        entryPoint: path.join(import.meta.dirname, "./styles/global.css"),
+        // tailwindcss 3: the path to the tailwind config file (eg: `tailwind.config.js`)
+        tailwindConfig: path.join(import.meta.dirname, "./tailwind.config.js"),
+      },
     },
     rules: {
       "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
@@ -157,12 +165,12 @@ export default [
       "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
       "@typescript-eslint/consistent-type-imports": "error", // Ensure `import type` is used when it's necessary
       "import-x/prefer-default-export": "off", // Named export is easier to refactor automatically
-      "tailwindcss/classnames-order": [
-        "warn",
-        {
-          officialSorting: true,
-        },
-      ], // Follow the same ordering as the official plugin `prettier-plugin-tailwindcss`
+      // "better-tailwindcss/classnames-order": [
+      //   "warn",
+      //   {
+      //     officialSorting: true,
+      //   },
+      // ], // Follow the same ordering as the official plugin `prettier-plugin-tailwindcss`
       "@typescript-eslint/no-unused-vars": "off",
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
@@ -191,6 +199,8 @@ export default [
         { props: "never", children: "never" },
       ],
       "@typescript-eslint/prefer-nullish-coalescing": "warn",
+      // enable all recommended rules to report an error
+      ...tailwind.configs["recommended-error"].rules,
     },
   },
   {

@@ -59,11 +59,25 @@ export default async function Page({ params }: Props) {
   if (!album) return <h1>Album not found</h1>;
 
   return (
-    <div className="flex flex-col gap-4 lg:flex-row">
+    <div
+      className={`
+        flex flex-col gap-4
+        lg:flex-row
+      `}
+    >
       {/* left column */}
-      <div className="flex flex-row items-start lg:w-1/3">
+      <div
+        className={`
+          flex flex-row items-start
+          lg:w-1/3
+        `}
+      >
         <div
-          className={`${styles["sleeve-text"]} hidden pr-4 font-noto text-xl font-bold lg:block`}
+          className={`
+            ${styles["sleeve-text"]}
+            hidden pr-4 font-noto text-xl font-bold
+            lg:block
+          `}
         >
           {album.name.jp}
         </div>
@@ -73,11 +87,25 @@ export default async function Page({ params }: Props) {
       {/* right column */}
       <div className="lg:w-2/3">
         {/* Album details */}
-        <div className="w-full rounded-xl bg-slate-100 p-4 pb-0 shadow-md shadow-slate-500/25">
-          <h1 className="border-b border-slate-200 pb-4 font-bauhaus text-2xl font-bold">
+        <div
+          className={`
+            w-full rounded-xl bg-slate-100 p-4 pb-0 shadow-md
+            shadow-slate-500/25
+          `}
+        >
+          <h1
+            className={`
+              border-b border-slate-200 pb-4 font-bauhaus text-2xl font-bold
+            `}
+          >
             {album.name.en}
           </h1>
-          <table className="w-full table-auto border-collapse text-sm md:text-base">
+          <table
+            className={`
+              w-full table-auto border-collapse text-sm
+              md:text-base
+            `}
+          >
             <tbody>
               <Row text="Release date" value={album.release} />
               <Row
@@ -92,8 +120,11 @@ export default async function Page({ params }: Props) {
 
               <tr>
                 <td
-                  className={`${styles.cell} border-t-2 border-t-slate-300 font-bold`}
                   colSpan={2}
+                  className={`
+                    ${styles.cell}
+                    border-t-2 border-t-slate-300 font-bold
+                  `}
                 >
                   Tracks
                 </td>
@@ -105,8 +136,16 @@ export default async function Page({ params }: Props) {
           </table>
         </div>
         {/* Lyrics */}
-        <div className="mt-4 rounded-xl bg-slate-100 p-4 shadow-md shadow-slate-500/25">
-          <h1 className="mb-4 border-b border-b-slate-300 pb-2 font-bebas text-2xl">
+        <div
+          className={`
+            mt-4 rounded-xl bg-slate-100 p-4 shadow-md shadow-slate-500/25
+          `}
+        >
+          <h1
+            className={`
+              mb-4 border-b border-b-slate-300 pb-2 font-bebas text-2xl
+            `}
+          >
             Lyrics
           </h1>
           <div>
@@ -114,7 +153,13 @@ export default async function Page({ params }: Props) {
             <p>
               Want to contribute and help transcribe to text or translate the
               lyrics?{" "}
-              <Link className="font-bold hover:underline" href="/about">
+              <Link
+                href="/about"
+                className={`
+                  font-bold
+                  hover:underline
+                `}
+              >
                 Learn how to contribute here.
               </Link>
             </p>

@@ -19,13 +19,22 @@ interface HomeCardBodyProps {
 }
 
 export const HomeCard = ({ children }: HomeCardProps) => (
-  <div className="relative flex aspect-[4/3] w-full items-end sm:aspect-[4/5]">
+  <div
+    className={`
+      relative flex aspect-4/3 w-full items-end
+      sm:aspect-4/5
+    `}
+  >
     {children}
   </div>
 );
 
 export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
-  <div className="absolute size-full overflow-hidden rounded-xl shadow-md shadow-slate-500">
+  <div
+    className={`
+      absolute size-full overflow-hidden rounded-xl shadow-md shadow-slate-500
+    `}
+  >
     <Image
       fill
       alt={alt}
@@ -41,7 +50,12 @@ export const HomeCardTitle = ({ children }: HomeCardTitleProps) => (
 );
 
 export const HomeCardBody = ({ children }: HomeCardBodyProps) => (
-  <div className="flex w-full flex-col p-4 pt-0 md:min-h-[50%]">
+  <div
+    className={`
+      flex w-full flex-col p-4 pt-0
+      md:min-h-[50%]
+    `}
+  >
     <div className="grow rounded-md bg-white/75 px-5 py-4 backdrop-blur-sm">
       {children}
     </div>

@@ -19,7 +19,7 @@ const components: MDXComponents = {
     <p className={cn("mb-2 break-before-avoid", className)} {...props} />
   ),
   ul: ({ className, ...props }) => (
-    <ul className={cn("list-none list-inside", className)} {...props} />
+    <ul className={cn("list-inside list-none", className)} {...props} />
   ),
   h1: ({ className, ...props }) => (
     // eslint-disable-next-line jsx-a11y/heading-has-content
@@ -45,28 +45,58 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
 
   return (
     <React.Fragment>
-      <div className="relative -mb-10 flex aspect-[1/1] w-11/12 shrink-0 overflow-hidden rounded-xl shadow-md shadow-slate-500 sm:mb-0 sm:mt-8 sm:aspect-[1/2] sm:h-auto sm:w-1/3 md:w-1/4 lg:m-0">
+      <div
+        className={`
+          relative -mb-10 flex aspect-square w-11/12 shrink-0 overflow-hidden
+          rounded-xl shadow-md shadow-slate-500
+          sm:mt-8 sm:mb-0 sm:aspect-1/2 sm:h-auto sm:w-1/3
+          md:w-1/4
+          lg:m-0
+        `}
+      >
         <Image
           fill
           alt={member.name}
-          className="object-cover object-top sm:object-center"
           src={member.image}
+          className={`
+            object-cover object-top
+            sm:object-center
+          `}
         />
       </div>
       <div
-        className={`flex flex-col rounded-md bg-white/75 p-4 pt-14 shadow-md shadow-slate-500/25 sm:pt-6 ${
-          reversed ? "sm:-mr-6 sm:pr-12" : "sm:-ml-6 sm:pl-12"
-        }`}
+        className={`
+          flex flex-col rounded-md bg-white/75 p-4 pt-14 shadow-md
+          shadow-slate-500/25
+          sm:pt-6
+          ${reversed ? "sm:-mr-6 sm:pr-12" : "sm:-ml-6 sm:pl-12"}
+        `}
       >
-        <div className="mb-4 flex flex-col justify-between md:mb-2 md:flex-row">
-          <h2 className="text-xl md:text-2xl lg:text-3xl">
+        <div
+          className={`
+            mb-4 flex flex-col justify-between
+            md:mb-2 md:flex-row
+          `}
+        >
+          <h2
+            className={`
+              text-xl
+              md:text-2xl
+              lg:text-3xl
+            `}
+          >
             <Link href={`/band/${member.slug}`}>
               <span className="font-bebas">{getMemberName(member).at(0)}</span>
               <span className=""> / </span>
               <span className="font-noto">{getMemberName(member).at(1)}</span>
             </Link>
           </h2>
-          <div className="flex flex-row items-center gap-2 text-sm md:text-base">
+          <div
+            className={`
+              flex flex-row items-center gap-2 text-sm
+              md:text-base
+            `}
+          >
             <button
               onClick={() => setLanguage("en")}
               type="button"
@@ -89,9 +119,11 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
           </div>
         </div>
         <div
-          className={`columns-2 text-sm md:text-base ${
-            language === "jp" ? "font-noto" : null
-          }`}
+          className={`
+            columns-2 text-sm
+            md:text-base
+            ${language === "jp" ? "font-noto" : null}
+          `}
         >
           <MemberMarkdown content={member.mdx} />
         </div>

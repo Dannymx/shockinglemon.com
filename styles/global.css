@@ -5,3 +5,18 @@ body,
 #__next {
   @apply min-h-screen h-screen;
 }
+
+@source '../content/**/*.mdx';
+
+@theme {
+  --breakpoint-xs: 390px;
+  --font-inter: "Inter", sans-serif;
+  --font-noto: "Noto Sans JP", sans-serif;
+  --font-bebas: "Bebas Neue", cursive;
+  --font-bauhaus: "Bauhaus Light Regular", sans-serif;
+  --color-light-bg: #e2e8f0;
+  --color-dark-copy: #374151;
+  --color-light-copy: #d1d5db;
+  --aspect-ratio-member-grid: 44 / 90;
+  --aspect-ratio-member-swatch: 22 / 45;
+}

@@ -13,7 +13,13 @@ export const schema = z.array(
 );
 
 const Videos = ({ videos }: Props) => (
-  <div className="grid grid-cols-1 items-end gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <div
+    className={`
+      grid grid-cols-1 items-end gap-4
+      md:grid-cols-2
+      lg:grid-cols-3
+    `}
+  >
     {videos.map((video) => (
       <div key={video.name}>
         <h2 className="mb-1 font-bold">{video.name}</h2>

@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 
 const components: MDXComponents = {
   p: ({ className, ...props }) => (
-    <p className={cn("leading-7 mb-4", className)} {...props} />
+    <p className={cn("mb-4 leading-7", className)} {...props} />
   ),
   ul: ({ className, ...props }) => (
-    <ul className={cn("mb-4 list-disc list-inside", className)} {...props} />
+    <ul className={cn("mb-4 list-inside list-disc", className)} {...props} />
   ),
   a: ({ className, ...props }) => (
     // eslint-disable-next-line jsx-a11y/anchor-has-content
@@ -20,7 +20,10 @@ const components: MDXComponents = {
     // eslint-disable-next-line jsx-a11y/heading-has-content
     <h2
       className={cn(
-        "text-2xl font-bebas [&:not(:first-child)]:mt-6",
+        `
+          font-bebas text-2xl
+          not-first:mt-6
+        `,
         className,
       )}
       {...props}

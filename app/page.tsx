@@ -30,10 +30,13 @@ const cards = [
         </p>
         <p className="mt-2">
           <a
-            className="font-bold hover:underline"
             href={AppConfig.discord}
             rel="noreferrer"
             target="_blank"
+            className={`
+              font-bold
+              hover:underline
+            `}
           >
             Click here to join
           </a>
@@ -52,7 +55,13 @@ const cards = [
           expand this website!
         </p>
         <p className="mt-2">
-          <Link className="font-bold hover:underline" href="/about">
+          <Link
+            href="/about"
+            className={`
+              font-bold
+              hover:underline
+            `}
+          >
             Learn here how to contribute
           </Link>
         </p>
@@ -69,7 +78,13 @@ const cards = [
           on for this website and for all the fans of Shocking Lemon.
         </p>
         <p className="mt-2">
-          <Link className="font-bold hover:underline" href="/blog">
+          <Link
+            href="/blog"
+            className={`
+              font-bold
+              hover:underline
+            `}
+          >
             Read more here
           </Link>
         </p>
@@ -82,7 +97,14 @@ export default function Page() {
   return (
     <React.Fragment>
       <HomeHero />
-      <div className="mx-auto grid max-w-screen-lg grid-cols-1 justify-center gap-6 pt-10 sm:grid-cols-2 md:grid-cols-3">
+      <div
+        className={`
+          mx-auto grid max-w-(--breakpoint-lg) grid-cols-1 justify-center gap-6
+          pt-10
+          sm:grid-cols-2
+          md:grid-cols-3
+        `}
+      >
         {cards.map((card) => (
           <HomeCard key={card.img}>
             <HomeCardImage imgSrc={card.img} />

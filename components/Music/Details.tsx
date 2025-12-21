@@ -9,7 +9,21 @@ interface Props {
 
 export const Row = ({ text, value }: Props) => (
   <tr>
-    <td className={`${styles.cell} whitespace-nowrap pr-8`}>{text}</td>
-    <td className={`${styles.cell} w-full`}>{value}</td>
+    <td
+      className={`
+        ${styles.cell}
+        pr-8 whitespace-nowrap
+      `}
+    >
+      {text}
+    </td>
+    <td
+      className={`
+        ${styles.cell}
+        w-full
+      `}
+    >
+      {value}
+    </td>
   </tr>
 );

@@ -10,15 +10,21 @@ interface GridProps {
 }
 
 const GalleryGrid = ({ album, activeImage, setActiveImage }: GridProps) => (
-  <div className="grid grid-cols-4 gap-2 lg:grid-cols-3">
+  <div
+    className={`
+      grid grid-cols-4 gap-2
+      lg:grid-cols-3
+    `}
+  >
     {album.images.other.map((image, i) => (
       <button
         key={image}
         onClick={() => setActiveImage(image)}
         type="button"
-        className={`relative flex aspect-square grow border-2 ${
-          activeImage === image ? "border-slate-600" : "border-transparent"
-        }`}
+        className={`
+          relative flex aspect-square grow border-2
+          ${activeImage === image ? "border-slate-600" : "border-transparent"}
+        `}
       >
         <Image
           fill
