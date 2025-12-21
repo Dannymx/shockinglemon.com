@@ -1,4 +1,5 @@
-import type { Member } from "@/.contentlayer/generated";
+import type { Member } from "content-collections";
+
 import imgixLoader from "@/lib/imageLoader";
 import { getMemberName } from "@/lib/utils";
 

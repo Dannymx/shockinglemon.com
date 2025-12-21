@@ -1,4 +1,6 @@
-import { allPosts } from "@/.contentlayer/generated";
+import { allPosts } from "content-collections";
+import type { Metadata } from "next";
+
 import BlogContainer from "@/components/Blog/BlogContainer";
 import BlogContent from "@/components/Blog/BlogContent";
 import { OpenGraphConfig } from "@/lib/OpenGraph";
@@ -10,7 +12,7 @@ interface Props {
   }>;
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = allPosts.find((item) => slugify(item.title) === slug);
 
@@ -38,7 +40,7 @@ export default async function Post({ params }: Props) {
 
   return (
     <BlogContainer post={post}>
-      <BlogContent content={post.body.code} />
+      <BlogContent content={post.mdx} />
     </BlogContainer>
   );
 }

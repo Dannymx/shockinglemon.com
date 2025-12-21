@@ -1,7 +1,7 @@
+import type { Post } from "content-collections";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import type { Post } from "@/.contentlayer/generated";
 import { formatDate, slugify } from "@/lib/utils";
 
 interface Props {

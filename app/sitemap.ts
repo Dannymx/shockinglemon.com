@@ -1,7 +1,7 @@
 import type { Record } from "components/Music/types";
+import { allMembers } from "content-collections";
 import type { MetadataRoute } from "next/types";
 
-import { allMembers } from "@/.contentlayer/generated";
 import music from "@/content/music/music.json";
 import { generateBlogTitles, getMemberSlugs } from "@/lib/utils";
 

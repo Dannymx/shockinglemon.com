@@ -34,7 +34,8 @@
     "paths": {
       "@/*": ["./*"],
       "@/public/*": ["./public/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "contentlayer/generated": ["./.contentlayer/generated"],
+      "content-collections": ["./.content-collections/generated"]
     },
     "plugins": [
       {

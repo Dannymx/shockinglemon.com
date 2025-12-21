@@ -1,12 +1,12 @@
 "use client";
 
+import type { Member } from "content-collections";
 import type { MDXComponents } from "mdx/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer2/hooks";
 import React, { useState } from "react";
 
-import type { Member } from "@/.contentlayer/generated";
 import { cn, getMemberName } from "@/lib/utils";
 
 interface Props {
@@ -93,7 +93,7 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
             language === "jp" ? "font-noto" : null
           }`}
         >
-          <MemberMarkdown content={member.body.code} />
+          <MemberMarkdown content={member.mdx} />
         </div>
         <div className="mt-2 border-t border-t-slate-300 pt-2 text-xs">
           Disclaimer: some of the content might contain grammar or spelling

@@ -192,4 +192,19 @@ export default [
       "@typescript-eslint/prefer-nullish-coalescing": "warn",
     },
   },
+  {
+    name: "content-collections",
+    files: [
+      "**/*.test.ts",
+      "**/*.test.tsx",
+      "content-collections.ts",
+      "next.config.js",
+    ],
+    rules: {
+      "import-x/no-extraneous-dependencies": [
+        "error",
+        { devDependencies: true },
+      ],
+    },
+  },
 ];

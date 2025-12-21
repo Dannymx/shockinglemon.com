@@ -1,10 +1,10 @@
 import type { ClassValue } from "clsx";
 import clsx from "clsx";
 import music from "content/music/music.json";
+import type { Member } from "content-collections";
+import { allPosts } from "content-collections";
 import { twMerge } from "tailwind-merge";
 
-import type { Member } from "@/.contentlayer/generated";
-import { allPosts } from "@/.contentlayer/generated";
 import type { Record } from "@/components/Music/types";
 
 export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));

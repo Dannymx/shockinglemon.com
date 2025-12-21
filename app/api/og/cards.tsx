@@ -1,6 +1,6 @@
+import type { Member } from "content-collections";
 import type { JSX } from "react";
 
-import type { Member } from "@/.contentlayer/generated";
 import type { Record } from "@/components/Music/types";
 import { MemberContent } from "@/components/OpenGraph/Member";
 import { CardContent } from "@/components/OpenGraph/Page";

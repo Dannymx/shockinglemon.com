@@ -1,6 +1,6 @@
+import { allMembers } from "content-collections";
 import type { Metadata } from "next";
 
-import { allMembers } from "@/.contentlayer/generated";
 import MemberContainer from "@/components/Band/MemberContainer";
 import MemberContent from "@/components/Band/MemberContent";
 import { OpenGraphConfig } from "@/lib/OpenGraph";

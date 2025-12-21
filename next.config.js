@@ -1,10 +1,10 @@
+const { withContentCollections } = require("@content-collections/next");
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
 const withMdx = require("@next/mdx")();
-
-const { withContentlayer } = require("next-contentlayer2");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -22,4 +22,6 @@ const nextConfig = {
   reactCompiler: true,
 };
 
-module.exports = withBundleAnalyzer(withContentlayer(withMdx(nextConfig)));
+module.exports = withBundleAnalyzer(
+  withContentCollections(withMdx(nextConfig)),
+);
