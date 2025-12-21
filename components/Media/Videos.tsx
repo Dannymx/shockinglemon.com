@@ -4,6 +4,7 @@ interface Props {
   videos: z.infer<typeof schema>;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const schema = z.array(
   z.object({
     url: z.string().url().startsWith("https://www.youtube.com/watch?v="),

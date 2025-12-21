@@ -13,6 +13,8 @@ import { globalIgnores } from "eslint/config";
 import { configs, plugins, rules } from "eslint-config-airbnb-extended";
 import { rules as prettierConfigRules } from "eslint-config-prettier";
 import prettierPlugin from "eslint-plugin-prettier";
+import reactCompiler from "eslint-plugin-react-compiler";
+import reactRefresh from "eslint-plugin-react-refresh";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import tailwindcss from "eslint-plugin-tailwindcss";
 import unusedImports from "eslint-plugin-unused-imports";
@@ -92,21 +94,56 @@ export default [
   ...typescriptConfig,
   // Prettier Config
   ...prettierConfig,
+  reactRefresh.configs.next,
   {
     name: "custom-plugins",
     plugins: {
       "simple-import-sort": simpleImportSort,
       "unused-imports": unusedImports,
       tailwindcss,
+      "react-compiler": reactCompiler,
     },
   },
   {
     name: "custom-rules",
     files: ["**/*.{js,jsx,ts,tsx}", "eslint.config.mjs"],
     languageOptions: {
+      parserOptions: {
+        projectService: {
+          allowDefaultProject: [
+            "vitest.config.ts",
+            "eslint.config.mjs",
+            "next.config.js",
+            "commitlint.config.js",
+            "contentlayer.config.js",
+            "lint-staged.config.js",
+            "postcss.config.js",
+            "tailwind.config.js",
+          ],
+          defaultProject: "tsconfig.json",
+        },
+        tsconfigRootDir: import.meta.dirname,
+      },
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: {
         ...globals.browser,
         ...globals.node,
+      },
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+      "import-x/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"],
+      },
+      "import-x/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+          project: ["tsconfig.json"],
+        },
+        node: true,
       },
     },
     rules: {
@@ -134,6 +171,25 @@ export default [
       "simple-import-sort/exports": "error",
       "simple-import-sort/imports": "error",
       "react/no-unknown-property": ["error", { ignore: ["tw"] }],
+      "react-compiler/react-compiler": "error",
+      "react-refresh/only-export-components": [
+        "warn",
+        {
+          allowConstantExport: true,
+          allowExportNames: [
+            "metadata",
+            "generateMetadata",
+            "viewport",
+            "generateViewport",
+            "generateStaticParams",
+          ],
+        },
+      ],
+      "react/jsx-curly-brace-presence": [
+        "error",
+        { props: "never", children: "never" },
+      ],
+      "@typescript-eslint/prefer-nullish-coalescing": "warn",
     },
   },
 ];

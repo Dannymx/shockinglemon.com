@@ -19,6 +19,7 @@ const nextConfig = {
     loaderFile: "./lib/imageLoader.ts",
     deviceSizes: [640, 768, 1024, 1280, 1536],
   },
+  reactCompiler: true,
 };
 
 module.exports = withBundleAnalyzer(withContentlayer(withMdx(nextConfig)));
