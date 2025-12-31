@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 html,
 body,
 #__next {
@@ -137,6 +135,41 @@ body,
   --sidebar-accent-foreground: oklch(0.985 0.002 247.839);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+/* Lemon Theme - Pastel lemon colors */
+.lemon {
+  --background: oklch(0.985 0.025 95);
+  --foreground: oklch(0.35 0.06 85);
+  --card: oklch(0.98 0.03 95);
+  --card-foreground: oklch(0.35 0.06 85);
+  --popover: oklch(0.98 0.03 95);
+  --popover-foreground: oklch(0.35 0.06 85);
+  --primary: oklch(0.75 0.14 95);
+  --primary-foreground: oklch(0.25 0.05 85);
+  --secondary: oklch(0.94 0.04 100);
+  --secondary-foreground: oklch(0.35 0.06 85);
+  --muted: oklch(0.95 0.03 100);
+  --muted-foreground: oklch(0.55 0.05 90);
+  --accent: oklch(0.92 0.06 105);
+  --accent-foreground: oklch(0.35 0.06 85);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.88 0.05 95);
+  --input: oklch(0.92 0.04 95);
+  --ring: oklch(0.78 0.12 95);
+  --chart-1: oklch(0.75 0.14 95);
+  --chart-2: oklch(0.72 0.1 130);
+  --chart-3: oklch(0.65 0.08 80);
+  --chart-4: oklch(0.8 0.15 100);
+  --chart-5: oklch(0.7 0.12 110);
+  --sidebar: oklch(0.97 0.03 98);
+  --sidebar-foreground: oklch(0.35 0.06 85);
+  --sidebar-primary: oklch(0.75 0.14 95);
+  --sidebar-primary-foreground: oklch(0.25 0.05 85);
+  --sidebar-accent: oklch(0.92 0.05 100);
+  --sidebar-accent-foreground: oklch(0.35 0.06 85);
+  --sidebar-border: oklch(0.88 0.05 95);
+  --sidebar-ring: oklch(0.78 0.12 95);
 }
 
 @layer base {

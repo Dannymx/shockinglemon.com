@@ -1,5 +1,5 @@
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import imgixLoader from "lib/imageLoader";
+import { ExternalLink } from "lucide-react";
 
 import type { Record } from "./types";
 
@@ -24,7 +24,7 @@ const GallerySelected = ({ album, activeImage }: Props) => {
         rel="noreferrer"
         target="_blank"
       >
-        View full size <ArrowTopRightOnSquareIcon className="ml-2 inline h-4" />
+        View full size <ExternalLink className="ml-2 inline h-4" />
       </a>
     </div>
   );

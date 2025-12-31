@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "components/Footer";
 import Navigation from "components/Navigation";
+import { ThemeProvider } from "components/ThemeProvider";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
@@ -30,7 +31,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html className={fontVariables} lang={AppConfig.locale}>
+    <html
+      suppressHydrationWarning
+      className={fontVariables}
+      lang={AppConfig.locale}
+    >
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta key="charset" charSet="UTF-8" />
       <link key="apple" href="/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -49,26 +54,28 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         type="image/png"
       />
       <link key="favicon" href="/favicon.ico" rel="icon" />
-      <body className="bg-light-bg font-inter text-dark-copy antialiased">
-        <div
-          className={`
-            relative flex h-full flex-col
-            sm:pt-10
-          `}
-        >
-          <Analytics />
-          <Navigation />
-          <main
+      <body className="bg-background font-inter text-foreground antialiased">
+        <ThemeProvider>
+          <div
             className={`
-              container mx-auto max-w-7xl grow px-8 py-10
-              2xl:px-0
+              relative flex h-full flex-col
+              sm:pt-10
             `}
           >
-            {children}
-          </main>
-          <Footer />
-          <SpeedInsights />
-        </div>
+            <Analytics />
+            <Navigation />
+            <main
+              className={`
+                container mx-auto max-w-7xl grow px-8 py-10
+                2xl:px-0
+              `}
+            >
+              {children}
+            </main>
+            <Footer />
+            <SpeedInsights />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

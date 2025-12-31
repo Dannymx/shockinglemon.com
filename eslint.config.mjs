@@ -165,12 +165,6 @@ export default [
       "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
       "@typescript-eslint/consistent-type-imports": "error", // Ensure `import type` is used when it's necessary
       "import-x/prefer-default-export": "off", // Named export is easier to refactor automatically
-      // "better-tailwindcss/classnames-order": [
-      //   "warn",
-      //   {
-      //     officialSorting: true,
-      //   },
-      // ], // Follow the same ordering as the official plugin `prettier-plugin-tailwindcss`
       "@typescript-eslint/no-unused-vars": "off",
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
@@ -201,6 +195,12 @@ export default [
       "@typescript-eslint/prefer-nullish-coalescing": "warn",
       // enable all recommended rules to report an error
       ...tailwind.configs["recommended-error"].rules,
+      "better-tailwindcss/enforce-consistent-line-wrapping": [
+        "error",
+        {
+          strictness: "loose",
+        },
+      ],
     },
   },
   {
