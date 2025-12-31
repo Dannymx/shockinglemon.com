@@ -94,6 +94,8 @@ const Navigation = () => {
               >
                 <Link href="/">
                   <TextScramble
+                    delay={2000}
+                    duration={2000}
                     initial="ショッキングレモン"
                     target="Shocking Lemon"
                   />

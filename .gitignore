@@ -37,3 +37,6 @@ local
 
 # content-collections
 .content-collections
+
+# cursor
+.cursor/plans

@@ -1,51 +1,57 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface TextScrambleProps {
   initial: string;
   target: string;
+  /** How long to show the initial text before morphing starts (ms) */
+  delay?: number;
+  /** How long the morph transition takes (ms) */
+  duration?: number;
 }
 
-const chars =
-  "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
-
-export function TextScramble({ initial, target }: TextScrambleProps) {
-  const [displayText, setDisplayText] = useState(initial);
+export function TextScramble({
+  initial,
+  target,
+  delay = 2500,
+  duration = 2000,
+}: TextScrambleProps) {
+  const [isTransitioned, setIsTransitioned] = useState(false);
 
   useEffect(() => {
-    const duration = 3000; // 2 seconds
-    const steps = 10;
-    const stepDuration = duration / steps;
-    let currentStep = 0;
+    const timer = setTimeout(() => {
+      setIsTransitioned(true);
+    }, delay);
 
-    const interval = setInterval(() => {
-      currentStep += 1;
+    return () => clearTimeout(timer);
+  }, [delay]);
 
-      if (currentStep >= steps) {
-        setDisplayText(target);
-        clearInterval(interval);
-        return;
-      }
+  return (
+    <span className="relative inline-block">
+      {/* Japanese text - starts visible and focused, blurs and fades out */}
+      <span
+        className="transition-all ease-out"
+        style={{
+          transitionDuration: `${duration}ms`,
+          opacity: isTransitioned ? 0 : 1,
+          filter: isTransitioned ? "blur(12px)" : "blur(0px)",
+        }}
+      >
+        {initial}
+      </span>
 
-      const progress = currentStep / steps;
-      const newText = target
-        .split("")
-        .map((char) => {
-          if (Math.random() < progress) {
-            return char;
-          }
-          return chars[Math.floor(Math.random() * chars.length)];
-        })
-        .join("");
-
-      setDisplayText(newText);
-    }, stepDuration);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [target]);
-
-  return <React.Fragment>{displayText}</React.Fragment>;
+      {/* English text - starts blurred and invisible, sharpens and fades in */}
+      <span
+        className="absolute inset-0 text-center transition-all ease-out"
+        style={{
+          transitionDuration: `${duration}ms`,
+          opacity: isTransitioned ? 1 : 0,
+          filter: isTransitioned ? "blur(0px)" : "blur(12px)",
+        }}
+      >
+        {target}
+      </span>
+    </span>
+  );
 }
