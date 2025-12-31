@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { HamburgerButton } from "@/components/HamburgerButton";
+import { MobileMenu } from "@/components/Navigation/MobileMenu";
 import { TextScramble } from "@/components/TextScramble";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { buttonVariants } from "@/components/ui/button";
@@ -12,19 +13,14 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 
 const navigation = [
-  { name: "Music", href: "/music" },
-  { name: "Band", href: "/band" },
-  { name: "Media", href: "/media" },
-  { name: "Blog", href: "/blog" },
-  { name: "About", href: "/about" },
+  { name: "Music", href: "/music" as const },
+  { name: "Band", href: "/band" as const },
+  { name: "Media", href: "/media" as const },
+  { name: "Blog", href: "/blog" as const },
+  { name: "About", href: "/about" as const },
 ];
 
 const Navigation = () => {
@@ -33,8 +29,8 @@ const Navigation = () => {
   return (
     <nav
       className={`
-        mx-auto w-full bg-gray-800
-        sm:container sm:bg-transparent
+        sticky top-0 z-50 mx-auto w-full bg-background
+        sm:relative sm:container sm:bg-transparent
       `}
     >
       <div
@@ -53,71 +49,35 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <div
             className={`
-              absolute inset-y-0 left-0 flex items-center
+              absolute left-0 flex items-center
               sm:hidden
             `}
           >
-            <Popover onOpenChange={setIsOpen} open={isOpen}>
-              <PopoverTrigger
-                className={cn(
-                  buttonVariants({ variant: "ghost" }),
-                  `
-                    inline-flex items-center justify-center rounded-md p-2
-                    text-gray-400
-                    hover:bg-gray-700 hover:text-white
-                    focus:ring-2 focus:ring-white focus:outline-none
-                    focus:ring-inset
-                  `,
-                )}
-              >
-                <HamburgerButton isOpen={isOpen} />
-              </PopoverTrigger>
-              <PopoverContent
-                align="start"
-                side="bottom"
-                className={`
-                  h-(--radix-popper-available-height)
-                  w-(--radix-popper-available-width) overflow-y-auto
-                  rounded-none border-none bg-background/90 p-0 shadow-none
-                  backdrop-blur-sm
-                  data-[side=bottom]:slide-in-from-top-2
-                  data-[state=closed]:animate-out data-[state=closed]:fade-out-0
-                  data-[state=closed]:zoom-out-95
-                  data-[state=open]:animate-in data-[state=open]:fade-in-0
-                  data-[state=open]:zoom-in-95
-                `}
-              >
-                <div className="flex flex-col gap-12 overflow-auto p-6">
-                  <div className="flex flex-col gap-3">
-                    {navigation.map((item) => (
-                      <Link
-                        key={item.name}
-                        onClick={() => setIsOpen(false)}
-                        className={`
-                          block rounded-md px-3 py-2 font-bebas text-2xl
-                          text-foreground
-                          hover:bg-muted hover:text-foreground
-                        `}
-                        href={
-                          item.href as
-                            | "/music"
-                            | "/band"
-                            | "/media"
-                            | "/blog"
-                            | "/about"
-                        }
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-center border-t pt-6">
-                    <ThemeToggle />
-                  </div>
-                </div>
-              </PopoverContent>
-            </Popover>
+            <button
+              aria-expanded={isOpen}
+              aria-label="Toggle navigation menu"
+              onClick={() => setIsOpen(!isOpen)}
+              type="button"
+              className={cn(
+                buttonVariants({ variant: "ghost" }),
+                `
+                  inline-flex items-center justify-center rounded-md p-2
+                  text-gray-400
+                  hover:bg-gray-700 hover:text-white
+                  focus:ring-0 focus:outline-none
+                `,
+              )}
+            >
+              <HamburgerButton isOpen={isOpen} />
+            </button>
           </div>
+
+          {/* Mobile menu overlay */}
+          <MobileMenu
+            isOpen={isOpen}
+            navigation={navigation}
+            onClose={() => setIsOpen(false)}
+          />
 
           <div
             className={`
@@ -128,7 +88,7 @@ const Navigation = () => {
             <div className="flex items-center justify-center">
               <span
                 className={`
-                  font-bauhaus text-2xl font-bold text-light-copy
+                  font-bauhaus text-2xl font-bold
                   sm:text-6xl sm:font-normal sm:text-dark-copy
                 `}
               >
@@ -145,45 +105,36 @@ const Navigation = () => {
             <div
               className={`
                 mt-4 hidden
-                sm:block
+                sm:flex sm:items-center sm:justify-center
               `}
             >
-              <div className="relative">
-                <NavigationMenu>
-                  <NavigationMenuList
-                    className={`
-                      flex justify-center space-x-4 align-middle font-bebas
-                      text-2xl
-                    `}
-                  >
-                    {navigation.map((item) => (
-                      <NavigationMenuItem key={item.name}>
-                        <Link
-                          className={cn(
-                            `
-                              rounded-md px-3 py-1
-                              hover:bg-muted hover:text-foreground
-                            `,
-                          )}
-                          href={
-                            item.href as
-                              | "/music"
-                              | "/band"
-                              | "/media"
-                              | "/blog"
-                              | "/about"
-                          }
-                        >
-                          {item.name}
-                        </Link>
-                      </NavigationMenuItem>
-                    ))}
-                  </NavigationMenuList>
-                </NavigationMenu>
-                {/* Theme toggle - top right */}
-                <div className="absolute top-0 right-0">
-                  <ThemeToggle />
-                </div>
+              <div className="flex-1" />
+              <NavigationMenu>
+                <NavigationMenuList
+                  className={`
+                    flex justify-center space-x-4 align-middle font-bebas
+                    text-2xl
+                  `}
+                >
+                  {navigation.map((item) => (
+                    <NavigationMenuItem key={item.name}>
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          `
+                            rounded-md px-3 py-1
+                            hover:bg-muted hover:text-foreground
+                          `,
+                        )}
+                      >
+                        {item.name}
+                      </Link>
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuList>
+              </NavigationMenu>
+              <div className="flex flex-1 justify-end">
+                <ThemeToggle />
               </div>
             </div>
           </div>

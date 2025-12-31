@@ -58,7 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ThemeProvider>
           <div
             className={`
-              relative flex h-full flex-col
+              relative flex min-h-svh flex-col
               sm:pt-10
             `}
           >
