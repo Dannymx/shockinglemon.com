@@ -16,8 +16,8 @@ const Cover = ({ album, sizes, activeImage }: Props) => {
         className={`
           ${styles.cover}
           ${styles["cover-border"]}
-          items-center justify-center bg-linear-to-br from-cyan-500 to-blue-500
-          text-8xl
+          items-center justify-center sl-media-box bg-linear-to-br from-cyan-500
+          to-blue-500 text-8xl
         `}
       >
         🍋
@@ -33,6 +33,7 @@ const Cover = ({ album, sizes, activeImage }: Props) => {
     <div
       className={`
         ${styles.cover}
+        sl-media-box
         ${
           !activeImage || activeImage === "cover.jpg"
             ? styles["cover-border"]

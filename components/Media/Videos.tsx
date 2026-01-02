@@ -23,7 +23,7 @@ const Videos = ({ videos }: Props) => (
     {videos.map((video) => (
       <div key={video.name}>
         <h2 className="mb-1 font-bold">{video.name}</h2>
-        <div className="overflow-hidden rounded-md shadow-md shadow-slate-500">
+        <div className="sl-media-box overflow-hidden">
           <iframe
             className="aspect-video w-full"
             title={video.name}

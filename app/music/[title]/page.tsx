@@ -87,15 +87,10 @@ export default async function Page({ params }: Props) {
       {/* right column */}
       <div className="lg:w-2/3">
         {/* Album details */}
-        <div
-          className={`
-            w-full rounded-xl bg-slate-100 p-4 pb-0 shadow-md
-            shadow-slate-500/25
-          `}
-        >
+        <div className="w-full sl-content-box pb-0">
           <h1
             className={`
-              border-b border-slate-200 pb-4 font-bauhaus text-2xl font-bold
+              border-b border-border pb-4 font-bauhaus text-2xl font-bold
             `}
           >
             {album.name.en}
@@ -123,7 +118,7 @@ export default async function Page({ params }: Props) {
                   colSpan={2}
                   className={`
                     ${styles.cell}
-                    border-t-2 border-t-slate-300 font-bold
+                    border-t-2 border-t-border font-bold
                   `}
                 >
                   Tracks
@@ -136,16 +131,8 @@ export default async function Page({ params }: Props) {
           </table>
         </div>
         {/* Lyrics */}
-        <div
-          className={`
-            mt-4 rounded-xl bg-slate-100 p-4 shadow-md shadow-slate-500/25
-          `}
-        >
-          <h1
-            className={`
-              mb-4 border-b border-b-slate-300 pb-2 font-bebas text-2xl
-            `}
-          >
+        <div className="mt-4 sl-content-box">
+          <h1 className="mb-4 border-b border-b-border pb-2 font-bebas text-2xl">
             Lyrics
           </h1>
           <div>

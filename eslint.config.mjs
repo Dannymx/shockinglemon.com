@@ -201,6 +201,12 @@ export default [
           strictness: "loose",
         },
       ],
+      "better-tailwindcss/no-unknown-classes": [
+        "error",
+        {
+          ignore: ["sl-*"],
+        },
+      ],
     },
   },
   {

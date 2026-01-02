@@ -1,11 +1,10 @@
 @reference "tailwindcss";
-
 .cover {
   @apply relative flex rounded-xl aspect-square;
 }
 
 .cover-border {
-  @apply overflow-hidden shadow-md shadow-slate-500;
+  @apply overflow-hidden;
 }
 
 .sleeve-text {

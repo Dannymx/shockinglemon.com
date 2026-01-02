@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="rounded-xl bg-slate-100 p-6 shadow-md shadow-slate-500/25">
+    <div className="sl-content-box">
       {/* <div className="mb-2 border-b border-b-slate-300 pb-2">
         <h1 className="font-bebas text-2xl">About Us</h1>
       </div> */}

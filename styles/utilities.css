@@ -1,0 +1,16 @@
+@reference "tailwindcss";
+
+/* Standardized content box surface - replaces repeated bg-slate-100 patterns */
+@utility sl-content-box {
+  @apply rounded-xl bg-card text-card-foreground p-6 shadow-md shadow-slate-500/25;
+}
+
+/* Standardized glass/translucent surface - replaces repeated bg-white/75 patterns */
+@utility sl-glass-box {
+  @apply rounded-md bg-white/75 backdrop-blur-sm shadow-xl shadow-slate-500/25;
+}
+
+/* Standardized media box for images/videos - applies border-radius and shadow */
+@utility sl-media-box {
+  @apply overflow-hidden rounded-xl shadow-md shadow-slate-500;
+}

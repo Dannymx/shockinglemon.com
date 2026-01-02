@@ -18,10 +18,14 @@ interface HomeCardBodyProps {
   children: ReactNode;
 }
 
+interface HomeCardFooterProps {
+  children: ReactNode;
+}
+
 export const HomeCard = ({ children }: HomeCardProps) => (
   <div
     className={`
-      relative flex aspect-4/3 w-full items-end
+      relative flex aspect-4/3 w-full flex-col
       sm:aspect-4/5
     `}
   >
@@ -30,11 +34,7 @@ export const HomeCard = ({ children }: HomeCardProps) => (
 );
 
 export const HomeCardImage = ({ imgSrc, alt = "" }: HomeCardImageProps) => (
-  <div
-    className={`
-      absolute size-full overflow-hidden rounded-xl shadow-md shadow-slate-500
-    `}
-  >
+  <div className="absolute inset-0 sl-media-box">
     <Image
       fill
       alt={alt}
@@ -50,14 +50,19 @@ export const HomeCardTitle = ({ children }: HomeCardTitleProps) => (
 );
 
 export const HomeCardBody = ({ children }: HomeCardBodyProps) => (
-  <div
-    className={`
-      flex w-full flex-col p-4 pt-0
-      md:min-h-[50%]
-    `}
-  >
-    <div className="grow rounded-md bg-white/75 px-5 py-4 backdrop-blur-sm">
+  <div className="relative z-10 mt-auto flex w-full flex-col p-4 pt-0">
+    {/* Fixed min-height ensures all glass boxes are the same size across cards */}
+    <div
+      className={`
+        flex min-h-44 flex-col sl-glass-box px-5 py-4
+        md:min-h-48
+      `}
+    >
       {children}
     </div>
   </div>
+);
+
+export const HomeCardFooter = ({ children }: HomeCardFooterProps) => (
+  <div className="mt-auto pt-3">{children}</div>
 );

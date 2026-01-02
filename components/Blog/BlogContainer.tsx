@@ -13,13 +13,16 @@ const BlogContainer = ({ post, children }: Props) => (
   <div
     // eslint-disable-next-line no-underscore-dangle
     key={post._id}
-    className="rounded-xl bg-slate-100 p-6 shadow-md shadow-slate-500/25"
+    className="sl-content-box"
   >
-    <div className="mb-2 border-b border-b-slate-300 pb-2">
+    <div className="mb-2 border-b border-b-border pb-2">
       <h1 className="font-bebas text-2xl">
         <Link href={`/blog/${slugify(post.title)}`}>{post.title}</Link>
       </h1>
-      <time className="block text-sm text-slate-600" dateTime={post.date}>
+      <time
+        className="block text-sm text-muted-foreground"
+        dateTime={post.date}
+      >
         Published on {formatDate(post.date)}
       </time>
     </div>

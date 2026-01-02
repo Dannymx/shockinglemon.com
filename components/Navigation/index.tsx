@@ -88,7 +88,7 @@ const Navigation = () => {
             <div className="flex items-center justify-center">
               <span
                 className={`
-                  font-bauhaus text-2xl font-bold
+                  font-bauhaus text-3xl font-bold
                   sm:text-6xl sm:font-normal sm:text-dark-copy
                 `}
               >
@@ -110,7 +110,8 @@ const Navigation = () => {
                 sm:flex sm:items-center sm:justify-center
               `}
             >
-              <div className="flex-1" />
+              {/* Left spacer to balance the toggle button width */}
+              <div aria-hidden="true" className="w-10" />
               <NavigationMenu>
                 <NavigationMenuList
                   className={`
@@ -124,7 +125,7 @@ const Navigation = () => {
                         href={item.href}
                         className={cn(
                           `
-                            rounded-md px-3 py-1
+                            rounded-md px-3 pt-1.5 pb-1
                             hover:bg-muted hover:text-foreground
                           `,
                         )}
@@ -135,9 +136,7 @@ const Navigation = () => {
                   ))}
                 </NavigationMenuList>
               </NavigationMenu>
-              <div className="flex flex-1 justify-end">
-                <ThemeToggle />
-              </div>
+              <ThemeToggle className="ml-2" />
             </div>
           </div>
         </div>

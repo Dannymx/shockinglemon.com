@@ -47,8 +47,7 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
     <React.Fragment>
       <div
         className={`
-          relative -mb-10 flex aspect-square w-11/12 shrink-0 overflow-hidden
-          rounded-xl shadow-md shadow-slate-500
+          relative -mb-10 flex aspect-square w-11/12 shrink-0 sl-media-box
           sm:mt-8 sm:mb-0 sm:aspect-1/2 sm:h-auto sm:w-1/3
           md:w-1/4
           lg:m-0
@@ -66,8 +65,7 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
       </div>
       <div
         className={`
-          flex flex-col rounded-md bg-white/75 p-4 pt-14 shadow-md
-          shadow-slate-500/25
+          flex flex-col sl-glass-box p-4 pt-14
           sm:pt-6
           ${reversed ? "sm:-mr-6 sm:pr-12" : "sm:-ml-6 sm:pl-12"}
         `}
@@ -127,7 +125,7 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
         >
           <MemberMarkdown content={member.mdx} />
         </div>
-        <div className="mt-2 border-t border-t-slate-300 pt-2 text-xs">
+        <div className="mt-2 border-t border-t-border pt-2 text-xs">
           Disclaimer: some of the content might contain grammar or spelling
           mistakes as it was copied as originally written by the author.
         </div>
