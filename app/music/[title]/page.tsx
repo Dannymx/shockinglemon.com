@@ -2,12 +2,17 @@ import { Row } from "components/Music/Details";
 import Gallery from "components/Music/Gallery";
 import styles from "components/Music/music.module.css";
 import type { Record } from "components/Music/types";
+import { allLyrics } from "content-collections";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { buttonVariants } from "@/components/ui/button";
 import music from "@/content/music/music.json";
 import { OpenGraphConfig } from "@/lib/OpenGraph";
-import { findRecord, formatDate } from "@/lib/utils";
+import { findRecord, formatDate, slugify } from "@/lib/utils";
+
+// Build a set of song slugs that have lyrics
+const songsWithLyrics = new Set(allLyrics.map((lyric) => lyric.songSlug));
 
 export const dynamicParams = false;
 
@@ -124,33 +129,37 @@ export default async function Page({ params }: Props) {
                   Tracks
                 </td>
               </tr>
-              {album.songs.map((song) => (
-                <Row key={song.name} text={song.name} value={song.length} />
-              ))}
+              {album.songs.map((song) => {
+                const songSlug = slugify(song.name);
+                const hasLyrics = songsWithLyrics.has(songSlug);
+
+                return (
+                  <Row
+                    key={song.name}
+                    text={song.name}
+                    value={
+                      <span className="flex items-center justify-between gap-2">
+                        <span>{song.length}</span>
+                        {hasLyrics ? (
+                          <Link
+                            className={buttonVariants({
+                              variant: "outline",
+                              size: "sm",
+                            })}
+                            href={
+                              `/music/${album.slug}/lyrics/${songSlug}` as "/music"
+                            }
+                          >
+                            Lyrics
+                          </Link>
+                        ) : null}
+                      </span>
+                    }
+                  />
+                );
+              })}
             </tbody>
           </table>
-        </div>
-        {/* Lyrics */}
-        <div className="mt-4 sl-content-box">
-          <h1 className="mb-4 border-b border-b-border pb-2 font-bebas text-2xl">
-            Lyrics
-          </h1>
-          <div>
-            <p>Sorry, currently we only have the lyrics in image format.</p>
-            <p>
-              Want to contribute and help transcribe to text or translate the
-              lyrics?{" "}
-              <Link
-                href="/about"
-                className={`
-                  font-bold
-                  hover:underline
-                `}
-              >
-                Learn how to contribute here.
-              </Link>
-            </p>
-          </div>
         </div>
       </div>
     </div>

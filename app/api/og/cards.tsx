@@ -2,11 +2,12 @@ import type { Member } from "content-collections";
 import type { JSX } from "react";
 
 import type { Record } from "@/components/Music/types";
+import { LyricsContent } from "@/components/OpenGraph/Lyrics";
 import { MemberContent } from "@/components/OpenGraph/Member";
 import { CardContent } from "@/components/OpenGraph/Page";
 import { RecordContent } from "@/components/OpenGraph/Record";
 
-export type Card = OGPage | OGRecord | OGMember;
+export type Card = OGPage | OGRecord | OGMember | OGLyrics;
 
 export interface OGPage {
   slug: Slugs;
@@ -21,6 +22,17 @@ export interface OGRecord {
 export interface OGMember {
   slug: "member";
   content: ({ member }: { member: Member }) => JSX.Element;
+}
+
+export interface OGLyrics {
+  slug: "lyrics";
+  content: ({
+    record,
+    songName,
+  }: {
+    record: Record | null;
+    songName: string;
+  }) => JSX.Element;
 }
 
 type Slugs = "home" | "music" | "band" | "media" | "blog" | "about";
@@ -86,5 +98,15 @@ export const cards: Card[] = [
     content: ({ member }: { member: Member }) => (
       <MemberContent member={member} />
     ),
+  },
+  {
+    slug: "lyrics",
+    content: ({
+      record,
+      songName,
+    }: {
+      record: Record | null;
+      songName: string;
+    }) => <LyricsContent record={record} songName={songName} />,
   },
 ];

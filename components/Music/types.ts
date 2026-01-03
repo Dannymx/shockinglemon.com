@@ -1,3 +1,8 @@
+export interface Song {
+  name: string;
+  length: string;
+}
+
 export interface Record {
   slug: string;
   name: {
@@ -14,10 +19,7 @@ export interface Record {
   labels: string[];
   catalog: string;
   barcode: string;
-  songs: {
-    name: string;
-    length: string;
-  }[];
+  songs: Song[];
   images: {
     cover: boolean;
     other: string[];

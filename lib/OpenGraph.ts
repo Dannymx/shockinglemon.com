@@ -43,11 +43,33 @@ const generateOpenGraph = ({
   },
 });
 
-export const OpenGraphConfig: Record<
-  string,
-  | Metadata
-  | (({ name, slug }: { name: string; slug: string } & Metadata) => Metadata)
-> = {
+type SluggedMetadataFn = (params: {
+  name: string;
+  slug: string;
+  openGraph?: Metadata["openGraph"];
+}) => Metadata;
+
+type LyricsMetadataFn = (params: {
+  name: string;
+  songSlug: string;
+  albumSlug: string;
+  openGraph?: Metadata["openGraph"];
+}) => Metadata;
+
+interface OpenGraphConfigType {
+  home: Metadata;
+  music: Metadata;
+  band: Metadata;
+  media: Metadata;
+  blog: Metadata;
+  about: Metadata;
+  record: SluggedMetadataFn;
+  member: SluggedMetadataFn;
+  post: SluggedMetadataFn;
+  lyrics: LyricsMetadataFn;
+}
+
+export const OpenGraphConfig: OpenGraphConfigType = {
   home: generateOpenGraph({
     openGraph: {
       type: "website",
@@ -124,5 +146,24 @@ export const OpenGraphConfig: Record<
       imgPath: `/api/og?card=blog`,
       name,
       slug: `/blog/${slug}`,
+    }),
+  lyrics: ({
+    name,
+    songSlug,
+    albumSlug,
+    openGraph,
+  }: {
+    name: string;
+    songSlug: string;
+    albumSlug: string;
+  } & Metadata) =>
+    generateOpenGraph({
+      openGraph: {
+        type: "music.song",
+        ...openGraph,
+      },
+      imgPath: `/api/og?card=lyrics&record=${albumSlug}&song=${songSlug}`,
+      name: `Lyrics for ${name}`,
+      slug: `/music/${albumSlug}/lyrics/${songSlug}`,
     }),
 };

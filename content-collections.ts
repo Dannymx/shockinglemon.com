@@ -48,6 +48,29 @@ const member = defineCollection({
   },
 });
 
+const lyrics = defineCollection({
+  name: "Lyrics",
+  directory: "content/music/lyrics",
+  include: "**/*.mdx",
+  schema: z.object({
+    content: z.string(),
+  }),
+  transform: async (doc, context) => {
+    const mdx = await compileMDX(context, doc);
+
+    return {
+      ...doc,
+      _id: doc._meta.filePath,
+      songSlug: doc._meta.fileName.replace(/(\.[^.]+){1}$/, ""),
+      language: doc._meta.directory.replace(/.*\//, "") as
+        | "japanese"
+        | "romaji"
+        | "english",
+      mdx,
+    };
+  },
+});
+
 export default defineConfig({
-  collections: [post, member],
+  collections: [post, member, lyrics],
 });
