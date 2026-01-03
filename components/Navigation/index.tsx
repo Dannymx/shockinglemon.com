@@ -36,6 +36,7 @@ const Navigation = () => {
       <div
         className={`
           mx-auto px-2
+          xs:px-4
           sm:px-6
           lg:px-8
         `}
@@ -59,7 +60,7 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               type="button"
               className={cn(
-                buttonVariants({ variant: "ghost" }),
+                buttonVariants({ variant: "ghost", size: "icon-lg" }),
                 `
                   inline-flex items-center justify-center rounded-md p-2
                   text-gray-400

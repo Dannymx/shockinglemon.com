@@ -47,7 +47,7 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
     <React.Fragment>
       <div
         className={`
-          relative -mb-10 flex aspect-square w-11/12 shrink-0 sl-media-box
+          relative z-10 -mb-10 flex aspect-square w-11/12 shrink-0 sl-media-box
           sm:mt-8 sm:mb-0 sm:aspect-1/2 sm:h-auto sm:w-1/3
           md:w-1/4
           lg:m-0

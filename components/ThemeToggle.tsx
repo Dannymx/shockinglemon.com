@@ -40,7 +40,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     <Button
       className={cn("text-xl", className)}
       onClick={toggleTheme}
-      size="icon"
+      size="icon-lg"
       variant="ghost"
       aria-label={
         theme === "lemon" ? "Switch to default theme" : "Switch to lemon theme"

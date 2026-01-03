@@ -58,7 +58,7 @@ export function MobileMenu({ isOpen, onClose, navigation }: MobileMenuProps) {
 
       {/* Menu content */}
       <div className="relative flex flex-col gap-6 overflow-auto p-6">
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col items-start gap-3">
           {navigation.map((item, index) => (
             <Link
               key={item.name}
@@ -66,8 +66,8 @@ export function MobileMenu({ isOpen, onClose, navigation }: MobileMenuProps) {
               onClick={onClose}
               className={cn(
                 `
-                  block rounded-md px-3 py-2 font-bebas text-2xl text-foreground
-                  transition-all duration-200
+                  inline-block rounded-md px-3 py-2 font-bebas text-2xl
+                  text-foreground transition-all duration-200
                   hover:bg-muted hover:text-foreground
                 `,
                 isOpen
