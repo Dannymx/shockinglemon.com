@@ -1,4 +1,4 @@
-import type { Member } from "content-collections";
+import type { Member, Post } from "content-collections";
 import type { JSX } from "react";
 
 import type { Record } from "@/components/Music/types";
@@ -7,7 +7,7 @@ import { MemberContent } from "@/components/OpenGraph/Member";
 import { CardContent } from "@/components/OpenGraph/Page";
 import { RecordContent } from "@/components/OpenGraph/Record";
 
-export type Card = OGPage | OGRecord | OGMember | OGLyrics;
+export type Card = OGPage | OGRecord | OGMember | OGLyrics | OGPost;
 
 export interface OGPage {
   slug: Slugs;
@@ -33,6 +33,11 @@ export interface OGLyrics {
     record: Record | null;
     songName: string;
   }) => JSX.Element;
+}
+
+export interface OGPost {
+  slug: "blog-post";
+  content: ({ post }: { post: Post }) => JSX.Element;
 }
 
 type Slugs = "home" | "music" | "band" | "media" | "blog" | "about";
@@ -108,5 +113,22 @@ export const cards: Card[] = [
       record: Record | null;
       songName: string;
     }) => <LyricsContent record={record} songName={songName} />,
+  },
+  {
+    slug: "blog-post",
+    content: ({ post }: { post: Post }) => {
+      if (post?.image) {
+        return (
+          <CardContent img={post.image}>
+            <div tw="flex text-7xl text-slate-300">{post.title}</div>
+          </CardContent>
+        );
+      }
+      return (
+        <CardContent img="https://shockinglemon.imgix.net/assets/images/music/inner-light/booklet-back.jpg?w=1200&h=630&fit=crop&crop=edges">
+          <div tw="flex text-9xl text-slate-300">Blog</div>
+        </CardContent>
+      );
+    },
   },
 ];
