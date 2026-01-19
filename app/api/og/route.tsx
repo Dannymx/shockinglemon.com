@@ -1,5 +1,5 @@
 import music from "content/music/music.json";
-import { allMembers } from "content-collections";
+import { allMembers, allPosts } from "content-collections";
 import { ImageResponse } from "next/og";
 import { NextResponse } from "next/server";
 import type { JSX } from "react";
@@ -16,9 +16,11 @@ const getContent = ({ og, url }: { og: Card; url: URL }) => {
   const slug = url.searchParams.get("record");
   const member = url.searchParams.get("member");
   const song = url.searchParams.get("song");
+  const post = url.searchParams.get("post");
 
   const singleRecord = music.records.find((item: Record) => item.slug === slug);
   const singleMember = allMembers.find((entry) => entry.slug === member);
+  const singlePost = allPosts.find((entry) => slugify(entry.title) === post);
 
   if (slug && singleRecord && og.slug === "record") {
     return og.content({
@@ -29,6 +31,12 @@ const getContent = ({ og, url }: { og: Card; url: URL }) => {
   if (member && singleMember && og.slug === "member") {
     return og.content({
       member: singleMember,
+    });
+  }
+
+  if (post && singlePost && og.slug === "blog-post") {
+    return og.content({
+      post: singlePost,
     });
   }
 

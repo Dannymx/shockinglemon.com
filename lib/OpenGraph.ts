@@ -143,7 +143,7 @@ export const OpenGraphConfig: OpenGraphConfigType = {
         type: "article",
         ...openGraph,
       },
-      imgPath: `/api/og?card=blog`,
+      imgPath: `/api/og?card=blog-post&post=${slug}`,
       name,
       slug: `/blog/${slug}`,
     }),
