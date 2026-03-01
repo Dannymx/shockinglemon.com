@@ -98,9 +98,11 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
             <button
               onClick={() => setLanguage("en")}
               type="button"
-              className={
-                language === "en" ? "underline underline-offset-4" : ""
-              }
+              className={cn(
+                language === "en"
+                  ? "underline underline-offset-4"
+                  : "cursor-pointer",
+              )}
             >
               English
             </button>
@@ -108,9 +110,11 @@ const MemberContent = ({ bios, reversed = false }: Props) => {
             <button
               onClick={() => setLanguage("jp")}
               type="button"
-              className={
-                language === "jp" ? "underline underline-offset-4" : ""
-              }
+              className={cn(
+                language === "jp"
+                  ? "underline underline-offset-4"
+                  : "cursor-pointer",
+              )}
             >
               日本語
             </button>
