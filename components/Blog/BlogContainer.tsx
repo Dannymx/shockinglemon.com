@@ -2,18 +2,18 @@ import type { Post } from "content-collections";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import { formatDate, slugify } from "@/lib/utils";
+import { cn, formatDate, slugify } from "@/lib/utils";
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   post: Post;
   children: ReactNode;
 }
 
-const BlogContainer = ({ post, children }: Props) => (
+const BlogContainer = ({ post, children, className }: Props) => (
   <div
     // eslint-disable-next-line no-underscore-dangle
     key={post._id}
-    className="sl-content-box"
+    className={cn("sl-content-box", className)}
   >
     <div className="mb-2 border-b border-b-border pb-2">
       <h1 className="font-bebas text-2xl">
