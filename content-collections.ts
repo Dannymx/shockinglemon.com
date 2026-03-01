@@ -3,6 +3,8 @@ import { defineCollection, defineConfig } from "@content-collections/core";
 import { compileMDX } from "@content-collections/mdx";
 import { z } from "zod";
 
+const READ_MORE_DELIMITER = "{/* read-more */}";
+
 const post = defineCollection({
   name: "Post",
   directory: "content/blog",
@@ -17,10 +19,21 @@ const post = defineCollection({
   transform: async (doc, context) => {
     const mdx = await compileMDX(context, doc);
 
+    let excerptMdx: string | undefined;
+    const delimiterIndex = doc.content.indexOf(READ_MORE_DELIMITER);
+    if (delimiterIndex !== -1) {
+      const excerptContent = doc.content.slice(0, delimiterIndex).trim();
+      excerptMdx = await compileMDX(context, {
+        ...doc,
+        content: excerptContent,
+      });
+    }
+
     return {
       ...doc,
       _id: doc._meta.filePath,
       mdx,
+      excerptMdx,
     };
   },
 });
